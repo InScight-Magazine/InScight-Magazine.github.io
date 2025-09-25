@@ -13,9 +13,7 @@ category: "article"
 permalink: "/issue5/chandrima-easier/"
 ---
 
-_Progress in science depends on new techniques, new discoveries, and new ideas, probably in that order_.
-
-#sym.dash.em *Sydney Brenner*
+_Progress in science depends on new techniques, new discoveries, and new ideas, probably in that order_. &mdash; *Sydney Brenner*
 
 ## Introduction
 

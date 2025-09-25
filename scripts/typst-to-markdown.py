@@ -71,8 +71,15 @@ def MainMatterArticle(mainContents, mainStart):
             continue
         if line.startswith("#dcap(\"") and line.endswith("\")"):
             mainMatter += line[7:-2] + "\n"
-        elif line.startswith("=="):
-            mainMatter += line.replace("==", "##") + "\n"
+        elif line.startswith("="):
+            parsedLine = ""
+            for (i, ch) in enumerate(line):
+                if ch == "=":
+                    parsedLine = parsedLine + "#"
+                if ch == " ":
+                    parsedLine = parsedLine + " " + line[i+1:]
+                    break
+            mainMatter += parsedLine + "\n"
         else:
             mainMatter += line + "\n"
     return mainMatter

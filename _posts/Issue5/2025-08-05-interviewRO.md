@@ -6,7 +6,7 @@ group1: "['SS:']"
 group2: "OR:"
 authors: ['Swarnendu Saha']
 author-affiliation: ['IISER Kolkata']
-excerpt: "#let abstract = [Swarnendu Saha interviews *Prof. Reizes Ofer* of Cleveland Clinic of the United States to discuss American academia, his current focus on women's cancers and therapy resistance, and the vital role of collaboration between scientists and clinicians."
+excerpt: "Swarnendu Saha interviews *Prof. Reizes Ofer* of Cleveland Clinic of the United States to discuss American academia, his current focus on women's cancers and therapy resistance, and the vital role of collaboration between scientists and clinicians."
 hero-image: "ofer.jpeg"
 category: "interview"
 permalink: "/issue5/swarnendu-curiosity/"

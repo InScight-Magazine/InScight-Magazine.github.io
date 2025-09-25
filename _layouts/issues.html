@@ -3,9 +3,9 @@ layout: default
 ---
 
 <img src="/assets/magazine-thumbnails/issue{{ page.issue }}" width=500 />
-<h1> Issue #{{ page.issue }} </h1>
+<h1> Issue #{{ page.issue }} | {{ page.month }}, {{ page.year}}</h1>
 <div class="magazine-banner">
-<div>{{ page.month }}, {{ page.year}} <a class="button" href="/assets/magazines/issue{{ page.issue }}.pdf">Download PDF</a></div>
+<div><a class="button" href="/assets/magazines/issue{{ page.issue }}.pdf">Download PDF</a></div>
 </div>
 
 {% assign permalink = "issue" | append: page.issue %}
@@ -16,7 +16,7 @@ layout: default
 {% for item in metaArticles %}
 <div class="magazine-item">
 <span class="magazine-summary-title">{{ item.title }}</span>
-<span><span class="magazine-summary-author">{{ item.excerpt }}</span> <a class="reveal" href={{ item.url }}>Read</a></span>
+<span><span class="archive-author">{{ item.excerpt }}</span> <a class="reveal" href={{ item.url }}>Read</a></span>
 </div>
 {% endfor %}
 
@@ -26,7 +26,7 @@ layout: default
 {% for item in articles %}
 <div class="magazine-item">
 <span class="magazine-summary-title">{{ item.title }}</span>
-<span><span class="magazine-summary-author">{{ item.authors | join: ", " | strip }}</span> <a class="reveal" href={{ item.url }}>Read</a></span>
+<span><span class="archive-author">{{ item.authors | join: ", " | strip }}</span> <a class="reveal" href={{ item.url }}>Read</a></span>
 </div>
 {% endfor %}
 
@@ -35,7 +35,7 @@ layout: default
 {% for item in interviews %}
 <div class="magazine-item">
 <span class="magazine-summary-title">{{ item.title }}</span>
-<span><span class="magazine-summary-author">{{ item.authors | join: ", " }}</span> <a class="reveal" href={{ item.url }}>Read</a></span>
+<span><span class="archive-author">{{ item.authors | join: ", " }}</span> <a class="reveal" href={{ item.url }}>Read</a></span>
 </div>
 {% endfor %}
 
@@ -47,7 +47,7 @@ layout: default
 {% assign link = "/issue" | append: page.issue | append: "/digest/#" | append: slug %}
 <div class="magazine-item">
 <span class="magazine-summary-title">{{ item.Title }}</span>
-<span><span class="magazine-summary-author">{{ item["Author"] }}</span> <a class="reveal" href={{ link }}>Read</a></span>
+<span><span class="archive-author">{{ item["Author"] }}</span> <a class="reveal" href={{ link }}>Read</a></span>
 </div>
 {% endfor %}
 <div class="magazine-item">
@@ -62,7 +62,7 @@ layout: default
 {% for item in items %}
 <div class="magazine-item">
 <span class="magazine-summary-title">{{ item.title }}</span>
-<span><span class="magazine-summary-author">{{ item.authors }}</span> <a class="reveal" href={{ item.permalink }}>Read</a></span>
+<span><span class="archive-author">{{ item.authors }}</span> <a class="reveal" href={{ item.permalink }}>Read</a></span>
 </div>
 {% endfor %}
 {% endif %}
@@ -72,6 +72,6 @@ layout: default
 {% assign items = issueItems | where_exp:"item", "categories contains item.category" %}
 {% for item in items %}
 <div class="magazine-item">
-	<span><span class="magazine-summary-title">{{ item.title }}</span><a class="reveal" href="{{ item.url }}">Try Out</a></span>
+<span><span class="magazine-summary-title">{{ item.title }}</span><a class="reveal" href="{{ item.url }}">Try Out</a></span>
 </div>
 {% endfor %}

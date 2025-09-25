@@ -12,7 +12,7 @@ permalink: /
 <h1>Issue #{{ latestIssue["issue-number"] }} | {{ latestIssue["month"] }} {{ latestIssue["year"] }} </h1>
 {% for key in latestIssue["highlights"] offset:1 limit:3 %}
 {% assign post = site.posts | find_exp:"item", "item.permalink contains key" %}
-<span class="nf">{{ site.color-emoji[post.category] }}</span> {{ post.title | markdownify | remove: '<p>' | remove: '</p>' }} {% if post.authors != nil %} <span class="archive-author">{{ post.authors }}</span> {% endif %} <br>
+<span class="nf">{{ site.color-emoji[post.category] }}</span> {{ post.title | markdownify | remove: '<p>' | remove: '</p>' }} {% if post.authors != nil %} | <span class="archive-author">{{ post.authors }}</span> {% endif %} <br>
 {% endfor %}
 <div class="home-button">{{ site.color-emoji["browse"] }} &nbsp;<a href="{{latestIssue["permalink"]}}"> Browse Issue (HTML)</a></div>
 <div class="home-button">{{ site.color-emoji["download"] }} &nbsp;<a target="_blank" href="/assets/magazines/issue{{latestIssue["issue-number"]}}.pdf"> Download Issue (PDF)</a> </div>

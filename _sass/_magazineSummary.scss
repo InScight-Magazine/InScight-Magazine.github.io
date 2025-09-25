@@ -29,13 +29,16 @@
   > strong {
   color: constants.$emph-color;
   }
+  margin-top: -1rem;
 }
 
 .magazine-summary-title {
-  color: constants.$emph-color;
-  padding-right: 1rem;
-}
-.magazine-summary-author {
   color: constants.$fg-color;
   font-weight: bold;
+  padding-right: 1rem;
+}
+
+.mag-header {
+  display: flex;
+  justify-content: space-between;
 }

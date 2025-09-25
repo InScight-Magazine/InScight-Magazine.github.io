@@ -1,15 +1,6 @@
 [
   
     {
-      "title": "BAW 2025 – Shaping the Next Generation of Biomedical Scientists",
-      "date": "2025-09-09T00:00:00+05:30",
-      "permalink": "/issue5/bishal-scientists/",
-      "authors": "Bishal Hazra",
-      "category": "article",
-      "hero-image": "/assets/images/issue5/bishal-scientists/BAW.svg"
-    },
-  
-    {
       "title": "Cell Death Makes Living Easier",
       "date": "2025-08-29T00:00:00+05:30",
       "permalink": "/issue5/chandrima-easier/",
@@ -34,6 +25,15 @@
       "authors": "Mahua Maulik",
       "category": "article",
       "hero-image": "/assets/images/issue5/mahua-wipeout/banner.svg"
+    },
+  
+    {
+      "title": "BAW 2025 – Shaping the Next Generation of Biomedical Scientists",
+      "date": "2025-06-06T00:00:00+05:30",
+      "permalink": "/issue5/bishal-scientists/",
+      "authors": "Bishal Hazra, Jayasri Das Sarma",
+      "category": "article",
+      "hero-image": "/assets/images/issue5/bishal-scientists/BAW.svg"
     },
   
     {

@@ -1,6 +1,6 @@
 html {
-  background-color: #FAFAF9;
-  color: #1F2937;
+  background-color: #FAFAFA;
+  color: #2E2E2E;
   font-family: "Lato", "Symbols Nerd Font", "Noto Color Emoji" !important;
   font-size: 17px;
   font-weight: 400;
@@ -43,7 +43,7 @@ main {
   }
 }
 .highlighter-rouge {
-  background-color: rgba(31, 41, 55, 0.05);
+  background-color: rgba(46, 46, 46, 0.05);
   padding: 1rem;
   margin-bottom: 1rem;
 }
@@ -63,24 +63,24 @@ figure {
 figure > figcaption {
   font-size: 0.9rem;
   padding-top: 0.2rem;
-  color: #6B7280;
-  font-style: italic;
+  color: #000;
+  font-weight: bold;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   img {
     max-width: 100%;
   }
 }
 h1 {
-  color: #3B82F6;
+  color: #1E88E5;
   font-size: 2.5em;
   text-align: left;
   line-height: 95%;
 }
 
 h2, h3, h4, h5, h6 {
-  color: #3B3A30;
+  color: #8E3A2F;
   text-align: left;
   line-height: 95%;
   margin-bottom: 1rem;
@@ -103,7 +103,7 @@ h2 + p {
 }
 
 a {
-  color: #D87C5A;
+  color: #E65100;
   text-decoration: none;
   font-weight: 600;
 }
@@ -126,7 +126,7 @@ a.nf:focus {
 
 header {
   width: 100%;
-  background-color: #1F2937;
+  background-color: #2E2E2E;
   position: fixed;
   top: 0;
   z-index: 999;
@@ -142,7 +142,7 @@ nav {
   width: 100%;
 }
 nav > a {
-  color: #FAFAF9;
+  color: #FAFAFA;
 }
 nav > a:hover {
   text-decoration: none;
@@ -188,7 +188,7 @@ nav > a:hover {
   cursor: pointer;
 }
 .open-sidebar-button > svg, .close-sidebar-button > svg {
-  fill: #FAFAF9;
+  fill: #FAFAFA;
   width: 2rem;
   height: 2rem;
 }
@@ -263,11 +263,11 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 0.5em;
-  color: #1F2937;
+  color: #2E2E2E;
   font-weight: bold;
 }
 footer > span > .nf {
-  color: #3B82F6;
+  color: #1E88E5;
 }
 
 .nf {
@@ -276,7 +276,7 @@ footer > span > .nf {
 }
 
 a.nf {
-  color: #6B7280;
+  color: #AD1457;
 }
 
 .nf + .nf {
@@ -346,36 +346,38 @@ a.nf {
   display: flex;
   justify-content: space-around;
   gap: 1rem;
+  margin-top: -1rem;
 }
 .release-buttons > strong {
-  color: #6B7280;
+  color: #AD1457;
 }
 
 .magazine-summary-title {
-  color: #6B7280;
+  color: #2E2E2E;
+  font-weight: bold;
   padding-right: 1rem;
 }
 
-.magazine-summary-author {
-  color: #1F2937;
-  font-weight: bold;
+.mag-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .digest-item {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border-top: 0.2rem solid #1F2937;
+  border-top: 0.2rem solid #2E2E2E;
   margin-top: 1rem;
   padding-top: 1rem;
 }
 .digest-item > .reference {
   font-style: italic;
   text-align: right;
-  color: #3B82F6;
+  color: #1E88E5;
 }
 .digest-item > .author {
-  color: #6B7280;
+  color: #AD1457;
   font-weight: bold;
   text-align: right;
 }
@@ -396,22 +398,22 @@ a.nf {
   }
 }
 .excerpt {
-  color: #1F2937;
-  font-style: italic;
-  font-weight: bold;
-  font-size: 1.1rem;
+  color: #2E2E2E;
+  font-weight: 550;
   text-align: justify;
-  margin-right: 40%;
+  background-color: rgba(142, 58, 47, 0.1);
+  padding: 0.8rem;
+  margin-top: 1rem;
 }
 
 .author {
-  font-size: 1.3rem;
-  color: #6B7280;
+  font-size: 1.1rem;
+  color: #AD1457;
   font-weight: bold;
 }
 
 .author-bio {
-  background-color: rgba(59, 58, 48, 0.1);
+  background-color: rgba(142, 58, 47, 0.1);
   padding: 1em;
   display: flex;
   flex-direction: row;
@@ -424,7 +426,7 @@ a.nf {
 }
 .author-bio > p {
   margin: 0em;
-  color: #1F2937;
+  color: #2E2E2E;
   font-size: 0.9em;
   line-height: 1.1em;
   text-align: justify;
@@ -435,11 +437,25 @@ a.nf {
 }
 
 #hero-caption {
-  color: #FAFAF9;
-  background-color: rgba(31, 41, 55, 0.4);
+  color: #FAFAFA;
+  background-color: rgba(46, 46, 46, 0.4);
   position: relative;
   left: 50%;
   bottom: 3em;
+}
+
+.article-date {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#article-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  row-gap: 1rem;
 }
 
 table {
@@ -451,7 +467,7 @@ table {
 table > caption {
   font-size: 0.9rem;
   padding-top: 0.2rem;
-  color: #6B7280;
+  color: #AD1457;
   font-style: italic;
   caption-side: bottom;
   text-align: justify;
@@ -476,11 +492,11 @@ td {
 }
 
 tr:nth-child(even) {
-  background-color: rgba(59, 130, 246, 0.1);
+  background-color: rgba(30, 136, 229, 0.1);
 }
 
 thead {
-  background-color: rgba(59, 130, 246, 0.2);
+  background-color: rgba(30, 136, 229, 0.2);
 }
 
 td.IN {
@@ -513,7 +529,7 @@ span.PD {
 thead > tr {
   text-transform: uppercase;
   text-align: center;
-  color: #1F2937;
+  color: #2E2E2E;
 }
 
 .type, .date {
@@ -523,6 +539,7 @@ thead > tr {
 
 .date {
   font-weight: bold;
+  font-size: 1.2rem;
   width: 100px;
 }
 
@@ -531,11 +548,11 @@ thead > tr {
 }
 
 .IN, .PH, .PD {
-  color: #FAFAF9;
+  color: #FAFAFA;
 }
 
 .IN > a, .PH > a, .PD > a {
-  color: #FAFAF9;
+  color: #FAFAFA;
 }
 
 .recent-articles {
@@ -570,32 +587,32 @@ input[type=radio] {
   box-sizing: border-box;
   appearance: none;
   background: white;
-  border: 3px solid #3B3A30;
-  background: #3B3A30;
+  border: 3px solid #8E3A2F;
+  background: #8E3A2F;
   width: 16px;
   height: 16px;
 }
 
 input[type=radio]:checked {
-  background: #FAFAF9;
+  background: #FAFAFA;
 }
 
 .quizIndicatorCorrect {
-  color: #6B7280;
+  color: #AD1457;
   font-size: 1.4rem;
   padding-left: 0.5rem;
 }
 
 .quizIndicatorWrong {
-  color: #D87C5A;
+  color: #E65100;
   font-size: 1.4rem;
   padding-left: 0.5rem;
 }
 
 .reveal, .reveal a {
   margin-top: 1rem;
-  background-color: #1F2937;
-  color: #FAFAF9;
+  background-color: #2E2E2E;
+  color: #FAFAFA;
   border: 0px;
   font-weight: bold;
   padding: 0.3rem;
@@ -608,6 +625,10 @@ input[type=radio]:checked {
 
 .reveal:hover {
   text-decoration: none;
+}
+
+.reveal + .reveal, .archive-author + .reveal {
+  margin-left: 1rem;
 }
 
 .quiz-image {
@@ -630,7 +651,7 @@ iframe.crossword-iframe {
 #crossword {
   display: grid;
   border-collapse: collapse;
-  border: 3px solid #1F2937;
+  border: 3px solid #2E2E2E;
   padding: 1rem;
   aspect-ratio: 1;
 }
@@ -641,8 +662,8 @@ iframe.crossword-iframe {
   border: none;
   position: relative;
   padding: 0;
-  background: rgba(31, 41, 55, 0.05);
-  border: 1px solid #FAFAF9;
+  background: rgba(46, 46, 46, 0.05);
+  border: 1px solid #FAFAFA;
 }
 
 #crossword > span.blank {
@@ -658,7 +679,7 @@ iframe.crossword-iframe {
   font-size: 16px;
   outline: none;
   text-transform: uppercase;
-  background: #D87C5A;
+  background: #E65100;
   position: absolute;
   top: 0;
   left: 0;
@@ -670,7 +691,7 @@ iframe.crossword-iframe {
   position: absolute;
   top: 0;
   left: 1px;
-  color: #1F2937;
+  color: #2E2E2E;
   font-weight: bold;
 }
 
@@ -771,13 +792,13 @@ iframe.crossword-iframe {
 }
 #intro > div {
   font-size: 1.4rem;
-  color: #3B82F6;
+  color: #1E88E5;
   font-weight: bold;
 }
 
 .shuffle {
-  background-color: rgba(31, 41, 55, 0.9);
-  color: #FAFAF9;
+  background-color: rgba(46, 46, 46, 0.9);
+  color: #FAFAFA;
   padding: 0.1rem;
   padding-bottom: 0.2rem;
   padding-left: 0.6rem;
@@ -796,13 +817,14 @@ iframe.crossword-iframe {
 }
 
 .archive-author {
-  color: #6B7280;
+  color: #AD1457;
   font-style: italic;
+  font-weight: bold;
 }
 
 #seed-word {
   font-weight: bold;
-  color: #3B3A30;
+  color: #8E3A2F;
 }
 
 .hint-block {
@@ -827,13 +849,13 @@ iframe.crossword-iframe {
   font-size: 1.1rem;
   text-transform: uppercase;
   border: 0;
-  color: #FAFAF9;
+  color: #FAFAFA;
   font-weight: bold;
-  background: #6B7280;
+  background: #AD1457;
 }
 
 .llInputs input.locked {
-  background: #D87C5A;
+  background: #E65100;
 }
 
 #result {
@@ -843,8 +865,6 @@ iframe.crossword-iframe {
 }
 
 .interview-answer {
-  padding: 0.6rem;
-  background-color: rgba(107, 114, 128, 0.1);
   margin-left: 1rem;
 }
 

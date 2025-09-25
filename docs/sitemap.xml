@@ -181,6 +181,10 @@
 <lastmod>2025-06-06T00:00:00+05:30</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/issue5/bishal-scientists/</loc>
+<lastmod>2025-06-06T00:00:00+05:30</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/issue5/mahua-wipeout/</loc>
 <lastmod>2025-06-06T00:00:00+05:30</lastmod>
 </url>
@@ -243,10 +247,6 @@
 <url>
 <loc>http://localhost:4000/issue5/foreword/</loc>
 <lastmod>2025-09-05T00:00:00+05:30</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/issue5/bishal-scientists/</loc>
-<lastmod>2025-09-09T00:00:00+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/issue5/linkedlist/</loc>

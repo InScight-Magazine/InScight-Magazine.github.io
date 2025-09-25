@@ -9,12 +9,12 @@ figure {
   > figcaption {
     font-size: 0.9rem;
     padding-top: 0.2rem;
-    color: constants.$emph-color;
-    font-style: italic;
+    color: constants.$caption-color;
+    font-weight: bold;
   }
 }
 
-@media (max-width: constants.$breakpoint-small) {
+@media (max-width: constants.$breakpoint-medium) {
   img {
     max-width: 100%;
   }
