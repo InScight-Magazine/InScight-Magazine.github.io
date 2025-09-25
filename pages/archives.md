@@ -1,6 +1,6 @@
 ---
 title: Archives
-permalink: /archives
+permalink: /archives/
 ---
 
 Complete archive of all _Articles_, _Interviews_ and _Insight Digest_ publications from InScight, sorted by year and category.
