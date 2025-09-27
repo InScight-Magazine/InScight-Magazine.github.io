@@ -18,3 +18,7 @@ a.nf:hover,
 a.nf:focus {
   text-decoration: none;
 }
+
+a.title-link {
+  color: constants.$fg-color;
+}

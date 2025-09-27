@@ -11,6 +11,8 @@ table {
     caption-side: bottom;
     text-align: justify;
   }
+  border: 2px solid rgba(constants.$emph-color, 0.6);
+  padding: 0;
   table-layout:fixed;
 }
 .table {
@@ -29,34 +31,11 @@ td {
   white-space: nowrap;
 }
 
-tr:nth-child(even) {
-    background-color: rgba(constants.$h1-color, 0.1);
-}
 thead {
-    background-color: rgba(constants.$h1-color, 0.2);
+    background-color: rgba(constants.$emph-color, 0.2);
 }
-
-td.IN {
-  background-color: constants.$IN-color;
-}
-td.PH {
-  background-color: constants.$PH-color;
-}
-td.PD {
-  background-color: constants.$PD-color;
-}
-
-span.IN {
-  color: constants.$IN-color;
-  font-weight: bold;
-}
-span.PH {
-  color: constants.$PH-color;
-  font-weight: bold;
-}
-span.PD {
-  color: constants.$PD-color;
-  font-weight: bold;
+tr:nth-child(even) {
+    background-color: rgba(constants.$emph-color, 0.03);
 }
 
 thead > tr{
@@ -74,13 +53,14 @@ thead > tr{
   font-size: 1.2rem;
   width: 100px;
 }
-.position {
-  white-space: normal;
+
+td.date {
+  font-size: 1rem;
 }
 
-.IN, .PH, .PD,  {
-  color: constants.$bg-color;
-}
-.IN > a, .PH > a, .PD > a,  {
-  color: constants.$bg-color;
+.position {
+  white-space: normal;
+  > a {
+    color: constants.$fg-color;
+  }
 }

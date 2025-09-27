@@ -30,16 +30,17 @@ Complete archive of all _Articles_, _Interviews_ and _Insight Digest_ publicatio
   {% continue %}
   {% endif %}
   {% if category != "digest" %}
-  {{ item.title }}
-  <br>
-  {% if item.authors != nil %} <span class="archive-author">_{{ item.authors | join: ", " }}_ </span> &nbsp;&nbsp;\|&nbsp;&nbsp; {% endif %}{{ item.date | date:"%b %d" }} &nbsp;&nbsp;\|&nbsp;&nbsp; <a href="{{ item.url }}" class="button">View</a>
+  <div markdown=1><a href="{{ item.url }}" class="title-link">{{ item.title }}</a>&nbsp;&nbsp;\|&nbsp;&nbsp; {% if item.authors != nil %} <span class="archive-author">_{{ item.authors | join: ", " }}_ </span> &nbsp;&nbsp;\|&nbsp;&nbsp; {% endif %}{{ item.date | date:"%b %d" }}
+  </div>
   {% else %}
-  Issue {{ item.issue }}
-  {% assign filename = "issue" | append: item.issue %}
+  {% assign issue = item.issue %}
+  <h4>Issue {{ issue }}</h4>
+  {% assign filename = "issue" | append: issue %}
   {% for item in site.data.digest[filename] %}
   {% assign slug = item["Title"] | slugify %}
-  {% assign link = "/issue" | append: item.issue | append: "/digest/#" | append: slug %}
-  - {{ item["Title"] }} <span class="archive-author">_{{ item["Author"] }}_</span> <a class="button" href="{{ link }}">Read</a>
+  {% assign link = "/issue" | append: issue | append: "/digest/#" | append: slug %}
+  <div markdown=1><a href="{{ link }}" class="title-link">{{ item.Title }}</a>&nbsp;&nbsp;\|&nbsp;&nbsp; <span class="archive-author">_{{ item.Author }}_ </span>
+  </div>
   {% endfor %}
   {% endif %}
   {% endfor %}

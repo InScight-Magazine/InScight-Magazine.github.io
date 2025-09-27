@@ -1,0 +1,19 @@
+{% assign type = include.type %}
+<table id="opp-table-{{ type }}" class="sortable">
+  <thead>
+    <tr>
+      <th class="position">Position</th>
+      <th class="date">Deadline</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in site.data.openings %}
+  {% if row.Type == type %}
+  <tr>
+  <td class="position"><a href="{{ row.Deadline }}">{{ row.Name }}</a></td>
+  <td class="date">{{ row.Deadline }}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+  </tbody>
+</table>
