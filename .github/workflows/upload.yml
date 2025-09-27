@@ -1,0 +1,11 @@
+- name: Checkout
+  uses: actions/checkout@v4
+- name: SFTP upload
+  uses: Dylan700/sftp-upload-action@latest
+  with:
+    server: webupload.iiserkol.ac.in
+    username: scicomm
+    password: ${{secrets.pass}}
+    port: 22
+    uploads: |
+    ./docs => ./home/users/scicomm/public_html/
