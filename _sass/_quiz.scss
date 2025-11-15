@@ -50,6 +50,7 @@ input[type='radio']:checked {
 }
 .quiz-image {
   width: 100%;
+  max-width: 500px;
   display: block;
   margin: auto;
   text-align: center;

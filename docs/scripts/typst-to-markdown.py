@@ -1,5 +1,5 @@
 #!/bin/python
-import sys, os
+import sys, os, shutil
 
 def FrontMatter(contents):
     mainStart = 0
@@ -23,7 +23,10 @@ def FrontMatter(contents):
             frontMatter["title"] = line[line.find("\"")+1:-1]
             continue
         if line.startswith("#let authors ="):
-            frontMatter["authors"] = [s.strip()[1:] for s in line[line.find("(")+1:line.find(")")].split("\",") if len(s) > 0]
+            frontMatter["authors"] = [s.strip() for s in line[line.find("(")+1:line.find(")")].replace("\"","").split(",") if len(s) > 0]
+            continue
+        if line.startswith("#let authorImage ="):
+            frontMatter["authorImage"] = line[line.find("\"")+1:-1]
             continue
         if line.startswith("#let affiliations ="):
             frontMatter["author-affiliation"] = [s.strip()[1:] for s in line[line.find("(")+1:line.find(")")].split("\",") if len(s) > 0]
@@ -59,13 +62,24 @@ def FrontMatter(contents):
 
 def MainMatterArticle(mainContents, mainStart):
     mainMatter = ""
+    images = []
+    tables = []
     for line in mainContents:
+
+        if line.startswith("#tables"):
+            tableDict = {'file': "", 'caption': ""}
+            tableDict['file'] = os.path.basename(line[line.find("file: \"")+7:line.find("\"", line.find("file: \"")+7)])
+            tableDict['caption'] = line[line.find("caption: \"")+10:line.find("\"", line.find("caption: \"")+10)]
+            mainMatter += "{{% include table.html path=\"{}\" caption=\"{}\" width=500 %}}\n".format(tableDict['file'], tableDict["caption"].replace("*","**")) + "\n"
+            tables.append(tableDict['file'])
+            continue
+
         if line.startswith("#img(") or line.startswith("#img("):
             imageDict = {'path': "", 'caption': ""}
             imageDict['path'] = os.path.basename(line[line.find("path: \"")+7:line.find("\"", line.find("path: \"")+7)])
-            print(imageDict['path'])
             imageDict['caption'] = line[line.find("caption: \"")+10:line.find("\"", line.find("caption: \"")+10)]
             mainMatter += "{{% include figure.html image=\"{}\" caption=\"{}\" width=500 %}}\n".format(imageDict['path'], imageDict["caption"].replace("*","**")) + "\n"
+            images.append(imageDict['path'])
             continue
         if line.startswith("#align") or line.startswith("#colbreak()") or line.startswith("#show: section.with") or line.startswith("#import"):
             continue
@@ -82,7 +96,7 @@ def MainMatterArticle(mainContents, mainStart):
             mainMatter += parsedLine + "\n"
         else:
             mainMatter += line + "\n"
-    return mainMatter
+    return mainMatter, images, tables
 
 
 def MainMatterInterview(interviewName, interviewer, interviewee):
@@ -98,7 +112,7 @@ def MainMatterInterview(interviewName, interviewer, interviewee):
             for (i, s) in enumerate([s.strip() for s in line[line.find("(")+1:line.rfind(")")].split("\",")]):
                 k, v = [s[:s.find(":")].strip(' \"'), s[s.find(":")+1:].strip(' \"')]
                 imageDict[k] = v
-            print(imageDict['path'])
+            print(imageDict)
             mainMatter += "{{% include figure.html image=\"{}\" caption=\"{}\" width=500 %}}\n".format(os.path.basename(imageDict['path']), imageDict["caption"].replace("*","**"))
             continue
         if line.startswith("#dcap(\"") and line.endswith("\")"):
@@ -126,9 +140,17 @@ frontMatter["category"] = category
 frontMatter["permalink"] = "/issue" + issue + "/" + frontMatter["authors"][0].split()[0].lower() + "-" + frontMatter["title"].split()[-1].lower() + "/"
 savePath = frontMatter["date"] + "-" + typstpath.split("/")[-1].replace(".typ", ".md")
 if category == "article":
-    mainMatter = MainMatterArticle(contents[mainStart+1:], mainStart+1)
+    mainMatter, images, tables = MainMatterArticle(contents[mainStart+1:], mainStart+1)
 elif category == "interview":
     mainMatter = MainMatterInterview(frontMatter["file"], frontMatter["group1"], frontMatter["group2"])
+imgDir = frontMatter["authors"][0].split()[0].lower() + "-" + frontMatter["title"].split()[-1].lower()
+os.makedirs(imgDir, exist_ok=True)
+for img in images:
+    shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "images"), img), imgDir)
+shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "authFaces"), frontMatter["authorImage"]), imgDir)
+shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "covers"), frontMatter["hero-image"]), imgDir)
+for table in tables:
+    shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "dataFiles"), table), ".")
 
 with open(savePath, "w") as file:
     file.write("---\n")

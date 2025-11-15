@@ -1,6 +1,51 @@
 [
   
     {
+      "title": "The Physics of Forgetting: When Information Becomes Heat",
+      "date": "2025-11-01T00:00:00+05:30",
+      "permalink": "/issue6/tanmoy-heat/",
+      "authors": "Tanmoy Pandit",
+      "category": "article",
+      "hero-image": "/assets/images/issue6/tanmoy-heat/tanmoy.svg"
+    },
+  
+    {
+      "title": "From Waves To Leaves: Story of the First Biophysicist",
+      "date": "2025-10-25T00:00:00+05:30",
+      "permalink": "/issue6/gautam-biophysicist/",
+      "authors": "Gautam Basu",
+      "category": "article",
+      "hero-image": "/assets/images/issue6/gautam-biophysicist/bose.svg"
+    },
+  
+    {
+      "title": "A Story of Ice or Fire: How Does Temperature Affect Body Size in Insects",
+      "date": "2025-10-21T00:00:00+05:30",
+      "permalink": "/issue6/atri-insects/",
+      "authors": "Atri Majumdar",
+      "category": "article",
+      "hero-image": "/assets/images/issue6/atri-insects/atri.svg"
+    },
+  
+    {
+      "title": "Engineered Probiotics And The New-Age Onco-weapon: The Story of IISER Kolkata's Triumph at iGEM 2025",
+      "date": "2025-10-16T00:00:00+05:30",
+      "permalink": "/issue6/sharanya-2025/",
+      "authors": "Sharanya Chatterjee, Madhura Theng",
+      "category": "article",
+      "hero-image": "/assets/images/issue6/sharanya-2025/iGEM.svg"
+    },
+  
+    {
+      "title": "My Journey with the Fruit Fly: Decoding Neurodegeneration in Lysosomal Storage Disease",
+      "date": "2025-10-12T00:00:00+05:30",
+      "permalink": "/issue6/apurba-disease/",
+      "authors": "Apurba Das",
+      "category": "article",
+      "hero-image": "/assets/images/issue6/apurba-disease/apurba.svg"
+    },
+  
+    {
       "title": "Cell Death Makes Living Easier",
       "date": "2025-08-29T00:00:00+05:30",
       "permalink": "/issue5/chandrima-easier/",

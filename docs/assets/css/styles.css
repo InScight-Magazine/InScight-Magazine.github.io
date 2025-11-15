@@ -301,14 +301,16 @@ a.nf {
 
 .member-details {
   width: 250px;
+}
+.member-details > img {
+  width: 200px;
+}
+.member-details {
   text-align: left;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-}
-.member-details > img {
-  width: 200px;
 }
 
 @media (max-width: 450px) {
@@ -319,10 +321,12 @@ a.nf {
   }
   .member-details {
     width: 100%;
-    text-align: left;
   }
   .member-details > img {
     width: 200px;
+  }
+  .member-details {
+    text-align: left;
   }
 }
 .magazine-item {
@@ -338,10 +342,6 @@ a.nf {
   margin-top: 1.2rem;
 }
 
-.magazine-banner {
-  margin-top: -1rem;
-  margin-bottom: 2rem;
-}
 .magazine-banner > div {
   font-size: 1.3em;
   font-weight: bold;
@@ -349,15 +349,21 @@ a.nf {
 .magazine-banner > img {
   margin-bottom: 0.5rem;
 }
+.magazine-banner {
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
 
 .release-buttons {
   display: flex;
   justify-content: space-around;
   gap: 1rem;
-  margin-top: -1rem;
 }
 .release-buttons > strong {
   color: #AD1457;
+}
+.release-buttons {
+  margin-top: -1rem;
 }
 
 .magazine-summary-title {
@@ -394,9 +400,8 @@ a.nf {
 }
 
 .hero-image {
-  height: 500px;
-  width: 100vw;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1000px) {
@@ -420,6 +425,17 @@ a.nf {
   font-weight: bold;
 }
 
+.author-bio > p {
+  margin: 0em;
+  color: #2E2E2E;
+  font-size: 0.9em;
+  line-height: 1.1em;
+  text-align: justify;
+  max-width: 400px;
+}
+.author-bio > img {
+  max-width: 300px;
+}
 .author-bio {
   background-color: rgba(142, 58, 47, 0.1);
   padding: 1em;
@@ -431,17 +447,6 @@ a.nf {
   margin: auto;
   text-align: center;
   flex-wrap: wrap;
-}
-.author-bio > p {
-  margin: 0em;
-  color: #2E2E2E;
-  font-size: 0.9em;
-  line-height: 1.1em;
-  text-align: justify;
-  max-width: 400px;
-}
-.author-bio > img {
-  max-width: 300px;
 }
 
 #hero-caption {
@@ -470,9 +475,6 @@ table {
   width: 100%;
   border-collapse: separate; /* Required for border-spacing to work */
   border-spacing: 5px 5px;
-  border: 2px solid rgba(173, 20, 87, 0.6);
-  padding: 0;
-  table-layout: fixed;
 }
 table > caption {
   font-size: 0.9rem;
@@ -481,6 +483,11 @@ table > caption {
   font-style: italic;
   caption-side: bottom;
   text-align: justify;
+}
+table {
+  border: 2px solid rgba(173, 20, 87, 0.6);
+  padding: 0;
+  table-layout: fixed;
 }
 
 .table {
@@ -615,6 +622,7 @@ input[type=radio]:checked {
 
 .quiz-image {
   width: 100%;
+  max-width: 500px;
   display: block;
   margin: auto;
   text-align: center;
@@ -710,13 +718,15 @@ iframe.crossword-iframe {
 .highlight-main {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
-  margin-bottom: 2rem;
 }
 .highlight-main > a > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.highlight-main {
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .highlight-desc {
@@ -724,11 +734,13 @@ iframe.crossword-iframe {
   flex-direction: column;
   justify-content: start;
   gap: 0.1rem;
-  text-align: left;
 }
 .highlight-desc > h1, .highlight-desc p {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+.highlight-desc {
+  text-align: left;
 }
 
 .highlight-small {
@@ -769,13 +781,13 @@ iframe.crossword-iframe {
   margin-top: 0.5rem;
 }
 
-#intro {
-  margin-bottom: 2rem;
-}
 #intro > div {
   font-size: 1.4rem;
   color: #1E88E5;
   font-weight: bold;
+}
+#intro {
+  margin-bottom: 2rem;
 }
 
 .shuffle {
