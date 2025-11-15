@@ -25,13 +25,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Themed Crossword: Women In Science</title>
-	<meta name="description" content="">
+	<title>Breaking The Ice: India's First Women In Antarctica</title>
+	<meta name="description" content="In this story, Apurba Das chronicles her PhD journey uncovering how lysosomal defects trigger neurodegeneration in Mucopolysaccharidosis Type VII using the humble fruit fly as a model. Her work not only reveals how restoring the cell’s self-cleaning process can rescue brain function but also points toward affordable, brain-targeted therapies for rare diseases.">
 
-	<meta property="og:title" content="Themed Crossword: Women In Science">
+	<meta property="og:title" content="Breaking The Ice: India's First Women In Antarctica">
 	<meta property="og:type" content="website">
-	<meta property="og:url" content=http://localhost:4000/issue6/crossword/>
-	<meta property="og:description" content="">
+	<meta property="og:url" content=http://localhost:4000/issue6/comic-antarctica/>
+	<meta property="og:description" content="In this story, Apurba Das chronicles her PhD journey uncovering how lysosomal defects trigger neurodegeneration in Mucopolysaccharidosis Type VII using the humble fruit fly as a model. Her work not only reveals how restoring the cell’s self-cleaning process can rescue brain function but also points toward affordable, brain-targeted therapies for rare diseases.">
 	<meta property="og:image" content="">
 
 	<link rel="icon" href="/assets/favicon.svg" sizes="any" type="image/svg+xml">
@@ -100,60 +100,60 @@
   
   <div class="hero-image-caption">
 	
-	  <img class="hero-image" src="/assets/images/issue6/crossword/lab.jpg"/>
+	  <img class="hero-image" src="/assets/images/issue6/comic-antarctica/comic.svg"/>
 	
   
   </div>
 
-<h1> Themed Crossword: Women In Science </h1>
+<h1> Breaking The Ice: India's First Women In Antarctica </h1>
 <div id="article-data">
 
 <div>
-<div class="author">Sayan Saha</div>
+<div class="author">Arya Mhatre</div>
 
 
-</div>
-
-<div class="article-date">Nov 05, 2025</div>
+<i>IISER Kolkata</i>
 
 </div>
 
+<div class="article-date">Oct 12, 2025</div>
 
+</div>
 
 <hr>
-<div id="crossword-wrapper">
-<div id="crossword-container">
-<div id="crossword"></div>
-  <p>
-  <button id="revealBtn" class="reveal">Reveal</button>
-  <button id="refreshBtn" class="reveal">Clear</button>
-  </p>
-</div>
-<div class="clues">
-  <div>
-  <h4>Across</h4>
-  <div id="acrossClues"></div>
-  </div>
-  <div>
-  <h4>Down</h4>
-  <div id="downClues"></div>
-  </div>
-</div>
-</div>
+  <div class="author-bio">
+	
+	<img src=/assets/images/issue6/comic-antarctica/apurba.jpg />
+	
+    <p><em>Apurba Das</em> is a recent PhD graduate from Lysosome Biology and Related Disease lab at Department of Biological Sciences, IISER Kolkata, under the guidance of Prof. Rupak Datta. She is interested in understanding neurodegeneration, lysosomal storage disorders, and rare diseases.</p>
 
-<script src="/assets/js/crossword.js"></script>
+  </div>
+
+<hr>
+
+
+<img class="comic-page" tabindex="0" src="/assets/images//issue6/comic-antarctica/comic-1.jpeg"/>
+
+
+<img class="comic-page" tabindex="0" src="/assets/images//issue6/comic-antarctica/comic-2.jpeg"/>
+
+
+<img class="comic-page" tabindex="0" src="/assets/images//issue6/comic-antarctica/comic-3.jpeg"/>
+
+
+<img class="comic-page" tabindex="0" src="/assets/images//issue6/comic-antarctica/comic-4.jpeg"/>
+
 
 <script>
-handleFile({"size":11,"blanks":[55,66,77,88,99,110,1,12,23,34,56,67,78,89,100,2,13,90,101,3,25,36,58,80,102,59,81,103,5,27,38,60,6,28,39,50,61,83,105,116,7,29,40,51,62,84,106,117,107,118,9,20,31,42,53,64,86,108,119,10,98,109,120],"across":{"CURIE":[111,"Pioneering chemist and physicist who discovered polonium and radium."],"KADAMBINI":[68,"One of the first Indian women doctors; pioneer in medicine and women’s education."],"MEITNER":[91,"Austrian–Swedish physicist who co-discovered nuclear fission."],"SUNITA":[14,"Indian-American astronaut who spent over 300 days in space."],"ANNING":[44,"English fossil hunter whose discoveries helped found paleontology."]},"down":{"ALICE":[71,"American chemist who developed the first effective treatment for leprosy."],"KATHERINE":[8,"NASA mathematician whose calculations guided Apollo missions."],"HODGKIN":[21,"British chemist awarded the Nobel Prize for protein crystallography."],"BIBHA":[0,"Trailblazing Indian woman physicist who studied cosmic rays before independence."],"JANAKI":[24,"Indian botanist who contributed to cytogenetics and plant breeding."],"RUBIN":[4,"Astronomer who uncovered evidence for dark matter."]}});
+const pages = document.querySelectorAll('.comic-page')
+for (let i = 0; i < pages.length - 1; i++) {
+	const element = pages[i];
+	element.addEventListener('click', function() {
+		console.log(pages[i+1]);
+		pages[i+1].focus();
+    });
+}
 </script>
-
-
-
-<br>
-
-<br>
-
-
 
 </main>
 

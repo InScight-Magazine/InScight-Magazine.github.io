@@ -1,0 +1,12 @@
+@use 'constants';
+.comic-page {
+  // width: 100%;
+  max-height: calc(100vh - constants.$header-height - 1rem);
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  outline: none;
+  z-index: 999;
+}

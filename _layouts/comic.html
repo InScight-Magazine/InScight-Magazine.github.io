@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+{% if page.hero-image %}
+  <div class="hero-image-caption">
+	{% if page.hero-image contains "/assets/" %}
+	  <img class="hero-image" src="{{ page.hero-image }}"/>
+	{% else %}
+	  <img class="hero-image" src="/assets/images{{page.permalink}}{{ page.hero-image }}"/>
+	{% endif %}
+  {% if page.hero-source %}
+	  <div id="hero-caption">{{ page.hero-source }}</div>
+  {% endif %}
+  </div>
+{% endif %}
+<h1> {{ page.title }} </h1>
+<div id="article-data">
+{% if page.authors %}
+<div>
+<div class="author">{{ page.authors | join: ", " }}</div>
+{% endif %}
+{% if page.author-affiliation %}
+<i>{{ page.author-affiliation | join: ", " }}</i>
+{% endif %}
+</div>
+{% if page.date %}
+<div class="article-date">{{ page.date | date:"%b %d, %Y"}}</div>
+{% endif %}
+</div>
+{% if page.author-bio %}
+<hr>
+  <div class="author-bio">
+	{% if page.authorImage %}
+	<img src={{ "/assets/images" | append: page.permalink | append: page.authorImage }} />
+	{% endif %}
+    {{ page.author-bio | markdownify }}
+  </div>
+{% endif %}
+<hr>
+{% for pg in page.pages %}
+{% assign imgpath = "/assets/images/" | append: page.permalink | append: pg %}
+<img class="comic-page" tabindex="0" src="{{ imgpath }}"/>
+{% endfor %}
+
+<script>
+const pages = document.querySelectorAll('.comic-page')
+for (let i = 0; i < pages.length - 1; i++) {
+	const element = pages[i];
+	element.addEventListener('click', function() {
+		console.log(pages[i+1]);
+		pages[i+1].focus();
+    });
+}
+</script>

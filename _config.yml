@@ -44,6 +44,13 @@ defaults:
       excerpt: ""
       author-image: false
   - scope:
+      path: "_posts/*/*-comic-*.md"
+      type: posts
+    values:
+      layout: comic
+      author-image: false
+      excerpt: ""
+  - scope:
       path: "_posts/*/*-digest.md"
       type: posts
     values:
