@@ -149,8 +149,7 @@ const pages = document.querySelectorAll('.comic-page')
 for (let i = 0; i < pages.length - 1; i++) {
 	const element = pages[i];
 	element.addEventListener('click', function() {
-		console.log(pages[i+1]);
-		pages[i+1].focus();
+		pages[i+1].scrollIntoView({ block: "nearest" });
     });
 }
 </script>
