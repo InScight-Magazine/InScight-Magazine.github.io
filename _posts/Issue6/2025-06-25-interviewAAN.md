@@ -43,7 +43,7 @@ AAN: Yes, yes. Marathi is my mother tongue.
 {: .interview-answer }
 SS: Okay, and you are around Pune?
 
-AAN:  No, my hometown is in Belgaum, which is on the border of Marathi and Karnataka.
+AAN:  No, my hometown is in Belgium, which is on the border of Maharashtra and Karnataka.
 {: .interview-answer }
 SS:  Okay.
 
@@ -156,7 +156,7 @@ One day I met a gentleman who gave a completely different direction to my life. 
 {: .interview-answer }
 Then I was bubbling with enthusiasm, I did this, I did this and all of that. And then very calmly he said, my dear young boy, if you cannot use organic chemistry for either medicine or biology, it's of no use. In this sentence he said, that opened up my eyes.
 {: .interview-answer }
-And I started learning biology, using biology textbooks at the age of 34 or something like that. So because I realized that for organic chemistry, biology is highly necessary, complementary, then you will be able to design your molecules properly and so on and so forth. So I took up, I took up for the so-called bio-organic chemistry, maybe DNA based, protein based, I worked on the diagnostics and several things.
+And I started learning biology, using biology textbooks at the age of 34 or something like that. So because I realized that for organic chemistry, biology is highly necessary, complementary, then you will be able to design your molecules properly and so on and so forth. So I took up, I took up for the so-called bio-organic chemistry, maybe DNA-based, protein-based, I worked on the diagnostics and several things.
 {: .interview-answer }
 And last, how the circle completes, I gave a complete course on biology and chemistry of DNA and RNA for PhD students in biology and chemistry in a German university, Bielefeld University.
 {: .interview-answer }
@@ -175,7 +175,7 @@ AAN: No, no, regular private companies. I was a member of the board of directors
 {: .interview-answer }
 According to me, the second way is preferred, because of course, some, all high science, technology needs high science, there is no doubt about it. So I worked for the pharma industry, I worked in antifungals, I used several things, including one Japanese and one Hungarian firm. I was also a consultant. So I spent my life in NCL fully, I enjoyed my life.
 {: .interview-answer }
-And then after that, in the last few years, there was one Dr. Ganesh, who was the first director, I said, we were sharing the lab, we were sharing the office, everything in NCL. And then we were discussing this project with students, how they don't know anything, MSc, first class, kuch madhum nahi hai. So there we took an essence that we must do something for that.
+And then after that, in the last few years, there was one Dr. Ganesh, who was the first director, I said, we were sharing the lab, we were sharing the office, everything in NCL. And then we were discussing this project with students, how they don't know anything, MSc, first class, _kuch malum nahi hai_ (they don't even know the basics). So there we took an essence that we must do something for that.
 {: .interview-answer }
 {% include figure.html image="AAN6.jpg" caption="**Prof. K.N.Ganesh**, founding director of IISER Pune and a key mentor during the institute’s early years. He and Prof. Arvind Natu shared the laboratory and the office during their days at NCL." width=500 %}
 And it initiated, of course, that we were very small fish the whole time. Then there were great people like C.N.R.Rao, and all of the people joined, they inculcate a great tendency to develop eye service for this thing, mainly with two USPs. One is the inculcation of research at the graduate level, which is a really very good point.
