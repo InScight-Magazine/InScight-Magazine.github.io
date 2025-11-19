@@ -740,6 +740,7 @@ iframe.crossword-iframe {
   margin-bottom: 1rem;
 }
 .highlight-desc {
+  max-width: 50%;
   text-align: left;
 }
 
@@ -758,7 +759,7 @@ iframe.crossword-iframe {
 .highlight-small > div > a > img {
   width: 100%;
   object-fit: cover;
-  height: 250px;
+  height: 500px;
 }
 .highlight-small > a:hover {
   text-decoration: none;
@@ -771,6 +772,9 @@ iframe.crossword-iframe {
   }
   .highlight-small > div > a > img {
     object-fit: contain;
+  }
+  .highlight-desc {
+    max-width: 100%;
   }
 }
 .home-button {
