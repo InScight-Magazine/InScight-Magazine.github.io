@@ -80,7 +80,7 @@ SS:  How?
 
 AAN: That is the trick of the army. So I worked there for some time and then I joined NCL, National Chemical Laboratory. I was drawing 300 rupees as a fellowship which is unimaginable today.
 {: .interview-answer }
-{% include figure.html image="AAN3.jpg" caption="**National Chemical Laboratory (NCL)**, where Prof.Natu completed his PhD and spent over three decades of his career." width=500 %}
+{% include figure.html image="AAN3.jpg" caption="**National Chemical Laboratory (NCL)**, where Prof. Natu completed his PhD and spent over three decades of his career." width=500 %}
 SS:  But in those days it might be a good amount of...
 
 AAN: Oh, maybe, maybe to some extent. My wife took up a job and we started both.
