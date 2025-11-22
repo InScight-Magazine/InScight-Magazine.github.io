@@ -46,5 +46,5 @@ This is a new section in our magazine, where we intend to publish one article ev
 - The article should be understood by a **general audience** (undergraduate students in various disciplines). Technical words should be used sparingly, and whenever used must be explained clearly.
 - Use **figures** generously. The guidelines about images mentioned in the "Science Articles" section hold here as well.
 <p></p>
-No examples of this yet, unfortunately. Help us out by contributing!
+For a **canonical example** of what we are looking for, check out the [this article](/issue6/apurba-disease/) by Apurba Das.
 <p></p>

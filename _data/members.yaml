@@ -45,12 +45,6 @@
         email: ss23ms132@iiserkol.ac.in
         github: "https://github.com/Shibaraj123"
   -
-      name: Alekhya Kundu
-      desc: "I am in IISER Kolkata currently in first year of BS-MS degree here. I have particular interest in Physics, Music, Geopolitics and History to be precise. In Future, I want to pursue a career as a  High energy Physics  researcher."
-      image: alekhya.jpg
-      links:
-        email: ak23ms169@iiserkol.ac.in
-  -
       name: Suman Halder
       desc: "I am Ph.D student at Department of Physical Sciences, IISER Kolkata. I am working with Dr. Rumi De."
       image: suman.jpg
@@ -85,6 +79,13 @@
       image: sukalyan.jpg
       links:
         email: sd23rs062@iiserkol.ac.in
+  -
+      name: Aranya Mukherjee
+      desc: "I am a 3rd year BS-MS Student at IISER Kolkata pursuing a Physics Major. I am highly interested in Science, Music, Movies and everything that makes nature fascinating!"
+      image: aranya.jpg
+      links:
+        email: am23ms261@iiserkol.ac.in
+        instagram: "https://www.instagram.com/_aranya_007/"
 "Graphics Design and Website":
 -
     name: Abhirup Mukherjee
@@ -122,6 +123,20 @@
     links:
       email: madhurastheng@gmail.com
       instagram: "https://www.instagram.com/madhuraa.09"
+
+"Games":
+-
+    name: Sayan Saha
+    desc: "Hi, I am a student at IISER Kolkata."
+    image: sayan.jpg
+    links:
+      email: sahasayan748@gmail.com
+-
+    name: Alekhya Kundu
+    desc: "I am in IISER Kolkata currently in first year of BS-MS degree here. I have particular interest in Physics, Music, Geopolitics and History to be precise. In Future, I want to pursue a career as a  High energy Physics  researcher."
+    image: alekhya.jpg
+    links:
+      email: ak23ms169@iiserkol.ac.in
 "Social Media Management":
 -
     name: Sayan Saha
