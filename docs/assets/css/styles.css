@@ -360,7 +360,7 @@ a.nf {
 .instagram, .facebook, .linkedin, .twitter, .email, .github, .website {
   min-width: 20px;
   min-height: 20px;
-  display: block;
+  display: inline-block;
   background-size: cover; /* or 'contain' depending on your need */
   background-position: center;
   background-repeat: no-repeat;
