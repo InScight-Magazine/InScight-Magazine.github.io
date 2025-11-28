@@ -303,7 +303,7 @@ a.nf {
   width: 250px;
 }
 .member-details > img {
-  height: 250px;
+  width: 200px;
 }
 .member-details {
   text-align: left;
