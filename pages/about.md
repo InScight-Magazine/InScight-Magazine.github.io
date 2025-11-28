@@ -26,11 +26,10 @@ If you are feeling generous and wish to sponsor some printed copies of our magaz
 <div class="member-details">
 <img src="/assets/members/{{member["image"]}}"/>
 <strong>{{ member["name"] | upcase }}</strong>
-<div>
+<div class="socials">
 {% for link in member["links"] %}
 {%- assign name = link[0] -%}
-{%- assign classes = site.data.icons[name]["classes"] -%}
-<a class="{{ classes }}" href="link[1]">{{ site.data.icons[name]["icon"] }}</a>
+<a class="{{ link[0] }}" href="{{ link[1] }}"></a>
 {% endfor %}
 </div>
 {{ member["desc"] }}

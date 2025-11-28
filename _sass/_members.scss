@@ -9,7 +9,7 @@
 .member-details {
   width: 250px;
   > img {
-    width: 200px;
+    height: 250px;
   }
   text-align: left;
   display: flex;
@@ -31,4 +31,39 @@
     }
     text-align: left;
   }
+}
+
+
+.email {
+  background: url("/assets/socialIcons/email.png");
+}
+.instagram {
+  background: url("/assets/socialIcons/instagram.png");
+}
+.linkedin {
+  background: url("/assets/socialIcons/linkedin.png");
+}
+.github {
+  background: url("/assets/socialIcons/github.png");
+}
+.facebook {
+  background: url("/assets/socialIcons/facebook.png");
+}
+.twitter {
+  background: url("/assets/socialIcons/twitter.png");
+}
+.website {
+  background: url("/assets/socialIcons/website.png");
+}
+.instagram, .facebook, .linkedin, .twitter, .email, .github, .website {
+  min-width: 20px;
+  min-height: 20px;
+  display: block;
+  background-size: cover;    /* or 'contain' depending on your need */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.socials {
+  display: flex;
+  gap: 1em;
 }

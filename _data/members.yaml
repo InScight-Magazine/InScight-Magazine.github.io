@@ -9,14 +9,13 @@
         instagram: "https://www.instagram.com/swarnendu013/"
   -
       name: Archita Sarkar 
-      desc: "Hi! I'm Archita a.k.a Smileyarchi. A recently graduated BS-MS student with Biology major and Chemistry Minor with a passion in exploring almost everything, every time."
+      desc: "Once an IISERKite is always an IISERKite. A PhD Student from Heinrich Heine University Düsseldorf, Germany working in single-molecule Fluorescence Spectroscopy to understand the structural features of Phase-Separating Biomolecular Condensates."
       image: archita.jpg
       links:
-        email: architasarkar07@gmail.com
+        email: Archita.Sarkar@hhu.de
         facebook: "https://www.facebook.com/smileyarchi07"
         instagram: "https://www.instagram.com/smileyarchi07"
         twitter: "https://twitter.com/smileyarchi07"
-        github: "https://github.com/smileyarchi07"
   -
       name: Medha Roy Chowdhury 
       desc: "PhD Research Fellow in Quantum Condensed Matter. Book lover, mountain enthusiast and passionate about music."
@@ -39,10 +38,11 @@
         email: ayanbsw98@gmail.com
   -
       name: Shibaraj Sahu 
-      desc: "Passionate about exploring Physics and Mathematics. Avidly interested in Quantum Information Theory, math modeling, scientific computation, and effective science communication."
-      image: shibraj.png
+      desc: "3rd year physics undergrad student with an interest in sci-com and philosophy of science."
+      image: shibaraj.jpg
       links:
         email: ss23ms132@iiserkol.ac.in
+        instagram: "https://www.instagram.com/diracslonecat"
         github: "https://github.com/Shibaraj123"
   -
       name: Suman Halder
@@ -73,6 +73,12 @@
         instagram: "https://www.instagram.com/ishitaa_bardhan/"
         twitter: "https://x.com/ishita_bardhan"
         linkedin: "https://www.linkedin.com/in/ishita-bardhan-5b6267188/"
+  -
+      name: Sharanya Chatterjee
+      desc: "I review, edit and write articles for the InScight Issue. I hold interviews and mobilise article collection."
+      image: sharanya.jpg
+      links:
+        email: sc23ms118@iiserkol.ac.in
   -
       name: Sukalyan Deb
       desc: "Second year PhD student in department of physical science."
