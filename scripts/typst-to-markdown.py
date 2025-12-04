@@ -66,6 +66,8 @@ def MainMatterArticle(mainContents, mainStart):
     tables = []
     for line in mainContents:
 
+        if "$" in line:
+            print("Possibly math detected. Math will have to be converted manually.")
         if line.startswith("#tables"):
             tableDict = {'file': "", 'caption': ""}
             tableDict['file'] = os.path.basename(line[line.find("file: \"")+7:line.find("\"", line.find("file: \"")+7)])
@@ -151,6 +153,8 @@ for img in images:
     shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "images"), img), imgDir)
 if "authorImage" in frontMatter:
     shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "authFaces"), frontMatter["authorImage"]), imgDir)
+if "refs-file" in frontMatter:
+    shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "dataFiles"), frontMatter["refs-file"] + ".yml"), ".")
 shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "covers"), frontMatter["hero-image"]), imgDir)
 for table in tables:
     shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "dataFiles"), table), ".")
