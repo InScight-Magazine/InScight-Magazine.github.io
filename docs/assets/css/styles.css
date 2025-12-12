@@ -43,13 +43,7 @@ main {
   }
 }
 .highlighter-rouge {
-  background-color: rgba(46, 46, 46, 0.05);
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-.highlight {
-  margin: 0;
+  font-weight: bold;
 }
 
 p + ul {
