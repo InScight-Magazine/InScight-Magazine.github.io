@@ -1,6 +1,6 @@
 ---
-title: "Typst Design Guidelines for InScight"
-permalink: /typst-design/
+title: "Website Design Guidelines for InScight"
+permalink: /web-design/
 ---
 
 This page lists the steps necessary to get started with typesetting articles for _InScight_. The typesetting engine used is [typst](https://typst.app/), a modern alternative to LaTeX. All files necessary for the task can be found on our [github repo](https://github.com/InScight-Magazine/Print-Templates).
