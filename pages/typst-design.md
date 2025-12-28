@@ -45,17 +45,17 @@ You'll typically be asked to design multiple pieces of content during the course
 
 - If not already present, create a main file at the root of the folder, say `full.typ`. This fill will call all other subfiles and create the full issue. The `full.typ` file has the following structure:
 
+```typst
+#import "template-files/inscight-template.typ": *
 
-    #import "template-files/inscight-template.typ": *
+#show: default.with(
+  issueDetails: yaml("/dataFiles/issueData.yml"),
+)
 
-    #show: default.with(
-      issueDetails: yaml("/dataFiles/issueData.yml"),
-    )
+#include "/subfiles/front.typ"
 
-    #include "/subfiles/front.typ"
-
-    // include rest of the files as well.
-
+// include rest of the files as well.
+```
 
 - In order to design a particular category of content, it's best to copy a similar category file from the previous issue and modify it. For example, to start designing an article, copy an article file from the previous issue into the `subfiles` folder of the present issue and begin modifying it according to the content.
 
