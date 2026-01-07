@@ -99,191 +99,186 @@
 <main>
   <h1> Website Design Guidelines for InScight </h1>
 
-<p>This page lists the steps necessary to get started with typesetting articles for <em>InScight</em>. The typesetting engine used is <a href="https://typst.app/">typst</a>, a modern alternative to LaTeX. All files necessary for the task can be found on our <a href="https://github.com/InScight-Magazine/Print-Templates">github repo</a>.</p>
+<p>This page lists the steps necessary to get started with creating web content for <em>InScight</em>. This includes</p>
+
+<ul>
+  <li>
+    <p>converting articles and interviews from <code class="language-plaintext highlighter-rouge">.typ</code> (typst) format to a variant of markdown that is suitable for our static site generator Jekyll,</p>
+  </li>
+  <li>
+    <p>using datafiles from the pdf version to create the science games and the Insight Digest section</p>
+  </li>
+  <li>
+    <p>using existing images to create a web version of a comic (if the issue has one), and</p>
+  </li>
+  <li>
+    <p>creating “editor’s word” and “foreword” pages for the given issue, again from the <code class="language-plaintext highlighter-rouge">.typ</code> file.</p>
+  </li>
+</ul>
+
+<p>The website is generated using a static-site-generator <em>Jekyll</em>; it uses markdown files and some predefined templates to create an HTML website that can be deployed on our server. All files necessary for the task can be found on our <a href="https://github.com/InScight-Magazine/InScight-Magazine.github.io">github repo</a>.</p>
 
 <h2 id="setting-up-the-system">Setting up the system</h2>
 
 <ul>
   <li>
-    <p>Download the <em>InScight</em> typst <a href="https://github.com/InScight-Magazine/Print-Templates/">template repository</a> from github. Extract into a folder if it’s downloaded as a compressed archive.</p>
+    <p>Download the <a href="https://github.com/InScight-Magazine/InScight-Magazine.github.io"><em>InScight</em> website  repository</a> from github. Extract into a folder if it’s downloaded as a compressed archive.</p>
   </li>
   <li>
-    <p>Copy the appropriate typst binary for your operating system (Windows vs Unix) from the <code class="language-plaintext highlighter-rouge">typst-binaries</code> folder and place it in your system’s path.</p>
+    <p>In order to use <em>Jekyll</em>, we need to first install <em>Ruby</em>. Check <a href="https://www.ruby-lang.org/en/documentation/installation/">this page</a> for some guidance. My personal recommendation is to use <a href="https://github.com/postmodern/ruby-install#readme">ruby-install</a> if you’re on Unix-ish systems (use your distributions package manager) and <a href="https://rubyinstaller.org/downloads/">RubyInstaller</a> for Windows (choose the “without devkit” latest x64 version).</p>
   </li>
   <li>
-    <p>Install all the fonts from the <code class="language-plaintext highlighter-rouge">fonts</code> folder.</p>
-
-    <ul>
-      <li>
-        <p>On Windows, this involves going into each font subfolder (such as <code class="language-plaintext highlighter-rouge">neuton</code>), selecting all files in the folder, right clicking to bring the context menu and then selecting <code class="language-plaintext highlighter-rouge">Install font</code>.</p>
-      </li>
-      <li>
-        <p>On Unixish systems, it is enough to copy the contents of the <code class="language-plaintext highlighter-rouge">fonts</code> folder into <code class="language-plaintext highlighter-rouge">~/.fonts</code>.</p>
-      </li>
-    </ul>
+    <p>Ensure that the <code class="language-plaintext highlighter-rouge">bundler</code> executable exists in our system path and is executable. We’ll be using <code class="language-plaintext highlighter-rouge">bundler</code> to install Jekyll and other necessary plugins (called <em>gems</em> in the ruby ecosystem) for building and serving our website.</p>
   </li>
-  <li>
-    <p>Having copied the typst binary and installed all fonts, remove the <code class="language-plaintext highlighter-rouge">fonts</code> and <code class="language-plaintext highlighter-rouge">typst-binaries</code> folders. The remaining contents of the folder (which we’ll call <code class="language-plaintext highlighter-rouge">templates</code> from now) serve as the base for each issue of <em>InScight</em>.</p>
+  <li>Start a terminal in the directory of the repository you downloaded earlier. Run
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span>
+</code></pre></div>    </div>
+    <p>; it should install the gems listed in the <code class="language-plaintext highlighter-rouge">Gemfiles</code> file.</p>
+  </li>
+  <li>Having installed the gems, you can now run
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div>    </div>
+    <p>to build and serve the website. The output should state the url at which the website is being served; open the url in a web browser to check what the served website looks like.</p>
   </li>
 </ul>
 
-<h2 id="structure-of-the-templates-folder">Structure of The Templates Folder</h2>
+<h2 id="structure-of-the-website">Structure of The Website</h2>
 <p>It might be useful to know your way around the various folders.</p>
+
 <ul>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">template-files</code>: Various typst templates and helper functions that are applied on the provided content to generate the actual pdf of the magazine. Please do not edit these files as it would make the styling inconsistent across pages.</p>
+    <p><code class="language-plaintext highlighter-rouge">index.md</code>
+The homepage content of your site, written in Markdown. Rendered using a layout (usually specified in front matter) and served as <code class="language-plaintext highlighter-rouge">/</code>.</p>
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">subfiles</code>: These are issue-specific files that contain the actual content material for the issue, such as the articles, games, comics, editor’s word, foreword, etc.</p>
+    <p><code class="language-plaintext highlighter-rouge">_config.yml</code>: Main configuration file for Jekyll. Defines site metadata, build settings, plugins, base URLs, markdown engine, etc.</p>
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">dataFiles</code>: These files contain data used to generate certain parts of the magazine. Examples include the <code class="language-plaintext highlighter-rouge">issueData.yml</code> file that contains the issue number and release date of the present issue, the <code class="language-plaintext highlighter-rouge">openings.csv</code> file that stores data about various academic job opportunities (we display them within the magazine), various bibliography files that list the references cited in articles (each article gets its own reference file), various interview files that contain the questions and answers for interviews, etc.</p>
+    <p><code class="language-plaintext highlighter-rouge">Gemfile</code>: Lists Ruby gems (dependencies) needed for the site.
+Ensures consistent environments across machines.</p>
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">images</code>: Contains all non-header image files used throughout the magazine. These include files used in the bodies of articles, interviews, games, etc.</p>
+    <p><code class="language-plaintext highlighter-rouge">Gemfile.lock</code>: Pins exact gem versions used.
+Prevents unexpected breakage when dependencies update.</p>
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">covers</code>: Contains all header/cover image files. These images are used as the title image of each article or interview or other content. Think of these as banner or teaser images.</p>
+    <p><code class="language-plaintext highlighter-rouge">README.md</code>: Human-readable documentation for the repository.
+Typically explains site purpose, build instructions, and contribution notes.</p>
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">authFaces</code>: Contains images of authors. These images are displayed within the article, alongside a short author biography.</p>
+    <p><code class="language-plaintext highlighter-rouge">_posts/</code>: Holds blog posts written in Markdown or HTML.
+Filenames follow <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-title.md</code> and automatically become dated posts.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">pages/</code>: Custom standalone pages (e.g., About, Contact, Teaching).
+Unlike <code class="language-plaintext highlighter-rouge">_posts</code>, filenames don’t need dates.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">docs/</code>: The publishing source for GitHub Pages.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">_data/</code>: YAML/JSON/CSV files providing structured data to templates.
+Useful for menus, people lists, publications, etc.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">_layouts/</code>: HTML templates that wrap content.
+Defines overall page structure (header, footer, navigation).</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">_includes/</code>: Reusable partials inserted into layouts.
+Examples: header, footer, navigation bar, analytics snippet.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">_sass/</code>: Sass/SCSS partials for styling.
+Compiled into CSS during the build process.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">assets/</code>: Static files like CSS, JavaScript, images, and fonts.
+Copied verbatim to the generated site.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">scripts/</code>: Utility scripts (Ruby, Bash, Python, etc.).
+Used for automation, content generation, or deployment helpers.</p>
   </li>
 </ul>
 
-<h2 id="getting-started-with-a-particular-issue-of-inscight">Getting Started With A Particular Issue Of InScight</h2>
+<h2 id="getting-started-with-a-particular-web-issue-of-inscight">Getting Started With A Particular Web-Issue Of InScight</h2>
 <p>You’ll typically be asked to design multiple pieces of content during the course any given issue.</p>
 
 <ul>
   <li>
-    <p>When you are about to start designing the first item for an issue, copy the contents of the <code class="language-plaintext highlighter-rouge">templates</code> folder and rename it appropriately (say <code class="language-plaintext highlighter-rouge">Issue7</code>).</p>
+    <p>When you are about to start designing the first item for an issue, create a folder with an appropriate name (say <code class="language-plaintext highlighter-rouge">Issue7</code>) within the <code class="language-plaintext highlighter-rouge">_posts</code> and <code class="language-plaintext highlighter-rouge">assets</code> folders (if it doesn’t already exist). Note the capitalisation of names of existing folders and name the new folders accordingly.</p>
   </li>
   <li>
-    <p>Most of the folders will contain files from the previous issue — retain those files if you want to use them as base for creating new files for the coming issue, otherwise delete them.</p>
-  </li>
-  <li>
-    <p>Update the <code class="language-plaintext highlighter-rouge">issueData.yml</code> file to reflect the appropriate issue number and release month.</p>
-  </li>
-  <li>
-    <p>If not already present, create a main file at the root of the folder, say <code class="language-plaintext highlighter-rouge">full.typ</code>. This fill will call all other subfiles and create the full issue. The <code class="language-plaintext highlighter-rouge">full.typ</code> file has the following structure:</p>
-
-    <p>#import “template-files/inscight-template.typ”: *</p>
-
-    <p>#show: default.with(
-    issueDetails: yaml(“/dataFiles/issueData.yml”),
-  )</p>
-
-    <p>#include “/subfiles/front.typ”</p>
-
-    <p>// include rest of the files as well.</p>
-  </li>
-  <li>
-    <p>In order to design a particular category of content, it’s best to copy a similar category file from the previous issue and modify it. For example, to start designing an article, copy an article file from the previous issue into the <code class="language-plaintext highlighter-rouge">subfiles</code> folder of the present issue and begin modifying it according to the content.</p>
-  </li>
-  <li>
-    <p>In order to compile the article file you are designing and see what the pdf looks like, make sure that the specific file you are designing is included in the <code class="language-plaintext highlighter-rouge">full.typ</code> file, using something like <code class="language-plaintext highlighter-rouge">#include "/subfiles/article.typ"</code>, where <code class="language-plaintext highlighter-rouge">article.typ</code> has to be replaced with the name of the file you are editing. Once this file is included within <code class="language-plaintext highlighter-rouge">full.typ</code>, start a terminal in the same folder where the <code class="language-plaintext highlighter-rouge">full.typ</code> exists, and run <code class="language-plaintext highlighter-rouge">typst watch full.typ</code>. It will watch the <code class="language-plaintext highlighter-rouge">full.typ</code> file and recompiles on changes, producing a <code class="language-plaintext highlighter-rouge">full.pdf</code> file.</p>
+    <p>You should also have the latest version of the <a href="https://github.com/InScight-Magazine/Content">typst version of the magazine</a> downloaded and extracted somewhere. It is important that you download the full repository because the upcoming steps assume a certain directory structure of these files.</p>
   </li>
 </ul>
 
-<p>Instruction for designing specific types of content are provided below.</p>
-
-<h2 id="designing-articles">Designing Articles</h2>
-<p>Copy an article file from the previous issue and rename it appropriately. Before adding the actual article content into the file, copy the following files into the project:</p>
-<ul>
-  <li>
-    <p>Image files used within the article. Copy these into <code class="language-plaintext highlighter-rouge">images</code>. Consider using a simple naming scheme such as <code class="language-plaintext highlighter-rouge">article-1.png</code>, <code class="language-plaintext highlighter-rouge">article-2.jpg</code>, <code class="language-plaintext highlighter-rouge">article-3.png</code>, etc, where <code class="language-plaintext highlighter-rouge">article</code> is to be replaced with the name of the <code class="language-plaintext highlighter-rouge">.typ</code> file for the article.</p>
-  </li>
-  <li>
-    <p>If there are references within the article, copy them into a <code class="language-plaintext highlighter-rouge">.yml</code> file with the appropriate format (check past files) and copy it into the <code class="language-plaintext highlighter-rouge">dataFiles</code> folder.</p>
-  </li>
-  <li>
-    <p>If there are tables within the article, copy each table into a <code class="language-plaintext highlighter-rouge">.csv</code> file and copy those into the <code class="language-plaintext highlighter-rouge">dataFiles</code> folder as well.</p>
-  </li>
-  <li>
-    <p>Copy the author image and cover image into the appropriate folders as well.</p>
-  </li>
-</ul>
-
-<p>Having prepared all files, we start editing the actual article file. At the top of the file, the following variables <em>must</em> be set in distinct lines:</p>
-<ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">title</code>: <em>String</em>. Can contain markdown (enclose words within underscore or asterisk to make them italic or bold).</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">authors</code>: <em>Array</em>. Examples: <code class="language-plaintext highlighter-rouge">#let authors = ("Abhirup Mukherjee",)</code> for single author (note the trailing comma after the name to ensure the object is an array), <code class="language-plaintext highlighter-rouge">#let authors = ("Abhirup Mukherjee", "Swarnendu Saha")</code> for multiple authors.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">affiliations</code>: <em>Array</em>. Similar structure as <code class="language-plaintext highlighter-rouge">authors</code>.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">abstract</code>: <em>String</em>. Can contain markdown. Typically restricted to two sentences. Acts as a pitch for the article.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">coverImage</code>: <em>String</em>. Name of the file for the cover image. Example: <code class="language-plaintext highlighter-rouge">#let coverImage = "sunrise.png"</code>. Ensure that the file <code class="language-plaintext highlighter-rouge">/covers/sunrise.png</code> exists.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">authorImage</code>: <em>String</em>. Name of the file for the author image. Similar example, but in the folder <code class="language-plaintext highlighter-rouge">authFaces</code>.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">authorInfo</code>: <em>String</em>. Short bio of author. Can contain markdown.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">received</code>: <em>Dictionary</em>. Specified the date when the article was submitted to InScight. Example: <code class="language-plaintext highlighter-rouge">#let received = (month: 10, day: 12, year: 2025)</code>.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">reviewedBy</code>: <em>Array</em>. List of names who reviewed the article. Similar structure as the <code class="language-plaintext highlighter-rouge">authors</code> array.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">refsFile</code>: <em>String</em>. Name of the reference file that was copied to the <code class="language-plaintext highlighter-rouge">dataFiles</code> folder.</p>
-  </li>
-</ul>
-
-<p>After setting the metadata, the next thing to note is the function call <code class="language-plaintext highlighter-rouge">#section</code>. This function provides the layout of the page and draws the headers and footer. Many of the arguments in the function call don’t need to be touched. The ones that might need adjustment are:</p>
+<h2 id="designing-articles-and-interviews">Designing Articles and Interviews</h2>
+<p>In order to convert the <code class="language-plaintext highlighter-rouge">.typ</code> articles and interviews, we have a convenience script <code class="language-plaintext highlighter-rouge">typst-to-markdown.py</code> in the <code class="language-plaintext highlighter-rouge">scripts</code> folder of the website repository. The script does a lot of the tedious conversion tasks. The following assumes that a working python-3 environment is available on the system.</p>
 
 <ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">coverCaption</code>: <em>String</em>. Set this if you want to add a caption to the cover image in an interview. Has no effect in an article.</p>
+  <li>Open a terminal in the <code class="language-plaintext highlighter-rouge">scripts</code> folder, and run <code class="language-plaintext highlighter-rouge">python typst-to-markdown.py &lt;full-path-of-typst-file&gt; &lt;issue-number&gt;</code>. For example, if we are trying to convert the article <code class="language-plaintext highlighter-rouge">/home/arch/InScight-Documents/Issue7/subfiles/quantum.typ</code>, the appropriate command is
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python typst-to-markdown.py /home/arch/InScight-Documents/Issue7/subfiles/quantum.typ 7
+</code></pre></div>    </div>
+    <p>If things run correctly, the operation should generate (within the <code class="language-plaintext highlighter-rouge">scripts</code> folder) a markdown file for the article and a folder that contains all images used in the article, and (optionally) copy datafiles that are used in the article (such as references, tables, etc) from the typst repository into the folder.</p>
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">sideImageFraction</code>: <em>Percentage</em>. For example: <code class="language-plaintext highlighter-rouge">sideImageFraction: 35%</code>. For an interview, sets the width of the interviewee image on the title page. <code class="language-plaintext highlighter-rouge">sideImageFraction: 100%</code> means the entire right half will be covered by the interviewee image.</p>
+    <p>The operation should also output the location where the webpage for this article can be viewed (for example, <code class="language-plaintext highlighter-rouge">/issue7/quantum-article/</code>). Copy/note this location.</p>
+  </li>
+  <li>The name of the markdown <code class="language-plaintext highlighter-rouge">.md</code> file should have the date at the beginning; check that it’s sensible. Next, copy the generated/copied files into the appropriate folders of the website:
+    <ul>
+      <li>The <code class="language-plaintext highlighter-rouge">.md</code> file goes into the appropriate <code class="language-plaintext highlighter-rouge">_posts</code> folder for the issue (such as <code class="language-plaintext highlighter-rouge">_posts/issue7</code>) that you created in the previous section.</li>
+      <li>The images folder goes into the appropriate <code class="language-plaintext highlighter-rouge">assets/images</code> folder for the issue, that you created in the previous section.</li>
+      <li>Any datafiles generated go into the <code class="language-plaintext highlighter-rouge">_data</code> folder. For example, if it’s a references file, it goes into <code class="language-plaintext highlighter-rouge">_data/references</code>.</li>
+    </ul>
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">breakAfter</code>: <em>Array</em> of integers. Indicates when to apply column breaks in the references. For example: <code class="language-plaintext highlighter-rouge">breakAfter: (7,10)</code> means that columns breaks will be applied after the seventh and tenth references. Useful for distributing the list of references into multiple columns.</p>
+    <p>Having copied all generated files into their respective folders, fire up the server by running <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code> in the root of the website folder (that is, where the <code class="language-plaintext highlighter-rouge">index.md</code> file resides).</p>
+  </li>
+  <li>The output of the command should state where the website is being served:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Auto-regeneration: enabled for '/home/Storage/websites/inscight'
+LiveReload address: http://127.0.0.1:35729
+  Server address: http://127.0.0.1:4000/
+Server running... press ctrl-c to stop.
+      LiveReload: Browser connected
+    Regenerating: 1 file(s) changed at 2025-12-28 12:32:07
+                  pages/web-design.md
+                  ...done in 0.669932492 seconds.
+</code></pre></div>    </div>
+    <p>Note the line <code class="language-plaintext highlighter-rouge">Server address: http://127.0.0.1:4000/</code>. Open the url <code class="language-plaintext highlighter-rouge">http://127.0.0.1:4000/</code> to see the website.</p>
+  </li>
+  <li>
+    <p>In order to view the article you converted, append the article location that was output earlier ( <code class="language-plaintext highlighter-rouge">/issue7/quantum-article/</code>) to the server address: <code class="language-plaintext highlighter-rouge">http://127.0.0.1:4000/issue7/quantum-article/</code>. Open this location in your browser to view the article.</p>
+  </li>
+  <li>View the webpage carefully to ensure that everything has been parsed correctly. In particular, verify that
+    <ul>
+      <li>All section headings are present.</li>
+      <li>All bold and italic are formatted appropriately.</li>
+      <li>The article metadata are displayed correctly: title, author name, author bio, author image, reviewer name, date, cover image and abstract.</li>
+      <li>All article images are visible with correct captions.</li>
+      <li>References, if any, are listed appropriately at the end.</li>
+    </ul>
   </li>
 </ul>
 
-<p>After the call to the <code class="language-plaintext highlighter-rouge">section</code> function, it is <em>imperative</em> that you add a line of that contains only</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// begin
+<p>One thing that the conversion script doesn’t account for is mathematical equations (the script output should warn you of this). If the equations are already available in latex format, copy and paste these equations directly, and change the separators appropriately. For example, the inline latex equation <code class="language-plaintext highlighter-rouge">$x=y$</code> or <code class="language-plaintext highlighter-rouge">\(x=y\)</code> has to be changed into <code class="language-plaintext highlighter-rouge">$$x=y$$</code>. The block equation</p>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">\[</span><span class="nb"> x</span><span class="o">=</span><span class="nb">y </span><span class="p">\]</span>
 </code></pre></div></div>
-
-<p>Within typst, it is commented out so it won’t affect the pdf, but it will be picked up by our typst-to-html converter to note that this is where the article content begins.</p>
-
-<p>We now begin designing the actual content of the article. The first letter of the first paragraph must be a drop-cap, which is applied by passing the paragraph into the <code class="language-plaintext highlighter-rouge">#dropcap</code> function as a string:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#dcap("Lorem ipsum dolor sit amet, consectetur adipiscing elit")
+<p>or</p>
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">\begin{equation}</span>
+    x=y
+<span class="nt">\end{equation}</span>
 </code></pre></div></div>
+<p>has to be similarly converted into</p>
+<pre><code class="language-mathjax">
+$$ x=y $$
 
-<p>The following formatting options are available:</p>
-<ul>
-  <li>
-    <p>Section headings of the article are specified using the <code class="language-plaintext highlighter-rouge">==</code> symbol: <code class="language-plaintext highlighter-rouge">== This is a section heading</code>.</p>
-  </li>
-  <li>
-    <p>Bold and italic: <code class="language-plaintext highlighter-rouge">This is *bold*, this is _italic_</code>.</p>
-  </li>
-</ul>
+</code></pre>
 
-<p>Images are inserted using the function <code class="language-plaintext highlighter-rouge">#img</code>. A typical call is of the form</p>
+<p>Note the empty lines before and after the equation.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#img(path: "/images/apurba1.svg", caption: "Drosophila as a model organism..", 
-     position: top, width: 100%, portrait: true)
-</code></pre></div></div>
-
-<p>The <code class="language-plaintext highlighter-rouge">path</code> and <code class="language-plaintext highlighter-rouge">caption</code> arguments are self-explanatory. The <code class="language-plaintext highlighter-rouge">position</code> argument can take values <code class="language-plaintext highlighter-rouge">top</code> or <code class="language-plaintext highlighter-rouge">bottom</code>, and dictates the placement of the image. The <code class="language-plaintext highlighter-rouge">portrait</code> variable can be <code class="language-plaintext highlighter-rouge">true</code> or <code class="language-plaintext highlighter-rouge">false</code>. Setting it <code class="language-plaintext highlighter-rouge">true</code> means that the image will be restricted one of the columns of the article, whereas <code class="language-plaintext highlighter-rouge">false</code> allows the possibility of the image stretching to cover both columns. The <code class="language-plaintext highlighter-rouge">width</code> argument specifies the width covered by the image. If <code class="language-plaintext highlighter-rouge">portrait</code> is <code class="language-plaintext highlighter-rouge">true</code>, setting <code class="language-plaintext highlighter-rouge">width</code> to <code class="language-plaintext highlighter-rouge">100%</code> means the image will cover the entirety of a single column and the caption will appear below it. If <code class="language-plaintext highlighter-rouge">portrait</code> is <code class="language-plaintext highlighter-rouge">false</code>, a width greater than <code class="language-plaintext highlighter-rouge">66.6%</code> means the image will span both columns and the caption will appear below it, spanning both columns. A width between <code class="language-plaintext highlighter-rouge">33.3%</code> and <code class="language-plaintext highlighter-rouge">66.6%</code> will make the caption appear to the right of the image, and the image+caption together will span both columns. Setting the width to less than <code class="language-plaintext highlighter-rouge">33.3%</code> is equivalent to setting <code class="language-plaintext highlighter-rouge">portrait = true</code>.</p>
-
-<p>Equations can be added by enclosing them using the $ symbol. Inline equations have the form <code class="language-plaintext highlighter-rouge">$x=y$</code>, while adding spaces at the start and end ensure the equation is rendered in its own line: <code class="language-plaintext highlighter-rouge">$ x = y $</code>. Check out <a href="https://qwinsi.github.io/tex2typst-webapp/cheat-sheet.html">this link</a> for a list of the available math functions.</p>
-
-<p>This should cover most of the things that one needs to know to design an article.</p>
+<p>If the latex equations are not available, they will of course have to be written from scratch in the markdown file, using the above format.</p>
 
 
 </main>

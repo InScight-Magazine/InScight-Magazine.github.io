@@ -134,11 +134,15 @@ def MainMatterInterview(interviewName, interviewer, interviewee):
     return mainMatter, images
 
 typstpath = sys.argv[1]
-category = sys.argv[2]
-issue = sys.argv[3]
+issue = sys.argv[2]
 with open(typstpath, "r") as file:
     contents = [line.rstrip() for line in file]
 frontMatter, mainStart = FrontMatter(contents)
+if "group1" in frontMatter:
+    category = "interview"
+else:
+    category = "article"
+print(category)
 frontMatter["category"] = category
 frontMatter["permalink"] = "/issue" + issue + "/" + frontMatter["authors"][0].split()[0].lower() + "-" + frontMatter["title"].split()[-1].lower() + "/"
 savePath = frontMatter["date"] + "-" + typstpath.split("/")[-1].replace(".typ", ".md")
@@ -169,3 +173,4 @@ with open(savePath, "w") as file:
             file.write("{}: \"{}\"\n".format(k, v))
     file.write("---\n")
     file.write(mainMatter)
+print("--------\nView article at {}\n---------".format(frontMatter["permalink"]))

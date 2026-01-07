@@ -134,3 +134,58 @@ Equations can be added by enclosing them using the \$ symbol. Inline equations h
 
 
 This should cover most of the things that one needs to know to design an article.
+
+## Designing Interviews
+Copy an interview file (`interiewXYZ.typ`) from the previous issue and rename it appropriately. Also copy the following files into the project:
+- Text file containing the interview content, into the `dataFiles` folder. The structure for this text file is described below.
+
+- Image files used within the interview. Copy these into `images`. Consider using a simple naming scheme such as `interviewXYZ-1.png`, `interviewXYZ-2.jpg`, `interviewXYZ-3.png`, etc, where `interviewXYZ` is to be replaced with the name of the `.typ` file for the article.
+
+- An image of the interviewee, into the `images` folder.
+
+- Copy the cover image into the `covers` folder.
+
+Having prepared all files, we start editing the `interiewXYZ.typ` file. At the top of the file, the following variables _must_ be set in distinct lines:
+- `title`: _String_. Can contain markdown (enclose words within underscore or asterisk to make them italic or bold).
+
+- `file`: _String_. Path of the text file containing the interview content (this file was copied above). Example: `#let file = "/dataFiles/interviewAAN.txt"`.
+
+- `authors`: _Array_. Name of interviewer. Examples: `#let authors = ("Abhirup Mukherjee",)` for single author (note the trailing comma after the name to ensure the object is an array), `#let authors = ("Abhirup Mukherjee", "Swarnendu Saha")` for multiple authors.
+
+- `affiliations`: _Array_. Similar structure as `authors`.
+
+- `abstract`: _String_. Can contain markdown. Typically restricted to two sentences. Acts as a pitch for the interview.
+
+- `coverImage`: _String_. Name of the file for the cover image. Example: `#let coverImage = "sunrise.png"`. Ensure that the file `/covers/sunrise.png` exists.
+
+- `received`: _Dictionary_. Specified the date when the article was submitted to InScight. Example: `#let received = (month: 10, day: 12, year: 2025)`.
+
+- `group1`: _Array_. List of codenames for the interviewers as used in the text file. Example: `#let group1 = ("SS:",)`.
+
+- `group2`: _String_. Codenames for the interviewee, as used in the text file. Example: `#let group2 = "AAN:"`.
+
+- `sideImage`: _String_. Path for the image of the interviewee. Example `#let sideImage = "/images/AAN.jpg"`.
+
+After setting the metadata, the next thing to note is the function call `#section`. This function provides the layout of the page and draws the headers and footer. Many of the arguments in the function call don't need to be touched. The ones that might need adjustment are:
+
+- `sideImageFraction`: _Percentage_. For example: `sideImageFraction: 35%`. For an interview, sets the width of the interviewee image on the title page. `sideImageFraction: 100%` means the entire right half will be covered by the interviewee image.
+
+The actual content of the interview is set in the `interviewXYZ.txt` file that was copied into the `dataFiles` folder. It has the following structure:
+
+```
+SS: Hello sir. I am Swarnendra Saha from Team InScight...
+
+AAN: So I did that because somehow I wanted to learn....
+
+IMAGE: (path: "/images/AAN1.jpg", caption: "Prof. Natu  ... at *Pune University*, while ...", position: bottom, width:100%, portrait: true)
+
+#colbreak()
+```
+
+The lines beginning with `SS:` are interviewer questions (the prefix `SS:` must match the ones provided in the `group1` variable defined in the .typ file), while those beginning with `AAN:` are the interviewee answers (this must in turn match the one provided in `group2` in the .typ file). Thes must be inserted according to the interview (the above two are just samples).
+
+The line starting with `IMAGE:` shows how to insert images. Column breaks can be inserted by adding `#colbreak` on an empty line.
+
+This should cover most of the things that one needs to know to design an article.
+
+

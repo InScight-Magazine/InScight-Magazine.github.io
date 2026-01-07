@@ -165,17 +165,21 @@
   </li>
   <li>
     <p>If not already present, create a main file at the root of the folder, say <code class="language-plaintext highlighter-rouge">full.typ</code>. This fill will call all other subfiles and create the full issue. The <code class="language-plaintext highlighter-rouge">full.typ</code> file has the following structure:</p>
-
-    <p>#import “template-files/inscight-template.typ”: *</p>
-
-    <p>#show: default.with(
-    issueDetails: yaml(“/dataFiles/issueData.yml”),
-  )</p>
-
-    <p>#include “/subfiles/front.typ”</p>
-
-    <p>// include rest of the files as well.</p>
   </li>
+</ul>
+
+<pre><code class="language-typst">#import "template-files/inscight-template.typ": *
+
+#show: default.with(
+  issueDetails: yaml("/dataFiles/issueData.yml"),
+)
+
+#include "/subfiles/front.typ"
+
+// include rest of the files as well.
+</code></pre>
+
+<ul>
   <li>
     <p>In order to design a particular category of content, it’s best to copy a similar category file from the previous issue and modify it. For example, to start designing an article, copy an article file from the previous issue into the <code class="language-plaintext highlighter-rouge">subfiles</code> folder of the present issue and begin modifying it according to the content.</p>
   </li>
@@ -285,11 +289,86 @@
 
 <p>This should cover most of the things that one needs to know to design an article.</p>
 
+<h2 id="designing-interviews">Designing Interviews</h2>
+<p>Copy an interview file (<code class="language-plaintext highlighter-rouge">interiewXYZ.typ</code>) from the previous issue and rename it appropriately. Also copy the following files into the project:</p>
+<ul>
+  <li>
+    <p>Text file containing the interview content, into the <code class="language-plaintext highlighter-rouge">dataFiles</code> folder. The structure for this text file is described below.</p>
+  </li>
+  <li>
+    <p>Image files used within the interview. Copy these into <code class="language-plaintext highlighter-rouge">images</code>. Consider using a simple naming scheme such as <code class="language-plaintext highlighter-rouge">interviewXYZ-1.png</code>, <code class="language-plaintext highlighter-rouge">interviewXYZ-2.jpg</code>, <code class="language-plaintext highlighter-rouge">interviewXYZ-3.png</code>, etc, where <code class="language-plaintext highlighter-rouge">interviewXYZ</code> is to be replaced with the name of the <code class="language-plaintext highlighter-rouge">.typ</code> file for the article.</p>
+  </li>
+  <li>
+    <p>An image of the interviewee, into the <code class="language-plaintext highlighter-rouge">images</code> folder.</p>
+  </li>
+  <li>
+    <p>Copy the cover image into the <code class="language-plaintext highlighter-rouge">covers</code> folder.</p>
+  </li>
+</ul>
+
+<p>Having prepared all files, we start editing the <code class="language-plaintext highlighter-rouge">interiewXYZ.typ</code> file. At the top of the file, the following variables <em>must</em> be set in distinct lines:</p>
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">title</code>: <em>String</em>. Can contain markdown (enclose words within underscore or asterisk to make them italic or bold).</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">file</code>: <em>String</em>. Path of the text file containing the interview content (this file was copied above). Example: <code class="language-plaintext highlighter-rouge">#let file = "/dataFiles/interviewAAN.txt"</code>.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">authors</code>: <em>Array</em>. Name of interviewer. Examples: <code class="language-plaintext highlighter-rouge">#let authors = ("Abhirup Mukherjee",)</code> for single author (note the trailing comma after the name to ensure the object is an array), <code class="language-plaintext highlighter-rouge">#let authors = ("Abhirup Mukherjee", "Swarnendu Saha")</code> for multiple authors.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">affiliations</code>: <em>Array</em>. Similar structure as <code class="language-plaintext highlighter-rouge">authors</code>.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">abstract</code>: <em>String</em>. Can contain markdown. Typically restricted to two sentences. Acts as a pitch for the interview.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">coverImage</code>: <em>String</em>. Name of the file for the cover image. Example: <code class="language-plaintext highlighter-rouge">#let coverImage = "sunrise.png"</code>. Ensure that the file <code class="language-plaintext highlighter-rouge">/covers/sunrise.png</code> exists.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">received</code>: <em>Dictionary</em>. Specified the date when the article was submitted to InScight. Example: <code class="language-plaintext highlighter-rouge">#let received = (month: 10, day: 12, year: 2025)</code>.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">group1</code>: <em>Array</em>. List of codenames for the interviewers as used in the text file. Example: <code class="language-plaintext highlighter-rouge">#let group1 = ("SS:",)</code>.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">group2</code>: <em>String</em>. Codenames for the interviewee, as used in the text file. Example: <code class="language-plaintext highlighter-rouge">#let group2 = "AAN:"</code>.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">sideImage</code>: <em>String</em>. Path for the image of the interviewee. Example <code class="language-plaintext highlighter-rouge">#let sideImage = "/images/AAN.jpg"</code>.</p>
+  </li>
+</ul>
+
+<p>After setting the metadata, the next thing to note is the function call <code class="language-plaintext highlighter-rouge">#section</code>. This function provides the layout of the page and draws the headers and footer. Many of the arguments in the function call don’t need to be touched. The ones that might need adjustment are:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sideImageFraction</code>: <em>Percentage</em>. For example: <code class="language-plaintext highlighter-rouge">sideImageFraction: 35%</code>. For an interview, sets the width of the interviewee image on the title page. <code class="language-plaintext highlighter-rouge">sideImageFraction: 100%</code> means the entire right half will be covered by the interviewee image.</li>
+</ul>
+
+<p>The actual content of the interview is set in the <code class="language-plaintext highlighter-rouge">interviewXYZ.txt</code> file that was copied into the <code class="language-plaintext highlighter-rouge">dataFiles</code> folder. It has the following structure:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SS: Hello sir. I am Swarnendra Saha from Team InScight...
+
+AAN: So I did that because somehow I wanted to learn....
+
+IMAGE: (path: "/images/AAN1.jpg", caption: "Prof. Natu  ... at *Pune University*, while ...", position: bottom, width:100%, portrait: true)
+
+#colbreak()
+</code></pre></div></div>
+
+<p>The lines beginning with <code class="language-plaintext highlighter-rouge">SS:</code> are interviewer questions (the prefix <code class="language-plaintext highlighter-rouge">SS:</code> must match the ones provided in the <code class="language-plaintext highlighter-rouge">group1</code> variable defined in the .typ file), while those beginning with <code class="language-plaintext highlighter-rouge">AAN:</code> are the interviewee answers (this must in turn match the one provided in <code class="language-plaintext highlighter-rouge">group2</code> in the .typ file). Thes must be inserted according to the interview (the above two are just samples).</p>
+
+<p>The line starting with <code class="language-plaintext highlighter-rouge">IMAGE:</code> shows how to insert images. Column breaks can be inserted by adding <code class="language-plaintext highlighter-rouge">#colbreak</code> on an empty line.</p>
+
+<p>This should cover most of the things that one needs to know to design an article.</p>
+
+
 
 </main>
 
  <footer>
-	<span>©️ 2025 InScight </span>
+	<span>©️ 2026 InScight </span>
 	<span>|</span>
 	<span> <a class="facebook" href="https://www.facebook.com/inscightmagazine"></a>
 <a class="instagram" href="https://www.instagram.com/inscight_iiserkolkata/"></a>

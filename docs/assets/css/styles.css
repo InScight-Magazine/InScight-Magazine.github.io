@@ -42,12 +42,39 @@ main {
     margin: auto;
   }
 }
-.highlighter-rouge {
-  font-weight: bold;
+:not(pre) > code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.9em;
+  background: rgba(0, 0, 0, 0.04); /* neutral on #FAFAFA */
+  padding: 0.05em 0.25em;
+  border-radius: 4px;
+  color: #66545e;
+}
+
+pre {
+  background: #f3f4f6; /* neutral light gray on #FAFAFA */
+  border-left: 4px solid #8E3A2F; /* $hn-color */
+  padding: 0.5em 1.2em;
+  margin: 0.5em 0;
+  overflow-x: auto;
+  border-radius: 6px;
+}
+
+pre code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.88em;
+  line-height: 1.5;
+  color: #2E2E2E; /* $fg-color */
+  background: none;
+  padding: 0;
 }
 
 p + ul {
   margin-top: -1em;
+}
+
+ul ul {
+  list-style-type: square;
 }
 
 img {
