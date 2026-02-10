@@ -1,6 +1,24 @@
 [
   
     {
+      "title": "Patterns In Primes Via Probability",
+      "date": "2025-12-22T00:00:00+05:30",
+      "permalink": "/issue7/anup-probability/",
+      "authors": "Anup Dixit, Siddhi Pathak",
+      "category": "article",
+      "hero-image": "/assets/images/issue7/anup-probability/primes.svg"
+    },
+  
+    {
+      "title": "The World of Diophantus",
+      "date": "2025-12-07T00:00:00+05:30",
+      "permalink": "/issue7/b.sury-diophantus/",
+      "authors": "B.Sury",
+      "category": "article",
+      "hero-image": "/assets/images/issue7/b.sury-diophantus/Sury.svg"
+    },
+  
+    {
       "title": "The Physics of Forgetting: When Information Becomes Heat",
       "date": "2025-11-01T00:00:00+05:30",
       "permalink": "/issue6/tanmoy-heat/",

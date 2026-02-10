@@ -12,7 +12,7 @@ archives: # key-value pairs that list the categories of posts that need to be li
   digest: "Insight Digest"
 archive-year: # range of years to archive
   start: 2024
-  end: 2025
+  end: 2026
 color-emoji:
   article: "🧬"
   interview: "🎙️"

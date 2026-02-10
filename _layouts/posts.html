@@ -21,7 +21,7 @@ layout: default
 <div class="author">{{ page.authors | join: ", " }}</div>
 {% endif %}
 {% if page.author-affiliation %}
-<i>{{ page.author-affiliation | join: ", " }}</i>
+<i>{{ page.author-affiliation | join: "; " }}</i>
 {% endif %}
 </div>
 {% if page.date %}
