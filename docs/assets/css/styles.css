@@ -940,7 +940,7 @@ iframe.crossword-iframe {
 }
 
 .interview-answer {
-  margin-left: 1rem;
+  font-weight: bold;
 }
 
 .interview-answer + .interview-answer {

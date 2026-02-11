@@ -1,6 +1,15 @@
 [
   
     {
+      "title": "The Genius of Koshliakov and His Indomitable Spirit",
+      "date": "2025-12-22T00:00:00+05:30",
+      "permalink": "/issue7/atul-spirit/",
+      "authors": "Atul Dixit",
+      "category": "article",
+      "hero-image": "/assets/images/issue7/atul-spirit/dixit.svg"
+    },
+  
+    {
       "title": "Patterns In Primes Via Probability",
       "date": "2025-12-22T00:00:00+05:30",
       "permalink": "/issue7/anup-probability/",
@@ -10,12 +19,21 @@
     },
   
     {
+      "title": "Guiding Tomorrow’s Minds: Conversation with Nayan Bhunia and Dibyendu Biswas",
+      "date": "2025-12-13T00:00:00+05:30",
+      "permalink": "/issue7/interview-biswas/",
+      "authors": "Interview by Subham Sarkar",
+      "category": "article",
+      "hero-image": "/assets/images/issue7/interview-biswas/interview.svg"
+    },
+  
+    {
       "title": "The World of Diophantus",
       "date": "2025-12-07T00:00:00+05:30",
       "permalink": "/issue7/b.sury-diophantus/",
       "authors": "B.Sury",
       "category": "article",
-      "hero-image": "/assets/images/issue7/b.sury-diophantus/Sury.svg"
+      "hero-image": "/assets/images/issue7/b.sury-diophantus/Sury.webp"
     },
   
     {
