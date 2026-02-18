@@ -22,8 +22,21 @@ SDA: Exactly—the world as it appears to us. Consider sound: it has frequencies
 {: .interview-answer }
 
 SS: In that sense, it resonates with Tagore’s words:
-QUOTE:আমারই চেতনার রঙে পান্না হল সবুজ,\ চুনি উঠল রাঙা হয়ে ।  \ আমি চোখ মেললুম আকাশে,\ জ্বলে উঠল আলো”\
-QUOTE:(It is my senses which colour\ Emerald green and ruby red.\ I look at the sky -- \ Light appears;)
+> আমারই চেতনার রঙে পান্না হল সবুজ,
+>
+> চুনি উঠল রাঙা হয়ে ।   
+>
+> আমি চোখ মেললুম আকাশে, 
+>
+> জ্বলে উঠল আলো”
+> 
+> (It is my senses which colour
+>
+> Emerald green and ruby red. 
+>
+> I look at the sky --  
+>
+> Light appears;)
 
 SDA: Exactly. All thinkers have essentially said the same thing. It is all because of consciousness. If there were no consciousness, who would perceive anything? And beyond that—what would even exist? No one really knows. Reality varies depending on the way it is perceived. We see the world through the lenses of desire and fear. I desire something, and because of that desire, I fear losing it. Desire and fear are two sides of the same coin. Only when one transcends both desire and fear does one begin to see reality as it truly is. That is why yogis and jñānis perceive a world very different from the one we live in. They inhabit a world where there is only bliss.
 {: .interview-answer }
@@ -33,7 +46,7 @@ SS: Because they have nothing left to seek.
 
 SDA: Yes, and they are not afraid of losing anything. In a world where everything is constantly being destroyed, the one who perceives that which is underlying and indestructible—that person sees reality.As you see in Bhagavad Gita (Chapter 13, Verse 28):
 {: .interview-answer }
-QUOTE:Vinashyatsu avinashyantam yah pashyati sa pashyati
+> Vinashyatsu avinashyantam yah pashyati sa pashyati
 {: .interview-answer }
 
 SS: My next question is this: often physicists and physics professors say that physics is the world itself, and mathematics  is merely the language used to describe it. In that context, physics is reality, and mathematics is its language. How do  you view this idea?
@@ -191,9 +204,13 @@ SDA: No, no—that is not the right way to frame it.
 {: .interview-answer }
 There is a famous line of poetry—by Satyendra Nath Datta—
 {: .interview-answer }
-QUOTE:জোটে যদি মোটে একটি পয়সা খাদ্য কিনিয়ো ক্ষুধার লাগি’ \ দুটি যদি জোটে অর্ধেকে তার ফুল কিনে নিয়ো, হে অনুরাগী!
-{: .interview-answer }
-QUOTE:(If you have one coin, buy food to satisfy hunger.\ If you have another coin, buy flowers to nourish the soul.)
+> জোটে যদি মোটে একটি পয়সা খাদ্য কিনিয়ো ক্ষুধার লাগি’ 
+>
+> দুটি যদি জোটে অর্ধেকে তার ফুল কিনে নিয়ো, হে অনুরাগী!
+> 
+> (If you have one coin, buy food to satisfy hunger.
+>
+> If you have another coin, buy flowers to nourish the soul.)
 {: .interview-answer }
 First come necessities—food, shelter, daily needs. Mathematics certainly serves these needs today through computers, technology, and applications. After that, if time and energy permit, we also explore ideas driven by logic and beauty. And those ideas often become useful later. What is done today purely for intellectual beauty may find applications tomorrow. Take number theory—Hardy famously believed it would never be used in war. Today, number theory is fundamental to cryptography and coding.At the time, Hardy took pride in the fact that his work had no military application. But history turned out differently. The point is: you never know when a good, logical, or beautiful idea will become useful, or where it will be applied. Sometimes it is used in areas for which it was never intended. Even within mathematics, ideas developed in one field often become powerful tools in another. Algebraic concepts are frequently used to solve problems they were not originally designed for. That is how mathematics grows—and why it remains both meaningful and indispensable.
 {: .interview-answer }
@@ -351,4 +368,4 @@ SDA: When I enter a classroom, I stand with folded hands—internally. You never
 {: .interview-answer }
 
 SS: Thank you sir for your time with us. We truly believe our readers shall have a great time to spend some time with you through the pages of InScight. With that thought, we end today’s discussion. Thank you.
-{% include figure.html image="rkmveri.jpg" caption="Prof.Adhikari is a professor at **Ramakrishna Mission Vivekananda Educational and Research Institute (RKMVERI)** and dean of School of Mathematical Sciences" width=500 %}
+{% include figure.html image="rkmveri.jpg" caption="Prof. Adhikari is a professor at **Ramakrishna Mission Vivekananda Educational and Research Institute (RKMVERI)** and dean of School of Mathematical Sciences" width=500 %}
