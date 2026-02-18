@@ -3,18 +3,27 @@
     {
       "title": "Seeing the World Mathematically: A Conversation with Prof. S. D. Adhikari",
       "date": "2026-01-07T00:00:00+05:30",
-      "permalink": "/issue7/swarnendu-adhikari/",
+      "permalink": "/issue7/s-d-adhikari/",
       "authors": "Swarnendu Saha",
-      "hero-image": "/assets/images/issue7/swarnendu-adhikari/SDA.jpg",
+      "hero-image": "/assets/images/issue7/s-d-adhikari/SDA.jpg",
+      "category": "interview"
+    },
+  
+    {
+      "title": "Interview of Prof. Ram Murty and Prof. Kumar Murty",
+      "date": "2025-12-12T00:00:00+05:30",
+      "permalink": "/issue7/ram-kumar-murty/",
+      "authors": "Abhisruta Maity, Shirshendu Chowdhury",
+      "hero-image": "/assets/images/issue7/ram-kumar-murty/murty.svg",
       "category": "interview"
     },
   
     {
       "title": "From ISI to Princeton and Back: Conversation with Ritabrata Munshi",
       "date": "2025-12-10T00:00:00+05:30",
-      "permalink": "/issue7/swarnendu-munshi/",
+      "permalink": "/issue7/ritabrata-munshi/",
       "authors": "Swarnendu Saha",
-      "hero-image": "/assets/images/issue7/swarnendu-munshi/RM.svg",
+      "hero-image": "/assets/images/issue7/ritabrata-munshi/RM.svg",
       "category": "interview"
     },
   

@@ -1,0 +1,171 @@
+<!doctype html>
+
+<html lang="en">
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MPQZSVEQWQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MPQZSVEQWQ');
+</script>
+	<!--KaTeX-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+	<script>
+	    document.addEventListener("DOMContentLoaded", function() {
+	  	  renderMathInElement(document.body, {
+	  	  });
+	    });
+	</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Themed Crossword &mdash; Nobel prizes</title>
+	<meta name="description" content="">
+
+	<meta property="og:title" content="Themed Crossword &mdash; Nobel prizes">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content=http://localhost:4000/issue7/crossword/>
+	<meta property="og:description" content="">
+	<meta property="og:image" content="">
+
+	<link rel="icon" href="/assets/favicon.svg" sizes="any" type="image/svg+xml">
+
+	<!doctype html>
+
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="/assets/css/syntax.css">
+<link rel="stylesheet" href="/assets/webfonts/Lato/stylesheet.css">
+<link rel="stylesheet" href="/assets/webfonts/Hero New/stylesheet.css">
+<link rel="stylesheet" href="/assets/webfonts/Roboto/stylesheet.css">
+<link rel="stylesheet" href="/assets/webfonts/SymbolsNF/stylesheet.css">
+<link rel="stylesheet" href="/assets/webfonts/Lilex/stylesheet.css">
+
+</head>
+
+
+<body>
+<header>
+    <nav>
+		<a id="home-button" href="/">
+			<img src="/assets/global/lightBanner.webp" />
+		</a>
+		
+			<a class="horiz" href=/magazine/>Magazine</a>
+		
+			<a class="horiz" href=/games/>Games</a>
+		
+			<a class="horiz" href=/submit/>Submit</a>
+		
+			<a class="horiz" href=/about/>About</a>
+		
+
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+
+        <label class="sidebar-overlay" for="sidebar-active"></label>
+
+        <div class="sidebar">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+			
+				<a href=/magazine/ class="reveal">Magazine</a>
+			
+				<a href=/archives/ class="reveal">Archives</a>
+			
+				<a href=/games/ class="reveal">Games</a>
+			
+				<a href=/opportunities/ class="reveal">Opportunities</a>
+			
+				<a href=/comics/ class="reveal">Comics</a>
+			
+				<a href=/submit/ class="reveal">Submit</a>
+			
+				<a href=/about/ class="reveal">About</a>
+			
+        </div>
+    </nav>
+</header>
+
+
+<main>
+  
+  <div class="hero-image-caption">
+	
+	  <img class="hero-image" src="/assets/images/issue7/crossword/nobel.jpg"/>
+	
+  
+  </div>
+
+<h1> Themed Crossword &mdash; Nobel prizes </h1>
+<div id="article-data">
+
+<div>
+<div class="author">Sayan Saha</div>
+
+
+</div>
+
+<div class="article-date">Dec 05, 2025</div>
+
+</div>
+
+
+
+<hr>
+<div id="crossword-wrapper">
+<div id="crossword-container">
+<div id="crossword"></div>
+  <p>
+  <button id="revealBtn" class="reveal">Reveal</button>
+  <button id="refreshBtn" class="reveal">Clear</button>
+  </p>
+</div>
+<div class="clues">
+  <div>
+  <h4>Across</h4>
+  <div id="acrossClues"></div>
+  </div>
+  <div>
+  <h4>Down</h4>
+  <div id="downClues"></div>
+  </div>
+</div>
+</div>
+
+<script src="/assets/js/crossword.js"></script>
+
+<script>
+handleFile("blanks = [11, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 25, 37, 39, 40, 41, 42, 43, 44, 45, 46, 47, 49, 58, 59, 61, 63, 65, 66, 67, 68, 69, 70, 72, 73, 74, 75, 77, 78, 79, 80, 81, 82, 84, 86, 92, 94, 96, 98, 99, 101, 102, 103, 104, 106, 115, 116, 118, 120, 122, 123, 125, 126, 127, 128, 130, 132, 134, 135] size = 12\n[across] BARDEEN = [71, 'Physicist who won the Nobel Prize twice (transistor and superconductivity).'] CURIE = [93, 'Only person to win Nobel Prizes in two different sciences (Physics & Chemistry).'] DYNAMITE = [52, 'Alfred Nobel’s invention whose commercial success funded the Nobel Prizes.'] MALALA = [0, 'Youngest Nobel Prize laureate ever (Peace Prize, age 17).'] PEACE = [85, 'Nobel Prize category awarded in Oslo instead of Stockholm.'] TAGORE = [2, 'First Asian to receive the Nobel Prize in Literature.']\n[down] EINSTEIN = [136, 'Scientist awarded the Nobel Prize for the photoelectric effect.'] GOODENOUGH = [26, 'Oldest Nobel laureate ever (Chemistry, age 97).'] MATHEMATICS = [0, 'Subject for which no Nobel Prize exists.'] PAULING = [108, 'Only person to receive two unshared Nobel Prizes.'] RAMAN = [87, 'First scientist from India to be awarded a Nobel Prize in a scientific category.'] REDCROSS = [50, 'Organization awarded the Nobel Peace Prize three times.']");
+</script>
+
+
+
+<br>
+
+<br>
+
+
+
+</main>
+
+ <footer>
+	<span>©️ 2026 InScight </span>
+	<span>|</span>
+	<span> <a class="facebook" href="https://www.facebook.com/inscightmagazine"></a>
+<a class="instagram" href="https://www.instagram.com/inscight_iiserkolkata/"></a>
+<a class="twitter" href="https://x.com/InScightIISERK"></a>
+</span>
+</footer> 
+
+</body>
+</html>
+

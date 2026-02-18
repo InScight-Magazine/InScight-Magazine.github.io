@@ -17,7 +17,7 @@ layout: default
 {% for item in site.data.digest[id] %}
 <div class="digest-item">
 <h3 id="{{ item["Title"] | slugify }}">{{ item["Title"] }}</h3>
-<span class="reference">{{ item["Reference"] }}</span>
+<a class="reference" href={{ item["Url"] }}>{{ item["Reference"] }}</a>
 <span class="author">Contributed by: {{ item["Author"] }}</span> 
 <span class="affiliation">({{ item["Affiliation"] }})</span>
 <span class="keywords">Keywords: {{ item["Keywords"] | join: ", " }}</span>

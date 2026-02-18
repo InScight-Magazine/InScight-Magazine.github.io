@@ -26,7 +26,7 @@ def FrontMatter(contents):
             frontMatter["authors"] = [s.strip() for s in line[line.find("(")+1:line.find(")")].replace("\"","").split(",") if len(s) > 0]
             continue
         if line.startswith("#let authorImage ="):
-            frontMatter["authorImage"] = line[line.find("\"")+1:-1]
+            frontMatter["authorImage"] = line[line.find("\"")+1:-1].split("/")[-1]
             continue
         if line.startswith("#let affiliations ="):
             frontMatter["author-affiliation"] = [s.strip()[1:] for s in line[line.find("(")+1:line.find(")")].split("\",") if len(s) > 0]
@@ -47,13 +47,10 @@ def FrontMatter(contents):
             frontMatter["author-bio"] = line[line.find("\"")+1:-1]
             continue
         if line.startswith("#let refsFile ="):
-            frontMatter["refs-file"] = os.path.splitext(os.path.basename(line[line.find("\"")+1:-1]))[0]
+            frontMatter["refs-file"] = os.path.basename(line[line.find("\"")+1:-1])
             continue
         if line.startswith("#let category ="):
             frontMatter["field"] = line[line.find("\"")+1:-1]
-            continue
-        if line.startswith("#let authorImage ="):
-            frontMatter["authorImage"] = line[line.find("\"")+1:-1]
             continue
         if line.startswith("// begin"):
             break
@@ -123,7 +120,7 @@ def MainMatterInterview(interviewName, interviewer, interviewee):
         elif line.startswith("#"):
             continue
         else:
-            if line.startswith(interviewee):
+            if True in [line.startswith(s) for s in interviewee]:
                 decorationFlag = True
                 mainMatter += "\n"
             if True in [line.startswith(s) for s in interviewer]:
@@ -156,9 +153,10 @@ os.makedirs(imgDir, exist_ok=True)
 for img in images:
     shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "images"), img), imgDir)
 if "authorImage" in frontMatter:
+    print(frontMatter["authorImage"])
     shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "authFaces"), frontMatter["authorImage"]), imgDir)
 if "refs-file" in frontMatter:
-    shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "dataFiles"), frontMatter["refs-file"] + ".yml"), ".")
+    shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "dataFiles"), frontMatter["refs-file"]), ".")
 shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "covers"), frontMatter["hero-image"]), imgDir)
 for table in tables:
     shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "dataFiles"), table), ".")

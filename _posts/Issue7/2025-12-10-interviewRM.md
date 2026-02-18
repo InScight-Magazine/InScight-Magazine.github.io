@@ -6,15 +6,14 @@ group1: "['SS:']"
 group2: "RM:"
 authors: ['Swarnendu Saha']
 author-affiliation: ['IISER Kolkata']
-excerpt: "In this wide-ranging conversation, Prof. Munshi reflects on a life shaped by mathematics—from early fascination with symbols to research at Princeton and a return to ISI Kolkata as faculty. He discusses number theory as an artistic pursuit, the changing philosophy of academic institutions, and why mathematics survives when fashionable disciplines fade."
+excerpt: "In this wide-ranging conversation, Prof. Munshi reflects on a life shaped by mathematics—from early fascination with symbols to research at Princeton and a return to ISI Kolkata as faculty. He discusses number theory as an artistic pursuit, the changing philosophy of academic institutions, and why mathematics survives when fashionable disciplines fade. The interview offers rare insight into mathematics as both a personal vocation and a centuries-old human enterprise."
 hero-image: "RM.svg"
-authorImage: "RM.jpg"
-author-bio: "*Prof. Munshi* is a mathematician specialising in number theory. He was awarded the Shanti Swarup Bhatnagar Prize for Science and Technology for the year 2015 in mathematical science category. On 8 November 2018 he was awarded the ICTP Ramanujan Prize in a ceremony held at the Budinich Lecture Hall, ICTP. He is affiliated to Tata Institute of Fundamental Research, Mumbai, and the Indian Statistical Institute, Kolkata."
+author-bio: "*Prof. Munshi* is a mathematician specialising in number theory. He was awarded the Shanti Swarup Bhatnagar Prize for Science and Technology for the year 2015 in mathematical science category. On 8 November 2018 he was awarded the ICTP Ramanujan Prize in a ceremony held at the Budinich Lecture Hall, ICTP. He is affiliated to Tata Institute of Fundamental Research, Mumbai, and the Indian Statistical Institute, Kolkata"
 date: "2025-12-10"
+authorImage: "RM.jpg"
 category: "interview"
-permalink: "/issue7/swarnendu-munshi/"
+permalink: "/issue7/ritabrata-munshi/"
 ---
-
 {% include figure.html image="RM_1.jpg" caption="Prof. Ritabrata Munshi at his dorm room in New Graduate College, Princeton, Aug 2001" width=500 %}
 SS: Hello sir, I am Swarnendu Saha from Team InScight, and it is an honour to have you with us today.
 

@@ -1,0 +1,32 @@
+- question: Which research institution am I?
+  image: "bellLabs.png"
+  hints:
+    - I began as an industrial research facility in the United States.
+    - I produced breakthroughs that reshaped communication technology.
+    - The transistor was developed within my walls.
+    - Many of my scientists became Nobel laureates.
+  answer: "Bell Telephone Laboratories (Bell Labs)"
+- question: Which national research laboratory am I?
+  image: "NCL.jpg"
+  hints:
+    - I was created in India after independence to support scientific research.
+    - I function under a national research council.
+    - I focus on fundamental and applied chemical sciences.
+    - I am located in Pune.
+  answer: "National Chemical Laboratory (NCL)"
+- question: Which university am I?
+  image: "bologna.jpg"
+  hints:
+    - I emerged from medieval Europe and shaped the modern idea of a university.
+    - My name is linked to a process that harmonized higher education systems.
+    - I have taught students for nearly a millennium.
+    - I am located in Italy.
+  answer: "University of Bologna"
+- question: Which group of institutions am I?
+  image: "iiser.jpg"
+  hints:
+    - I am a network of institutions in India dedicated to research in natural sciences.
+    - I emphasize undergraduate research and interdisciplinary learning.
+    - I follow a model inspired by the Indian Institute of Science.
+    - I have multiple campuses across India.
+  answer: "Indian Institutes of Science Education and Research (IISERs)"

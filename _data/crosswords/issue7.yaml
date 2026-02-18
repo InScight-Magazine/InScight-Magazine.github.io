@@ -1,0 +1,18 @@
+blanks = [11, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 25, 37, 39, 40, 41, 42, 43, 44, 45, 46, 47, 49, 58, 59, 61, 63, 65, 66, 67, 68, 69, 70, 72, 73, 74, 75, 77, 78, 79, 80, 81, 82, 84, 86, 92, 94, 96, 98, 99, 101, 102, 103, 104, 106, 115, 116, 118, 120, 122, 123, 125, 126, 127, 128, 130, 132, 134, 135]
+size = 12
+
+[across]
+BARDEEN = [71, 'Physicist who won the Nobel Prize twice (transistor and superconductivity).']
+CURIE = [93, 'Only person to win Nobel Prizes in two different sciences (Physics & Chemistry).']
+DYNAMITE = [52, 'Alfred Nobel’s invention whose commercial success funded the Nobel Prizes.']
+MALALA = [0, 'Youngest Nobel Prize laureate ever (Peace Prize, age 17).']
+PEACE = [85, 'Nobel Prize category awarded in Oslo instead of Stockholm.']
+TAGORE = [2, 'First Asian to receive the Nobel Prize in Literature.']
+
+[down]
+EINSTEIN = [136, 'Scientist awarded the Nobel Prize for the photoelectric effect.']
+GOODENOUGH = [26, 'Oldest Nobel laureate ever (Chemistry, age 97).']
+MATHEMATICS = [0, 'Subject for which no Nobel Prize exists.']
+PAULING = [108, 'Only person to receive two unshared Nobel Prizes.']
+RAMAN = [87, 'First scientist from India to be awarded a Nobel Prize in a scientific category.']
+REDCROSS = [50, 'Organization awarded the Nobel Peace Prize three times.']
