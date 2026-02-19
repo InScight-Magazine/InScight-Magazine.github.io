@@ -1,7 +1,7 @@
 ---
 
 title: "Against All Odds -- The Man Who Brought IVF To India"
-authors: ["Kajori Barman", "Afreen Chowdhury"]
+authors: ['Kajori Barman', 'Afreen Chowdhury']
 author-bio: "*Kajori* (right) is a student with curiosity in the sciences. Along with pursuing her interest in science, she also indulges in sketching and painting as hobbies. During the lockdown, she started getting into digital art and has since been drawing her favourite anime and comic characters. #linebreak() *Afreen* (left)  has always been very keen about nature, particularly biology. She has always loved reading novels and comics, and as someone who nerds on fiction, she wanted to try understanding how these stories are written by creating this comic with Kajori."
 issue: 7
 author-affiliation: ['IISER Kolkata']
