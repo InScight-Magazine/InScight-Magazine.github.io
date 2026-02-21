@@ -4,5 +4,5 @@ issue: 7
 category: crossword
 permalink: /issue7/crossword/
 hero-image: "nobel.jpg"
-authors: ["Sayan Saha"]
+authors: ['Alekhya Kundu']
 ---

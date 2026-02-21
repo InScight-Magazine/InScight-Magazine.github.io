@@ -3,9 +3,11 @@ issue: 7
 title: "Seeing the World Mathematically: A Conversation with Prof. S. D. Adhikari"
 file: "intSDA.txt"
 authors: ['Swarnendu Saha']
+author-bio: "*Prof. Adhikari* started his academic journey from B.B. College Asansol and spent time with Prof. Balasubramanium at Tifr and IMSc Chennai. He is a former member of National Board of Higher Mathematics, Fellow of National Academy of Science. Prof. Adhikari is presently the dean of school of mathematical Sciences at RKMVERI, Belur."
 author-affiliation: ['IISER Kolkata']
 excerpt: "In this conversation with our representative, Prof. Sukumar Das Adhikari connects number theory, combinatorics, physics, and Indian philosophy to argue that mathematical structures emerge from human cognition as much as from the external world. The interview offers fresh insights into how abstract ideas—pursued for beauty alone—later become foundational to physics, computing, and AI, while also revealing rarely discussed personal experiences with mentors, global collaborations, and unsolved problems."
 hero-image: "SDA.jpg"
+authorImage: "SDA.jpeg"
 date: "2026-01-07"
 category: "interview"
 permalink: "/issue7/s-d-adhikari/"
