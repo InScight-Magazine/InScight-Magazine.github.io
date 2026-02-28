@@ -96,3 +96,16 @@ blockquote {
 blockquote p {
   margin: 0.4em 0;
 }
+
+.katex-display > .katex {
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow-x: scroll;
+  text-align: initial;
+}
+.katex {
+  line-height: 1.2;
+  white-space: normal;
+  text-indent: 0;
+}
