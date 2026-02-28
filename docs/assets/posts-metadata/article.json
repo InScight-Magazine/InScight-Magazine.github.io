@@ -2,7 +2,7 @@
   
     {
       "title": "Macroscopic Quantum Phenomena : The Story of 2025 Physics Nobel",
-      "date": "2026-02-26T02:16:22+05:30",
+      "date": "2026-03-01T02:51:22+05:30",
       "permalink": "/issue7/raka-nobel/",
       "authors": "Raka Dasgupta",
       "category": "article",
@@ -11,7 +11,7 @@
   
     {
       "title": "Metal–Organic Frameworks (MOFs), Covalent Organic Frameworks (COFs), and My Scientific Journey with Professor Omar Yaghi",
-      "date": "2026-02-26T02:16:22+05:30",
+      "date": "2026-03-01T02:51:22+05:30",
       "permalink": "/issue7/rahul-yaghi/",
       "authors": "Rahul Banerjee",
       "category": "article",
@@ -20,7 +20,7 @@
   
     {
       "title": "Integer Partitions in Three Acts: Combinatorics, Number Theory, and Analysis",
-      "date": "2026-02-26T02:16:18+05:30",
+      "date": "2026-03-01T02:51:18+05:30",
       "permalink": "/issue7/koustav-analysis/",
       "authors": "Koustav Banerjee",
       "category": "article",
@@ -29,11 +29,20 @@
   
     {
       "title": "The Peacekeepers Within",
-      "date": "2026-02-26T02:16:12+05:30",
+      "date": "2026-03-01T02:51:12+05:30",
       "permalink": "/issue7/pallavi-within/",
       "authors": "Pallavi Gupta, Kushagra Bansal",
       "category": "article",
       "hero-image": "/assets/images/issue7/pallavi-within/peacekeepers.svg"
+    },
+  
+    {
+      "title": "How Magnetism Defies: Classical Mechanics",
+      "date": "2026-03-01T02:51:10+05:30",
+      "permalink": "/issue7/raj-mechanics/",
+      "authors": "Raj Gaurav Tripathi",
+      "category": "article",
+      "hero-image": "/assets/images/issue7/raj-mechanics/tripathi.png"
     },
   
     {
@@ -124,15 +133,6 @@
       "authors": "Chandrima Shaha",
       "category": "article",
       "hero-image": "/assets/images/issue5/chandrima-easier/chandrima.svg"
-    },
-  
-    {
-      "title": "How Magnetism Defies Classical Mechanics",
-      "date": "2025-06-10T00:00:00+05:30",
-      "permalink": "/issue7/raj-mechanics/",
-      "authors": "Raj Gaurav Tripathi",
-      "category": "article",
-      "hero-image": "/assets/images/issue7/raj-mechanics/tripathi.svg"
     },
   
     {

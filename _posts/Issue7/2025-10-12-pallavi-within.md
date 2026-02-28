@@ -1,7 +1,6 @@
 ---
 author-affiliation:
-- Molecular Biology and Genetics Unit, Jawaharlal Nehru Centre for Advanced Scientific
-  Research, Bangalore, India
+- Molecular Biology and Genetics Unit, Jawaharlal Nehru Centre for Advanced Scientific Research, Bangalore, India
 authorImage: peacekeepers_authors.svg
 authors:
 - Pallavi Gupta
