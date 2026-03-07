@@ -125,3 +125,5 @@ openings-sheet: "https://docs.google.com/spreadsheets/d/e/2PACX-1vS8Ae9TtmUWrWC3
 facebook: https://www.facebook.com/inscightmagazine
 instagram: https://www.instagram.com/inscight_iiserkolkata/
 twitter: https://x.com/InScightIISERK
+exclude:
+  - scripts

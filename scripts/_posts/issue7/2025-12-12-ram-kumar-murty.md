@@ -1,0 +1,265 @@
+---
+author-affiliation:
+- IISER Kolkata
+- IISER Kolkata
+author-bio: '**Profs. M. Ram Murty and V. Kumar Murty** are fellows of the Royal Society of Canada. The former is the A. V. Douglas Distinguished University Professor & Queen"s Research Chair at Queen"s University in Canada. The latter is the Director of the Lodha Mathematical Sciences Institute in Mumbai while also a Professor of Mathematics at University of Toronto in Canada. Prof. Ram Murty was an adjunct professor at IISER Kolkata.'
+authorImage: RMKM1.jpeg
+authors:
+- Abhisruta Maity
+- Shirshendu Chowdhury
+category: interview
+date: '2025-12-12'
+excerpt: Two distinguished mathematicians reflect on the origins of their curiosity, the mentors who shaped their paths, and the philosophy that sustained their research journeys. From self-learning calculus in high school to mastering seminal papers and embracing collaboration without ego, they reveal the human side of mathematical discovery. This conversation offers rare insights into creativity, perseverance, and the mindset required to thrive in mathematics.
+hero-image: murty.svg
+issue: 7
+permalink: /issue7/ram-kumar-murty/
+title: Interview of Prof. Ram Murty and Prof. Kumar Murty
+---
+Q: First let us talk about your journey to this day. You both have had great and successful mathematical careers. When and what sparked your mathematical interest?
+{: .interview-answer }
+
+
+RM: Well, I think, we began in high school and we wanted to learn calculus. We bought a book, “Teach Yourself Calculus”, and we learned from that book – teaching ourselves mainly. We also had some good teachers, but essentially, we taught ourselves from books. So, I think books are important from that perspective.
+
+KM: Books are important, but also, we"re lucky to have each other. Siblings are important. Family is important. Learning together is important. Books are a good support, but basically the human touch is the most important. And we"re very, very fortunate to have that.
+
+Q: When did you know that it was mathematics?
+{: .interview-answer }
+
+
+RM: It"s a good question. I think throughout high school, we were more or less clear that it was math; it was one of our strengths. When we went to university, we were taking courses in other topics as well: physics, computer science, even philosophy. But it was clear that math is going to be the core thing. And, from then onwards, I think after reaching university, we focused on math and math alone.
+
+KM: But, I remember even before high school, it was elementary school, and we had just written the final exam in mathematics. And I remember telling my best friend (Neil Kumar) at that time, "I"m going to be a mathematician." And the interesting thing as I reflect on that, two things come to my mind. Firstly, that day and that moment and that conversation are very clear in my mind. I still remember where we were standing and what I said. And second thing is, I had no idea what a mathematician is. So why did I say that? I don"t know. But clearly the idea was already there and then it grew.
+
+{% include figure.html image='RMKM3.jpeg' caption='Ram Murty during his public lecture on "The Art of Research" at IISER Kolkata.' width=500 %}
+
+Q: During your undergraduate education, was there anyone or anything that influenced you significantly?
+{: .interview-answer }
+
+
+RM: Yes, absolutely. We had an assortment of professors in the undergraduate period. Some of them were good. Some of them were not so good. But certainly, there was one professor, who was encouraging. And there were a few other professors who were also encouraging, but this professor was so encouraging that he would keep tabs on what we were doing. There was also some encouragement to go to conferences and present papers. We had, as undergraduates, written a paper or two, and he was very supportive in going to the Canadian Math Society Conference and presenting these works. But the most important role that he had was to tell us that, "For graduate school, you shouldn"t stay here”. And for us, it was nice to stay home. You can do your PhD. The University near our home has a PhD program, just do it. You don"t have to set up house, you don"t have to learn cooking. You don"t have to do any of these things. So, it was attractive to stay where we were, for us.
+
+But then, he was very adamant. And he was saying, "No, that would be a mistake." But he didn"t leave it at that. He told us to apply to the big schools. And he pestered us every day and asked "Did you send the applications for MIT, Harvard, Princeton? That"s where you people belong." And we said, "No, we didn"t do that." And he kept on pestering. So, we got the forms. And then next day he would say, "Did you fill those forms out?" We said, "No, we didn"t fill those forms out." "Why not?" Well, because a section on financial information was there and we didn"t want to give that. He said, "Leave that blank, fill the rest, and just send it in." So, you see, clearly there was some sort of divine intervention in the form- of this advice, which is out of the ordinary. If I were in his place and I told you, let"s say, to apply to these big schools, and you said you didn"t, I would have said, "Okay." I wouldn"t be pestering you every day and then telling you what you should do. Perhaps I’d rather say, if you don"t want, you don"t need to fill that out. But he used to say, "Get the forms." This was for Harvard and Harvard had more forms. I didn"t feel like doing it. He said, “No, get the form just for me. You don"t need to do it. I won"t see them." It"s unusual.
+
+That"s why I"m saying that sometimes, you know, when I see these episodes, which are very unusual, there is some divine intelligence moving around. I don"t know what it is. We tend to think in terms of humanoid personalities, but there may not be. There may be some transcendental intelligence, as I would like to call it, divine mother. What you would like to call if you"d like to speak in those terms, that seem to have these extraordinary events. I"m sure there are such events in your life too. I think there are such events, they are there in everybody"s life – turning points and things that happened that changed your life; thanks to some person who went out of the way to encourage you to do this or do that. So, I think these are important things when looking back. You can see the presence of the divine mother.
+
+Q: During your undergraduate education did you face any significant difficulty? And if you had, then how did you resolve it? Could you share?
+{: .interview-answer }
+
+
+KM: Not really difficulty. No, I don"t think we had any difficulty, but there were a few professors who perhaps were not totally encouraging. Let"s put it that way. We didn"t know why. For example, if you wanted to take an advanced course they said, "No, you"re in second year. Why do you want to take a fourth-year course?" But overall, I would say it was a positive experience. And you were asking just before about people who had an influence or impact and we were talking about this one professor, but there was another person who had a big influence on our thinking at that time. And he was not at the university at all. He was Paul Erdős. We used to read a lot of his papers, and we thought that"s the way to write papers too, which is not a good thing to do. So, our first papers were based on that kind of style. And our second paper, especially, the second published paper – well, he has a whole bunch of papers, like “Some Topics in Graph Theory”, “some problems in number theory” …. So, our paper was called “Some Results in Number Theory”.
+
+If I was a referee nowadays- I"d probably say, "What is this nonsensical title Put a proper title.” But we got away with that… and probably because we later learned Erdős was the referee! So, I think, mathematically, at that time when we were undergraduates, Erdős was a big influence. We used to read; we used to spend a lot of time in the library. There was a whole floor for math, and sciences was on the bottom floor of the library. And we used to spend hours and hours there, pouring over journals. All the spare time was spent in the library. And therefore, we were aware of many things in mathematics that maybe even the faculty did not know because we were studying them.
+
+{% include figure.html image='RMKM4.jpeg' caption='Kumar Murty delivering a public lecture on **"The Art of Research"** at IISER Kolkata.' width=500 %}
+
+KM: Exactly. I remember once: you went to class and I was in the library. I picked a book on topology. I didn"t know what topology was. I was a first-year undergraduate. And I read it, then after you came, we were going to lunch, I said, "There"s this thing called topology." So, it was a golden time in the sense that apart from a few hiccups, we had a lot of opportunities to read, to study beyond classrooms. And, the biggest influences were of course that professor we mentioned, but also Erdős. And so, we were very happy when in our final year, I think we were able to get Erdős to visit. We met him in person. And we even started a joint paper with him. And so now we both have Erdős number one.
+
+Q: Erdős is considered as a great problem solver. And so, if you start navigating his papers, you will see lots of ideas coming in from different kinds of mathematics. But in that case, because he used to get many ideas from other domains, at an early age, what strategy would you take to understand those papers? For example, for understanding some specific constructions, specific mathematical constructions.
+{: .interview-answer }
+
+
+RM: When we say we studied Erdős" papers, we did not do a systematic study starting from paper one. We didn"t do that. What we did was we came across a paper or two of Erdős" and we were baffled by, "How does one prove this?" For example, one of the first papers that we came across was a paper on the number of integers less than X such that N and phi of N are relatively prime. And so, the question is, how do you even begin to solve this? And what the paper entails is, an application of Brun’s Sieve. Now Brun’s Sieve is one of the hardest of the sieves, actually. I mean, I wrote a book on Sieve Theory afterwards, so I know that probably that"s the dumbest sieve to start with. You"re better off doing large sieve or Selberg sieve or something.
+
+But anyway, Erdős somehow mastered Brun’s Sieve. After Viggo Brun, probably Erdős was the expert on Brun’s Sieve. And so, this paper was a very clever application of analytic number theory. How to subdivide, chop, chop, chop- and estimate and see where the main term is coming from, where the other terms or error terms were coming from, how do you estimate all these things? And so, we mastered that paper. It was a paper published in the Journal of the Indian Math Society in 1948.
+
+It must have been submitted during independence time. And it was not a long paper, maybe six or seven pages long. We mastered it, and then we could generalize the question. And generalization is how often how many prime factors does N and phi of N actually have? And so when we worked it out, let"s say it has K prime factors. So, the case that Erdős did is a case where it has no prime factor, since N and phi of N are relatively prime. But if you do the K prime factor case, we discovered it had a Poisson distribution. So, it was kind of something new, and that was the paper Erdős refereed. He told us later.
+
+KM: But in that paper something interesting happened. That"s not the theorem we were trying to prove. We thought, okay, he did N and phi of N co-prime, but how often do N and phi of N have GCD K, let"s say? Can you count that? And we tried and we tried and we tried, and we couldn"t get it. And we were stuck on that, but then Ram was the one who observed, "Just a minute now, we didn"t solve the problem we wanted to solve. But you see that all these lemmas we put together actually solve this other problem on the number of prime divisors. That was an important observation. And so, we wrote that paper. Yes. So, this means that you set out to answer a question, and you think hard and deep about it, and you, you make a lot of progress, and still you think, "I didn"t solve the problem." But maybe, you solved some other problem. You have to realize that.
+
+RM: Yes that is important…
+
+KM: You must keep your mind open.
+
+RM: Absolutely. I think if there"s some mature advice that I can give anybody is that if you work on something, let"s say for a month, you cannot possibly tell me that you didn"t solve anything. You may not have solved that; you may have solved something else. Find it!
+
+KM: In fact, even now, this is the advice I give to PhD students. You don"t need to know everything. Just one paper, become the world"s expert on it. Just one paper, even if it"s a short paper, guaranteed you"ll get a new theorem. Guaranteed. Your thesis is done. Just become the master of one paper. We proved it from the beginning, but I"ve seen it play out many times with students. Know one fundamental paper inside out. And you"ll be surprised. The deeper the paper is, the deeper the result will be. But any paper can produce this.
+
+{% include figure.html image='RMKM9.jpeg' caption='**Paul Erdős** (1913–1996), A towering figure of twentieth-century mathematics, was a formative influence on Ram Murty and Kumar Murty.' width=500 %}
+
+RM: Any paper. And the maturity in research has to do with, understanding what it is that you"re doing. So, if you are investigating something, you"re trying to solve, let"s say, problem A. In the context of trying to solve problem A, you may not solve problem A. But you may give rise to problem B or problem C. You must have respect for these problems also. And then have the courage to sit down and say, "Yes, I did solve problem C in the context of this question. I was after problem A, but I didn"t solve that. I solved problem C." You write it up. You write them. That"s the way it works. Sometimes we get obsessed with some problem that you"re trying to solve. While trying to solve it, you probably have been solving some other problem. Find that problem that you"ve been solving, or you may have now the tools to solve something else.
+
+KM: It turned out many years later, both of us were in Chennai, visiting the Institute of Mathematical Sciences. And there was a conference proceedings volume. I was supposed to give a paper, but I usually like to write a paper slowly. So, they were telling me, "The deadline is soon, you need to give a paper." So, I said, "Okay, fine." I went into my office and thought for some reason, started thinking about this old problem again that we had tried when we were undergrads and that we couldn"t solve. Then I just saw everything fell into place. Just one afternoon, I got it, and then I went and showed it to you (Ram Murty) and Balasubramaniam. And thinking that I made a mistake. You guys checked it, and you said it was right. So, it was solved, but many years later.
+
+The point is that the whole process of discovery is quite wondrous. You know? It may not follow the plan that you thought, but it will follow some plan. And you must keep your mind open for that journey. On this one, one more point I want to make about discovering new things. We really mastered that paper of Erdos, and it gave rise to this theorem. And I"m telling you that now master any paper; you"ll get a new theorem. And then the deeper the paper, the bigger the theorem. So many years later, there was a paper of Serre. It"s published in the publications of the IHES. And we found it fascinating. In fact, you had a course on it at Harvard, right? And we found it fascinating.
+
+And I remember I was in Princeton, soon after it appeared, I used to walk around with it everywhere. I always had it in my hand. And I"d always believe in it. And the result was, within those three months, we had improved Serre"s results. I"m telling you; it is a principle, you can take it almost as a theorem: you master a paper, you"ll get a new theorem!
+
+RM: And mastering a paper means you should be able to present the paper with your bare hands. No notes! That is the test of real understanding.
+
+KM: If I wake you up in the middle of the night and I say, "Explain this." You immediately know. So, you need to know it that well.
+
+RM: And that"s why seminars are important. See, seminars for especially youngsters. Have a seminar every week, you know, like a weekly seminar. Encourage younger people to read a paper. Okay, if they need to use the notes, fine. But try to lecture without notes. I mean, I"m not saying that you must memorize numbers and know technical calculations. But you must have the conceptual idea, understanding of the conceptual idea, so clearly in your head that you can explain it.
+
+And, you know, to at least one group of other fellow graduate students or fellow colleagues. And when you understand something deeply, you"ll even have the conviction, "I can explain this to a child."
+
+KM: And we"ve seen this play out many times with my own students. For example, every Thursday, I have a seminar. It"s called the Ganita Seminar. And the format of it is a student lecture. My students and my postdocs too. And many of them have written their theses based on the talks they gave in the seminar. "Here"s a paper, read this paper and lecture on it." So, they read, they start lecturing. They don"t understand everything. We ask questions, many questions. We interrupt a lot, ask questions. And then they say some things they understand, then fine. Go think about it some more. Next week, speak again. They speak again. That happens several times. Before you know it, they"ve got that paper.
+
+And then before you know it a little bit more, they"ve got a new theorem. And they"ve got another new theorem, until their thesis appears. So, it"s a formula that works. And, you know I keep telling them also that it is hard not to prove a theorem. Mathematics is so rich. You must try hard not to prove a theorem. All you need to do is… the algorithm is right there for everybody. Just take one paper that you find interesting, master it. You"ll get a new theorem automatically.
+
+Q: Thank you very much for your advice. Let us now come to your doctoral studies. You were supervised by one of the greatest architects of modern mathematics: Professor John Tate. How was your personal experience: what could you learn from him?
+{: .interview-answer }
+
+
+{% include figure.html image='RMKM8.jpeg' caption='Ram Murty at the Tata Institute of Fundamental Research, 2011' width=500 %}
+
+KM: I think it was an interesting experience because every teacher is different. His approach was treating the students like colleagues. So that has its advantages and disadvantages. The advantage, of course, is you get to talk to, you know, a famous mathematician. But the disadvantage is he"s not going to give you any allowance because you"re a student. If you say something nonsensical, he"ll tell you: it"s nonsense. There are many, many stories of students who have been sort of shocked a little bit, about how rough he could be. Rough meaning, not physically. I mean verbally. He could tell them this, "Your idea is stupid." You know?
+
+He"s not trying to insult anybody. He"s just saying, he"s talking like he would banter with a colleague. If you"re expecting some understanding and kid gloves, no. He"s not going to give that. So that was one thing. Second thing is, he expected us to work on hard problems. I remember telling him once an idea and he said, "Okay, it looks interesting. Do it." I said, "No, I don"t think it"ll work because of the implication of this… it"ll solve a famous problem." “Yeah? So, what are you waiting for?" I was afraid to do it. But I was thinking, "It can"t possibly be right, because it"s consequence would be that." And he"s saying, "That"s why you should work on it."
+
+So those two things I remember. That is, he expected high standards. That is, he treats you like a colleague. Don"t come and try to tell him nonsense or things you didn"t think hard about. And second thing is, attack hard problems. Attack, big, open problems.
+
+Q: And your doctoral education was at MIT with two mathematicians, Harold Stark and Dorian Goldfeld. So, what would you say about that time?
+{: .interview-answer }
+
+
+RM: Good point. Yes. Both Stark and Goldfeld were firstly, classical number theory people. And I also consider Serre as one of my teachers. In fact, for my PhD thesis, I solved one of Serre"s conjectures. And Serre even read my preliminary draft, because he used to come to Harvard regularly, and he read my preliminary draft. So, I consider Serre one of my mentors. And the first year I was there, I was exposed to a course by Serre, in which he very cleverly was telling the interconnections between analytic number theory and algebraic number theory. Okay, so, now Serre started as an algebraist. And in this course, he was learning analytic number theory.
+
+And on the flip side, I had two very strong analytic number theory people. And both Goldfeld and Stark were very inspiring, I would say. Very easy to talk to. And, you know, one of the things that I think, the disease of many students – and there were many at MIT: students in number theory, is what I would call the allure of fashion. Okay, so fashion being big words, big programs, you know. You kind of rally as if it"s some sort of religion, you rally around a particular person and you use big words, let"s say, Langland"s program or whatever. You know… I"m not saying some specific thing, but there"s this tendency to be attracted by fashion.
+
+It"s important for the student to pursue what they actually love and not change what they wanted to learn to something else because it was fashionable. I"m not making any sweeping statements against other subjects, but I… for example, when I was a fresh PhD student, there were two or three other PhD students who were always talking about representation theory, Langlands program, Lie theory; that you had to learn Lie theory in order to do number theory. That was another big thing. Of course, they"re right. But if you came to work on analytic number theory and then thought that Lie theory was more fashionable and tried to learn that you may shortchange yourself, because it"s hard to make a big discovery in something that you"re a fresh, novice into.
+
+Whereas if you already have a certain tendency for a particular subject and you follow your heart – So I think that"s what I learned from all three. What I found with Stark and Goldfeld was this classical school of number theory that they were both part of. Then with Serre, I could see that there"s no need to abandon that tradition. There"s a way of moving into the algebraic setting and applying that. So, there was a connection, but there was a kind of a symbiosis, which I really liked. And Serre also talked about elliptic curves at that time. And I was learning a little bit about elliptic curves. And my thesis was something about cyclicity of the group of points mod p of elliptic curves. So, I did solve that unconditionally. Serre had solved it using the generalized Riemann hypothesis, and I managed to remove the Riemann hypothesis.
+
+So, I thought that was pretty good. In that sense, there was this kind of marriage between analysis and algebra that I got from Serre. I really thought that was a formative period.
+
+{% include figure.html image='RMKM10.jpg' caption='**John Tate** (1925-2019), one of the greatest architects of modern Mathematics, was the doctoral supervisor of Kumar Murty.' width=500 %}
+
+Q: Thank you for sharing this. Now let us move to some other theme. So today, you (Kumar Murty) have mentioned cooperation as a basic positive human behavior several times. In fact, Prof. Ram Murty mentioned that you both learned calculus at an early age. This is a great example of cooperation. So, how has your collaboration evolved over time? And of course, from that, what can we learn about collaborative efforts in mathematics in general?
+{: .interview-answer }
+
+
+RM: Could I say something or two? So, if you"re a graduate student, you can have a collaborative seminar. But it"s probably not a good idea to have collaborative research with other graduate students or people at that stage. You could in some sense. The PhD thesis could be a collaboration with the advisor. But the advisor, you know, shouldn"t be the one who"s giving all the ideas. There must be some sort of give and take. And that"s okay. I mean most of the time, the advisor supervises the student, and after the PhD thesis is over, maybe they will write two or three papers together. That"s fine. But it"ll be problematic if you did research with another graduate student, which of course you can.
+
+But it can"t be part of a thesis. And so, there"s a lot to be learned in the process of collaboration with someone who has a bit more experience than you do. I"m not saying two graduate students can"t get together and try to work on something. That"s certainly fine, but it can"t be the PhD thesis. Because there will be true problems there because who is going to put that theorem in there? So, there are all these issues. That"s one thing. But collaboration is one of the greatest things that we have access to. But the collaboration also has a lot to do with compatibility of personalities. So, you can"t collaborate unless there"s some sort of compatibility, you know. We’ve written more than 25 papers together. There"s a lot of collaboration, and it"s fun. There"s no doubt about it.
+
+I"ve collaborated with other mathematicians. I"ve collaborated with my students. I found that, to put it bluntly, it"s easy to collaborate with someone who you can talk freely with, and nobody is putting on airs. You don"t have to pretend you know something when you really don"t. So that pretense is gone. Certain freedom emerges. And in that freedom, perhaps some new ideas come.
+
+KM: Yes, because most of the time that is spent in collaborative discussion is not always productive. Most of the things we try don"t work out, you know. But you keep trying and eventually something will click. So, if I"m afraid of what you think or how I will appear to you, I won"t take that chance. But when we collaborate, we both say, you know, "Let"s just try something." It could be nonsense, doesn"t matter. Oh, it doesn"t work. Okay, so then, we try another thing. But there"s no… basically, there"s no ego. And so, there"s a good exchange of ideas. And, and again, this is a proven method. Whenever we proved a theorem that I think I"m proud of for a long time, it came about that way. That we just get together, just start. We know what we want to try and do, then we try, somebody tries, one of us tries something, the other person is taking notes, and then we realize this doesn"t work. Okay. So, then we change places.
+
+The other person goes to try something … doesn"t work. And eventually, you"ll be surprised how these things evolve into very deep work that you can be proud of for a long time. But collaboration is basically amplifying your own brain. It"s like double the brain power. And if you allow it to work in a frictionless way without resistance of ego, you"re magnifying your own power. So, it"s a very, very useful tool for discovery. But, as he says, the thesis time is a special time. Because you need to prove to the world that you can do something on your own. So, that has to be protected. But beyond that, you can do all sorts of other collaborations.
+
+{% include figure.html image='RMKM11.jpg' caption='**Jean-Pierre Serre** (1926), a pioneer of modern Mathematics and one of the mentors of Ram Murty.' width=500 %}
+
+RM: We were discussing Hadamard"s book on “The Psychology of Invention” or whatever the book is called. And in that, I think he does mention Henri Poincaré"s method of discovery. He says when you try and solve a problem, somehow these thought molecules are moving around in your head, and sometimes, there"s a sort of stable combination that comes out. And from that, some idea of a solution shows up. And I think I believe that. I believe something like that is going on. And I think the seminar is a venue for that. Collaboration is a venue for that.
+
+So, where you are freely talking more in collaboration because there"s more freedom in the collaborative thing. It"s not a seminar, it"s a private discussion. But even the seminar can be a place where this comes up because that"s why I always encourage my students to, whatever paper they"re studying, they should explain it and give a talk. And during that, at least they"re thinking about it. And I think there is some psychology of discovery connected with the movement of thought particles, as it were. Ideas related to a particular theme. So, when you put something on the blackboard, try to organize your thoughts, some order and arrangement take place, and so maybe a chance for a new idea to come and form a larger thought molecule. And then a new theorem is proved. And I"ve had this happen. This has happened. That"s why I like collaboration. Yes. When I"m trying to explain something to a person, I feel I understand it better and in the process of understanding it better, I do end up making a new discovery myself. So, I think that"s what"s needed.
+
+And coming back to the study of papers, you know, in detail, each paper probably has a secret. But that secret is not open. It"s hidden. It"s not out in the open. A person can pad the paper. It could be a 100-page paper, but maybe there"s only one idea. So, you must learn how to read papers. And it"s not like reading literature. So, you read the paper, you let it kind of incubate in your mind. Over time a kind of a flash comes and says, "Aha, this is the key idea." Once you understand that key idea, everything kind of falls into place. Otherwise, all this technical jargon that the paper begins with is going to discourage you from learning things. So, there"s a secret. The Goddess holds a secret. You know, the Goddess holds a secret, and that secret will not be divulged to you unless you make an effort to study the idea. Make that effort. The effort then is rewarding. It somehow allows in a new idea that helps to find out the secret. Serre once said to me, "How do you read a paper?” “You read it backwards," he said. I immediately understood when he said that.
+
+Q: So is it like you want to prove some theorem … suppose it is a direct proof, so A implies B, then, do you mean that you want to show B? How to show B? You prove something-
+{: .interview-answer }
+
+
+RM: You need this. You need that. Yeah. He doesn"t mean literally backwards. He means that somehow you have to read the paper, and then focus your attention; how do you get to the goal. How did you get B out of A? So, what are the steps that were there? And once you understand the steps, maybe there"s a technical lemma which you shouldn"t bang your head on. But you know these steps, and then you know how the whole proof is put together. Then once you understand the big picture, then you"ll be willing to spend the time to learn the 20-page proof for a technical lemma. But if I start your lecture with technical stuff, then everybody will walk away.
+
+Q: One more question when choosing the paper, as you mention, is that you should take one paper and read that. So, it seems selection is important. How do you select?
+{: .interview-answer }
+
+
+RM: You must learn how to browse through the library. You must learn how to browse … on the internet it’s not easy. It"s easier to browse in the library. Sit there just for the fun of it, with no specific goal in mind. The serendipity factor, if you want to call it that. You must have that attitude. See, this world is full of distractions. "I have to do this, I have to do that, I have to do…" You know, you"re always filled with the "I have to do." I think it"s important to sit in the library with a feeling that I don"t have to do anything. And just read for the fun of it. And you"re not even trying to prove a theorem. You"re not even saying, "I want to generalize this guy"s work." I just want to understand it. Like you would with a piece of music. Before you become a great musician, you must enjoy good music. You don"t listen to music saying, "I"m now going to produce the next concerto or next symphony." This is not the way you do.
+
+You just enjoy music for the sake of enjoying music. You take a walk just for the enjoyment of the walk. You go to enjoy some scenery, watch these mountains just for enjoyment. You don"t want to grab them. You just enjoy the beauty. So that kind of enjoyment, is I think what the Rishis were talking about when they say, "Ananda." Ananda refers to this enjoyment of life. We have forgotten how to enjoy life. So, you must learn how to enjoy ideas just for the fun of it. Otherwise, you"re not an academic.
+
+{% include figure.html image='RMKM6.jpg' caption='Kumar Murty in **Montreal, circa 1990**.' width=500 %}
+
+Q: Thank you. These days we are experiencing a pandemic of poor mental health among students, especially doctoral students. Is there anything you"d like to say upon improving the situation?
+{: .interview-answer }
+
+
+KM: Well, firstly, be a little kind and gentle. Because you see, the point of the doctorate is very, very demanding. That’s not because it"s hard. It"s because you"ve never done that before, in most cases. So, just think of how you came to the point of doing the doctorate. Okay? You went through school, then through undergraduate, and then you did a master"s degree, and you got into the doctorate program, you finished all the coursework, and now you have to write a thesis.
+
+A thesis is the first time you have to work on problems where people don"t know the answer. Do you see? Even at a master"s level, you take courses, you have assignments, there"s an exam. Somebody knows the answer. If they put a question on your assignment or an exam where they don"t know the answer, you have a legitimate complaint. Right? Somebody puts an unsolved problem on the exam- … you can complain. The exam is invalid. So, up to the point you"re doing all this coursework, it"s all known. For how many years? 15, 16, 20 years? Yes. You were doing that, and then, then suddenly people say, "Now you have to discover something new." It"s a shock. If you"re not used to it, if you haven"t built that culture of thinking originally, it"s a big shock. Psychological shock.
+
+I"ve had about two dozen PhD students. The difficult part I kept telling them, is not the math. Math is not the problem. You have convinced yourself you cannot discover anything new, because you"ve told yourself that and others have told you that. You think, basically, you"ve trained yourself to be a teacher, because you know how to stand in front of a class and talk about what"s in the textbook. Right? And so, the impediment for you to succeed now, to cross this final hurdle and get your thesis, is not math, is not that you don"t know enough math. It"s that you don"t have faith in yourself. So, I must gently lead you to the point where you believe you can do it.
+
+RM: I mean, if you think about an Olympic athlete. If the Olympic athlete tells himself or herself that, "I can"t do the high jump." They won"t do it. And then when they try to do it, what do you think is going to happen? They won"t do it. So, there"s a kind of trade-off also. It"s not necessarily inflation of ego that we"re talking about when we say self-confidence, faith in oneself. It"s essentially a statement of fact. So, firstly, we"re all given a package of mental energies. It"s just that we tend to put blockages on these energies, you see? That"s the problem. We like the difference between a person who can do the high jump versus a person who cannot do the high jump. The person who cannot do the high jump has convinced themselves that they cannot do it. But with training, they can.
+
+You must start with the training. How can I teach the student how to do the high jump if every day the student comes and says, "I can"t do it." So, you have to put away these ideas somehow and make the effort. It"s a negative process. You are putting blockages on yourself. Exactly. You know? So, it"s not an inflation of ego. In fact, it"s a form of de-hypnosis, you know? You have been hypnotized. Maybe parents told you, maybe teachers told you, maybe society tells you that you can"t do it, and therefore, you now believe you can"t do it. But if you check the autobiography of great athletes even, they had to undo that. And psych themselves that they could do it. And they could. But it’s not an ego factor. It"s a kind of undoing of conditioning that you have been brought up on. And the other thing that"s important is … I"m more a philosopher as such and the path of Jnana Yoga, which is just inquiry and pure thought. For every person who is trying to do research, there are a lot of factors in your favor.
+
+Firstly, time. The time that you"re living in. So, you may say, "Oh, but Gauss worked on this problem. How can I solve it?" Well, Gauss worked on it in the 18th century. Time has changed. There may be more tools. Right? Just so you must look at it from a practical standpoint. And the mere fact that saying Gauss worked on it, you recite yourself into your incompetence. So, it"s not some quality of respect for Gauss. In some sense, it"s a certain disrespect for yourself. So that kind of argument or that Grothendieck worked on it, and he… well, Grothendieck didn"t know analytic number theory, let"s say. You, you see my point? Serre didn"t do it. Well, he didn"t know this stuff. It is not given to any single individual to be omniscient.
+
+KM: Exactly. Nobody has a monopoly on talent. Nobody has a monopoly on your results. Everyone can discover something.
+
+RM: Exactly. So, you find what interests you. You go deeply into it. You love it. You savor it like you savor a dish. You enjoy it like you would enjoy a piece of music. And one day, out of the blue, a new idea will emerge.
+
+KM: I used to, for some time, make it a point to ask my PhD students to see Kung Fu Panda. Yes, that"s funny. Kung Fu Panda, you see, is a very interesting movie for people who are trying to do research. Because it teaches you two things. Firstly, success doesn"t necessarily follow conventional wisdom. You know? He says, "He doesn"t even know kung fu and you call him the Dragon Warrior." And yet he was the one who could defeat the enemy that all the other experts couldn"t do. We were talking about Gandhi. It"s similar. You see this little man with a frail body, marching thousands of kilometres. Yet he did it. So conventional wisdom is often wrong. So, you have to have those kind of dramatizations or actual examples in history, or your teachers as exemplars to say, "They could do it, why can"t I?"How am I any less? Maybe you prove the Riemann hypothesis and maybe I"ll prove a little non-vanishing theorem that"s different, but I"ll prove something. There"s this statement of Nachiketa in Katha Upanishad. He says, "Among some, I"m the best. Among others, I"m in the middle. But nowhere am I the last." I can also do something. I also have the capability of doing something." There are many stories, that"s why actually, you know, besides whatever discipline you"re studying you must fill your mind with inspiring stories. Inspiring stories, motivational stories. Whether they are mythological, historical, or social, it doesn"t matter. You fill your mind with those kinds of ideas to help you to understand the truth of the statement that you have ability, you have potential, you have creative talent, and that you can manifest it.
+
+I found amongst my students, the ones who listened to me when I told them these things, they succeeded. The ones who resisted, eventually they came back and accepted it, but the ones who resisted took the longest. For these, anything I told them just didn"t click. In the end, they came back and did exactly what I told them to do 10 years ago. And it worked, interestingly. So, there"s time for everything.
+
+RM: So, each person is on their own personal journey of evolution. And you must find your own calling. That"s why I say that as teachers, what we can do is give freedom; freedom to learn, freedom to explore, freedom to find what you find beautiful. And maybe the teacher can only guide. The teacher cannot dictate anything.
+
+KM: And, you know, after they succeed, then they thank us by saying, "You had confidence in me before I proved anything." We say, "Yes, that"s the job of the teacher." And then they write, you know, "I want to thank so-and-so for having believed in me when I didn"t have a result." That"s what your teachers are supposed to be able to do for you. You know, give your confidence a little boost. And they can see what the future kind of holds before you can see it. And so, give you that extra boost of confidence so that you can go over the top and prove your theorem.
+
+{% include figure.html image='RMKM7.jpg' caption='Ram Murty and Kumar Murty with Henryk Iwaniec' width=500 %}
+
+RM: See, I hope you"ve understood what we"re saying. When you sit down with a paper … for a month (say) and study it in depth to the point that you can lecture without notes, you may try to solve another problem using the techniques and still fail after a month. But you can"t tell me that you didn"t discover anything. You must have discovered something. Perhaps you solved something else. Find out. You must have solved something else. And so that maturity must be there. Some new problems emerge which were never thought of before. They happen to be coming out of your own intelligence.
+
+KM: You can say, "I have a problem and I"m looking for a solution." But another way of putting it, is what Atiyah used to tell us. He said, "I have a solution, but what problem does it solve?" He just studies a subject. And then, it throws light on certain problems. He wouldn"t start with the problem. If you read the interviews with Atiyah, he"ll explain his way of thinking about mathematics.
+
+RM: And, you know, another interesting thing about this idea of solutions is that if you take up as it is said you have a solution looking for a problem, what is the difference between a great mathematician and a mediocre mathematician? And the answer is, it"s just a joke of course. The answer is the mediocre mathematician is working on seriously unsolved problems, whereas the great mathematician is looking where the methods he has mastered can be applied. It"s almost like the solution looking for a problem, or proof looking for a theorem. He already has the proof. In the sense that the methods are there. Yes. And it"s looking for a theorem. It"s a kind of funny, interesting psychology, isn"t it? I mean, so that is the difference. So, sometimes time is ripe for certain ideas to be developed. And maybe all the tools or many of them are there. Like Fermat"s Last Theorem. It just happened that this was the time. It was not a century ago. You know, the time was right. There"s a certain inevitability.
+
+RM: You know in some sense maybe we"re talking about mental health, maybe there should be some sort of non-credit course, in which some sort of tips on how to study should be taught.
+
+KM: Well, this talk could be turned into a course. Because each of those points can be expanded with examples too.
+
+RM: But also habits, you know? And so maybe some sort of non-credit course about this kind of thing will attract… maybe we"ll meet once a week for one hour or something, that may give us focus. And then students can also try to express their concerns, what their questions are. Some experienced researcher kind of leading the discussion could help alleviate some of the mental stress that people feel. You see, this whole thing about you entering the PhD program, now you have added stress to prove something. That in itself is a problem. We certainly don"t want you to goof off. But at the same time, we don"t want you to be stressed out to the point that you go bonkers. We need to strike a balance.
+
+You need to make an effort, you need to learn something, but this idea of ananda, enjoyment, may be torture at the beginning, but it may be a certain form of enjoyment later when you have mastered the idea. And it takes work, just as it takes work to learn the high jump. The marathon is not run in a day. It requires training. So, once you do it, you enjoy it. See all these people who run the marathons. When the thing is over, they"re taking a victory lap. Well, how did that come? So, this is the enjoyment, that"s why they"re taking a victory lap. And there"s the same thing in research; the same mental phenomenon is there. Training of the mind. The training of mental energies.
+
+Q: What do you do when you are not in academic work? Actively?
+{: .interview-answer }
+
+
+KM: I have a lot of interests. Reading is fun. Reading non-math books. I do read quite a bit of philosophy books, and I also like writing, music, and singing. I like economics. I also like innovation, technology, … there are many subjects which are very inviting. And it"s also interesting to see, to put things together- you know that people didn"t put together before. So, I think maybe that to summarize the whole thing, I like the joy of discovering. Discovering new things is fun.
+
+{% include figure.html image='RMKM5.jpg' caption='Kumar Muntry with a statue of Kung Fu Panda at Brigham Young University (BYU), 2010.' width=500 %}
+
+Q: Do you think taking up something apart from your academics is a great form of not only enjoyment, but also a necessity?
+{: .interview-answer }
+
+
+RM: Absolutely. It comes back to hobbies. I think this is the problem. If I must go back and look at all the sad cases and the mental disasters in all of those cases, there was no healthy hobby.
+
+KM: If you equate yourself with your academic achievements, you"re in trouble. Because sometimes you will do well, sometimes you won"t do well. Firstly, when you do well even, that"s also dangerous. You get giddy. And when you don"t do well, you think you"re not good at anything. You know, these are extremes. You must be sensitive. You must develop some ways of thinking and living so that you"re grounded, you know, rooted – look, some things may go well, things may not go well, it doesn"t mean I"m any less. My worth has not gone down or gone up. It was always at a good level. I"m still capable of doing things. But that grounding is necessary, that"s all… That"s really a good point you"re raising. Grounding is necessary. That"s how you create mental hygiene, people call it mental health.
+
+Because hygiene involves habits. So, you brush your teeth regularly, you take a bath regularly. These are habits that keep you in good health. Personal hygiene. Mental hygiene is also necessary. You think that you can put all the garbage you want in your head and you"ll be healthy? You can"t. Just like junk food: how much can you tolerate? And the body retaliates. And so, the mind will retaliate too. And mental retaliation is much more severe than physical retaliation. You might get an upset stomach, that"s one thing. But mental unrest, that"s created by all the garbage we ourselves put in, is harder to deal with. So, you need to make sure what you"re taking in is healthy … healthy ideas.
+
+And secondly, you need a way to neutralize anything negative that"s already there. This is deliberate. These are very deliberate things that must be cultivated. They don"t happen accidentally. You know, for example, about what you take in… yesterday was the Janmatithi of Shri Shri Sarada Devi. What was her main teaching? Don"t put negative thoughts into your head by seeing negativity in others. Just if you could practice that one thing … Your interaction with everybody is positive.
+
+Q: How do you manage your time for studying and research while maintaining a high level of productivity? Are there specific habits or routine that you would like to suggest to the students?
+{: .interview-answer }
+
+
+RM: Each person must figure out how to use the 24 hours of the day. Everyone is different. You must determine when your mind is fresh and energized. That is the time for creative learning and research. For me, early morning hours are best, say between 5am and 9am, before any formal duties of employment intervene. I find browsing in the library is best in the afternoons.
+
+{% include figure.html image='RMKM12.jpg' caption='Ram Murty and Kumar Murty during interaction with school students at IISER Kolkata.' width=500 %}
+
+KM: Besides browsing, it is important to be realistic about how much can be done in a day. For each day have a goal of one or two or three things that you will work on. And focus on those, and don’t confuse yourself by working on other things.
+
+Q: We know that teaching is an important component of learning and understanding. From the teachers’ perspective, what would you suggest for improving the process of teaching?
+{: .interview-answer }
+
+
+RM: The teacher must make complicated ideas simple. This requires work. It requires solitary learning and writing from the teacher. Again, one must find the time of day for this work, usually one to two hours suffice.
+
+KM: The teacher should awaken a love and enjoyment for the material. Once that love and enjoyment is awakened in the student, they can teach themselves all the details.
+
+Q: You mentioned that the age of AI forces each of us to face questions like “Who am I? What’s my purpose?” to all of us. Are there any specific books on Psychology or Philosophy which you would recommend for understanding more about human mind and life?
+{: .interview-answer }
+
+
+RM: Personally, I found the writings of Vivekananda, especially his books on the four yogas, to be helpful. This may be useful to some. If this doesn’t work, then some “self-help” books may. Dale Carnegie’s books on public speaking are full of fascinating stories and helpful advice.
+
+KM: Vivekananda is certainly the person of our time who spoke most about faith in oneself and about believing in and manifesting one’s own potential, which he said is infinite.
+
+Q: While grappling with a new subject or a new book, many students get discouraged by either the terseness or the sheer volume of a book. Although there may not be any formula or algorithm to read and learn from books effectively, could you still mention a few important points to keep in mind while reading and understanding?
+{: .interview-answer }
+
+
+RM: Yes, the size of the book on the subject can be daunting. The secret is to find something that absorbs your attention. It begins from there. A little bit of time (say an hour) each day can go a long way and within a week or two, you will see results in mastering the topic. Note taking while you learn is also essential.
+
+KM: Yes slow steady progress can be made if it is regular. Even a big book is made of individual pages. Reading a page a day should be possible. And before you know it, you would have mastered a significant portion of the book. It is certainly possible.
+
+{% include figure.html image='RMKM1.jpeg' caption='Ram Murty and Kumar Murty: In the company of ideas: A Mathematical Duet.' width=500 %}
+

@@ -83,7 +83,8 @@ blockquote {
   border-left: 3px solid rgba(0, 0, 0, 0.25);
   background: rgba(0, 0, 0, 0.02);
   color: #333;
-  font-style: italic;
+  font-size: 0.9em;
+  font-family: monospace;
   line-height: 1.5;
 }
 
@@ -96,7 +97,9 @@ blockquote p {
   white-space: nowrap;
   max-width: 100%;
   overflow-x: scroll;
+  overflow-y: hidden;
   text-align: initial;
+  padding: 0.2em 0;
 }
 
 .katex {
@@ -560,6 +563,11 @@ a.nf {
   flex-wrap: wrap;
   gap: 2rem;
   row-gap: 1rem;
+}
+
+.footnotes {
+  font-style: italic;
+  font-size: 0.9em;
 }
 
 table {
