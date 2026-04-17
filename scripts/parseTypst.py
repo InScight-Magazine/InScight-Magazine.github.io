@@ -1,3 +1,4 @@
+#!~/python
 import typst, pypandoc, sys, json, yaml, subprocess, os, shutil
 
 typstpath = sys.argv[1]
@@ -10,11 +11,15 @@ global footnotes
 global images
 
 def parseContent(content):
+    if content is None:
+        return ""
     if "text" in content.keys() and content["func"] != "raw":
         text = content["text"]
         for (char, escapeChar) in escapeChars.items():
             text = text.replace(char, escapeChar)
         return text
+    elif content["func"] == "link":
+        return f"[{content['dest']}]({parseContent(content["body"]).strip()})"
     elif content["func"] == "strong":
         return f"**{parseContent(content["body"]).strip()}**"
     elif content["func"] == "emph":
@@ -44,8 +49,8 @@ def parseContent(content):
     elif content["func"] == "figure":
         images.append(parseContent(content['body']))
         if images[-1].endswith(".pdf"):
-            print(f"PDF image {images[-1]} in {filename}. Must be replaced with some other format.")
-        return f"{{% include figure.html image='{parseContent(content['body'])}' caption='{parseContent(content['caption'])}' width=500 %}}\n\n"
+            print(f"PDF image {images[-1]} in {filename}. I replaced it with `.svg'. Please add svg image.")
+        return f"{{% include figure.html image='{parseContent(content['body']).replace(".pdf", ".svg")}' caption='{parseContent(content['caption'])}' width=800 %}}\n\n"
     elif content["func"] == "image":
         return content["source"].split("/")[-1]
     elif content["func"] == "quote":
@@ -133,7 +138,7 @@ for (content, var) in zip(contents, vars):
                     }
             if metaData["refs-file"] != None:
                 metaData["refs-file"] =os.path.splitext(metaData["refs-file"].split("/")[-1])[0]
-                shutil.copy2(os.path.join(os.path.dirname(typstpath), "dataFiles", os.path.basename(var["value"]["refsFile"])), os.path.join(refsDir, metaData["refs-file"]))
+                shutil.copy2(os.path.join(os.path.dirname(typstpath), "dataFiles", os.path.basename(var["value"]["refsFile"])), os.path.join(refsDir, os.path.basename(var["value"]["refsFile"])))
         else:
             metaData = {
                     "title": var["value"]["title"],
@@ -155,7 +160,6 @@ for (content, var) in zip(contents, vars):
         markdown = []
         broken = False
         for data in content["value"]["children"]:
-            # print(data)
             if data == {'func': 'v', 'amount': '1.4em'}:
                 data = {'func': 'parbreak'}
             parsed = parseContent(data)

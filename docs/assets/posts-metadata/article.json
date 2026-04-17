@@ -2,7 +2,7 @@
   
     {
       "title": "Macroscopic Quantum Phenomena : The Story of 2025 Physics Nobel",
-      "date": "2026-03-26T01:34:22+05:30",
+      "date": "2026-04-17T23:38:22+05:30",
       "permalink": "/issue7/raka-dasgupta-nobel/",
       "authors": "Raka Dasgupta",
       "category": "article",
@@ -11,7 +11,7 @@
   
     {
       "title": "Metal–Organic Frameworks (MOFs), Covalent Organic Frameworks (COFs), and My Scientific Journey with Professor Omar Yaghi",
-      "date": "2026-03-26T01:34:22+05:30",
+      "date": "2026-04-17T23:38:22+05:30",
       "permalink": "/issue7/rahul-banerjee-yaghi/",
       "authors": "Rahul Banerjee",
       "category": "article",
@@ -20,7 +20,7 @@
   
     {
       "title": "The Genius of Koshliakov and His Indomitable Spirit",
-      "date": "2026-03-26T01:34:22+05:30",
+      "date": "2026-04-17T23:38:22+05:30",
       "permalink": "/issue7/atul-dixit-spirit/",
       "authors": "Atul Dixit",
       "category": "article",
@@ -29,7 +29,7 @@
   
     {
       "title": "Patterns In Primes Via Probability",
-      "date": "2026-03-26T01:34:22+05:30",
+      "date": "2026-04-17T23:38:22+05:30",
       "permalink": "/issue7/anup-dixit-probability/",
       "authors": "Anup Dixit, Siddhi Pathak",
       "category": "article",
@@ -38,7 +38,7 @@
   
     {
       "title": "Integer Partitions in Three Acts: Combinatorics, Number Theory, and Analysis",
-      "date": "2026-03-26T01:34:18+05:30",
+      "date": "2026-04-17T23:38:18+05:30",
       "permalink": "/issue7/koustav-banerjee-analysis/",
       "authors": "Koustav Banerjee",
       "category": "article",
@@ -47,7 +47,7 @@
   
     {
       "title": "Guiding Tomorrow’s Minds: Conversation with Nayan Bhunia and Dibyendu Biswas",
-      "date": "2026-03-26T01:34:13+05:30",
+      "date": "2026-04-17T23:38:13+05:30",
       "permalink": "/issue7/subham-sarkar-biswas/",
       "authors": "Subham Sarkar",
       "category": "article",
@@ -56,7 +56,7 @@
   
     {
       "title": "The World of Diophantus",
-      "date": "2026-03-26T01:34:12+05:30",
+      "date": "2026-04-17T23:38:12+05:30",
       "permalink": "/issue7/b-sury-diophantus/",
       "authors": "B Sury",
       "category": "article",
@@ -65,7 +65,7 @@
   
     {
       "title": "The Peacekeepers Within",
-      "date": "2026-03-26T01:34:12+05:30",
+      "date": "2026-04-17T23:38:12+05:30",
       "permalink": "/issue7/pallavi-gupta-within/",
       "authors": "Pallavi Gupta, Kushagra Bansal",
       "category": "article",
@@ -74,11 +74,56 @@
   
     {
       "title": "How Magnetism Defies: Classical Mechanics",
-      "date": "2026-03-26T01:34:10+05:30",
+      "date": "2026-04-17T23:38:10+05:30",
       "permalink": "/issue7/raj-gaurav-tripathi-mechanics/",
       "authors": "Raj Gaurav Tripathi",
       "category": "article",
       "hero-image": "/assets/images/issue7/raj-gaurav-tripathi-mechanics/tripathi.png"
+    },
+  
+    {
+      "title": "Finite Points, “Infinity Lines” and a Couple of Nice Proofs",
+      "date": "2026-02-22T00:00:00+05:30",
+      "permalink": "/issue8/abhratanu-ray-proofs/",
+      "authors": "Abhratanu Ray",
+      "category": "article",
+      "hero-image": "/assets/images/issue8/abhratanu-ray-proofs/abhratanu.svg"
+    },
+  
+    {
+      "title": "Remembering Jane Goodall: In the Forest and Beyond",
+      "date": "2026-01-27T00:00:00+05:30",
+      "permalink": "/issue8/dishari-dasgupta-beyond/",
+      "authors": "Dishari Dasgupta",
+      "category": "article",
+      "hero-image": "/assets/images/issue8/dishari-dasgupta-beyond/dishari.svg"
+    },
+  
+    {
+      "title": "At the Crossroads of Theoretical Physics and Mathematics",
+      "date": "2026-01-02T00:00:00+05:30",
+      "permalink": "/issue8/sridip-pal-mathematics/",
+      "authors": "Sridip Pal",
+      "category": "article",
+      "hero-image": "/assets/images/issue8/sridip-pal-mathematics/sridip.svg"
+    },
+  
+    {
+      "title": "How a Sleep Hormone Became a Drug Candidate for Wilson Disease",
+      "date": "2025-12-22T00:00:00+05:30",
+      "permalink": "/issue8/raviranjan-pandey-disease/",
+      "authors": "Raviranjan Pandey",
+      "category": "article",
+      "hero-image": "/assets/images/issue8/raviranjan-pandey-disease/pandey.svg"
+    },
+  
+    {
+      "title": "Earthquake Amplification in the Bengal Basin: Insights into Basin-Induced Seismic Hazard",
+      "date": "2025-11-01T00:00:00+05:30",
+      "permalink": "/issue8/baibhab-karmakar-hazard/",
+      "authors": "Baibhab Karmakar",
+      "category": "article",
+      "hero-image": "/assets/images/issue8/baibhab-karmakar-hazard/baibhav.svg"
     },
   
     {

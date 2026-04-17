@@ -31,7 +31,7 @@ RM: It"s a good question. I think throughout high school, we were more or less 
 
 KM: But, I remember even before high school, it was elementary school, and we had just written the final exam in mathematics. And I remember telling my best friend (Neil Kumar) at that time, "I"m going to be a mathematician." And the interesting thing as I reflect on that, two things come to my mind. Firstly, that day and that moment and that conversation are very clear in my mind. I still remember where we were standing and what I said. And second thing is, I had no idea what a mathematician is. So why did I say that? I don"t know. But clearly the idea was already there and then it grew.
 
-{% include figure.html image='RMKM3.jpeg' caption='Kumar Murty delivering a public lecture on “Reflections on the Computer and Human Brain” at IISER Kolkata.' width=500 %}
+{% include figure.html image='RMKM3.jpeg' caption='Ram Murty delivering a public lecture on “The Art of Research” at IISER Kolkata.' width=500 %}
 
 Q: During your undergraduate education, was there anyone or anything that influenced you significantly?
 {: .interview-answer }
@@ -51,7 +51,7 @@ KM: Not really difficulty. No, I don"t think we had any difficulty, but there w
 
 If I was a referee nowadays- I"d probably say, "What is this nonsensical title Put a proper title.” But we got away with that… and probably because we later learned Erdős was the referee! So, I think, mathematically, at that time when we were undergraduates, Erdős was a big influence. We used to read; we used to spend a lot of time in the library. There was a whole floor for math, and sciences was on the bottom floor of the library. And we used to spend hours and hours there, pouring over journals. All the spare time was spent in the library. And therefore, we were aware of many things in mathematics that maybe even the faculty did not know because we were studying them.
 
-{% include figure.html image='RMKM4.jpeg' caption='Kumar Murty delivering a public lecture on **"The Art of Research"** at IISER Kolkata.' width=500 %}
+{% include figure.html image='RMKM4.jpeg' caption='Kumar Murty delivering a public lecture on "Reflections on the Computer and Human Brain" at IISER Kolkata.' width=500 %}
 
 KM: Exactly. I remember once: you went to class and I was in the library. I picked a book on topology. I didn"t know what topology was. I was a first-year undergraduate. And I read it, then after you came, we were going to lunch, I said, "There"s this thing called topology." So, it was a golden time in the sense that apart from a few hiccups, we had a lot of opportunities to read, to study beyond classrooms. And, the biggest influences were of course that professor we mentioned, but also Erdős. And so, we were very happy when in our final year, I think we were able to get Erdős to visit. We met him in person. And we even started a joint paper with him. And so now we both have Erdős number one.
 
