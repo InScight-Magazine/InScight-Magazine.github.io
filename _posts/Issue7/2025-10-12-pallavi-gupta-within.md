@@ -1,7 +1,7 @@
 ---
 author-affiliation:
 - Molecular Biology and Genetics Unit, Jawaharlal Nehru Centre for Advanced Scientific Research, Bangalore, India
-author-bio: '*Pallavi Gupta* is a fourth-year Integrated PhD student at the Jawaharlal Nehru Centre for Advanced Scientific Research (JNCASR), Bangalore, where she is pursuing her doctoral research under the guidance of Prof. Kushagra Bansal. She has a strong interest in immunology, and her research focuses on understanding the regulatory role of Topoisomerase 1 in immune cell development. #linebreak() *Dr. Kushagra Bansal* is an Associate Professor at Molecular Biology and Genetics Unit, Jawaharlal Nehru Centre for Advanced Scientific Research (JNCASR), Bangalore. His research group focuses on the transcriptional regulation of immune cell development and function using murine models. He is a recipient of DBT-Wellcome Trust India Alliance Intermediate Fellowship.'
+author-bio: '*Pallavi Gupta* is a fourth-year Integrated PhD student at the Jawaharlal Nehru Centre for Advanced Scientific Research (JNCASR), Bangalore, where she is pursuing her doctoral research under the guidance of Prof. Kushagra Bansal. She has a strong interest in immunology, and her research focuses on understanding the regulatory role of Topoisomerase 1 in immune cell development. <br>*Dr. Kushagra Bansal* is an Associate Professor at Molecular Biology and Genetics Unit, Jawaharlal Nehru Centre for Advanced Scientific Research (JNCASR), Bangalore. His research group focuses on the transcriptional regulation of immune cell development and function using murine models. He is a recipient of DBT-Wellcome Trust India Alliance Intermediate Fellowship.'
 authorImage: peacekeepers_authors.svg
 authors:
 - Pallavi Gupta
