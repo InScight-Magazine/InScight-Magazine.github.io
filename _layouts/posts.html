@@ -14,11 +14,11 @@ layout: default
   {% endif %}
   </div>
 {% endif %}
-<h1> {{ page.title }} </h1>
+<h1> {{ page.title | markdownify  | remove: "<p>" | remove: "</p>" }} </h1>
 <div id="article-data">
 {% if page.authors %}
 <div>
-<div class="author">{{ page.authors | join: ", " }}</div>
+<div class="author">{{ page.authors | join: ", " | markdownify  | remove: "<p>" | remove: "</p>" }}</div>
 {% endif %}
 {% if page.author-affiliation %}
 <i>{{ page.author-affiliation | join: "; " }}</i>

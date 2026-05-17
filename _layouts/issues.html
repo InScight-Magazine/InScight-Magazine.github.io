@@ -2,12 +2,15 @@
 layout: default
 ---
 
-<h1> Issue #{{ page.issue }} | {{ page.month }}, {{ page.year}}</h1>
+{% assign issue = site.data.magazines.first.issue-number %}
+{% assign month = site.data.magazines.first.month %}
+{% assign year = site.data.magazines.first.year %}
+<h1> Issue #{{ issue }} | {{ month }}, {{ year}}</h1>
 <div class="magazine-banner">
-<div><a class="button" href="/assets/magazines/issue{{ page.issue }}.pdf">Download PDF</a></div>
+<div><a class="button" href="/assets/magazines/issue{{ issue }}.pdf">Download PDF</a></div>
 </div>
 
-{% assign permalink = "issue" | append: page.issue %}
+{% assign permalink = "issue" | append: issue %}
 {% assign issueItems = site.posts | where_exp: "item" , "item.permalink contains permalink" %}
 
 <h2>Perspectives</h2>
@@ -15,7 +18,7 @@ layout: default
 {% for item in metaArticles %}
 <div class="magazine-item">
 <span class="magazine-summary-title">{{ item.title }}</span>
-<span><span class="archive-author">{{ item.excerpt }}</span> <a class="reveal" href={{ item.url }}>Read</a></span>
+<span><span class="archive-author">{{ item.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</span> <a class="reveal" href={{ item.url }}>Read</a></span>
 </div>
 {% endfor %}
 
@@ -38,19 +41,19 @@ layout: default
 </div>
 {% endfor %}
 
-{% assign filename = "issue" | append: page.issue %}
+{% assign filename = "issue" | append: issue %}
 {% if site.data.digest[filename] %}
 <h2> Insight Digest </h2>
 {% for item in site.data.digest[filename] %}
 {% assign slug = item["Title"] | slugify %}
-{% assign link = "/issue" | append: page.issue | append: "/digest/#" | append: slug %}
+{% assign link = "/issue" | append: issue | append: "/digest/#" | append: slug %}
 <div class="magazine-item">
 <span class="magazine-summary-title">{{ item.Title }}</span>
 <span><span class="archive-author">{{ item["Author"] }}</span> <a class="reveal" href={{ link }}>Read</a></span>
 </div>
 {% endfor %}
 <div class="magazine-item">
-<span><a class="reveal" href="/issue{{ page.issue }}/digest/">Read All</a><br></span>
+<span><a class="reveal" href="/issue{{ issue }}/digest/">Read All</a><br></span>
 </div>
 {% endif %}
 
@@ -71,6 +74,6 @@ layout: default
 {% assign items = issueItems | where_exp:"item", "categories contains item.category" %}
 {% for item in items %}
 <div class="magazine-item">
-<span><span class="magazine-summary-title">{{ item.title }}</span><a class="reveal" href="{{ item.url }}">Try Out</a></span>
+<span><span class="magazine-summary-title">{{ item.title | markdownify | remove: '<p>' | remove: '</p>' }}</span><a class="reveal" href="{{ item.url }}">Try Out</a></span>
 </div>
 {% endfor %}

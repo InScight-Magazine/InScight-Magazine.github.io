@@ -12,7 +12,7 @@
   {% assign imagePath = page.permalink | append: image | prepend: "/assets/images" %}
   <img src="{{ imagePath | relative_url }}" width="{{ currentWidth }}" />
   {% else %}
-  <img src="{{ imagePath | relative_url }}" width="600px" />
+  <img src="{{ imagePath | relative_url }}" width="800px" />
   {% endif %}
   {% endfor %}
   {% if include.caption %}

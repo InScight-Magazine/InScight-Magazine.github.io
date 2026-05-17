@@ -1,0 +1,86 @@
+questions:
+  - "In H.G. Wells’ The Time Machine, the Time Traveller discovers that humanity has diverged into two species. Which group lives underground and maintains the machinery?"
+  - "In The Invisible Man, Griffin becomes invisible by changing his body's \"refractive index\" to match what?"
+  - "In the 1999 film The Matrix, how do freed minds leave the simulation and return to the real world?"
+  - "In the movie Interstellar, the protagonists visit a planet near a supermassive black hole where time passes much slower than on Earth. What real physics concept is this based on?"
+  - "Isaac Asimov’s \"Three Laws of Robotics\" are designed to protect humans. According to the First Law, a robot may not injure a human or, through \\_\\_\\_\\_, allow a human to come to harm."
+  - "In the Star Wars universe, Han Solo famously claims the Millennium Falcon made the \"Kessel Run\" in less than 12 parsecs. In real-world physics, what does a parsec measure?"
+  - "Jules Verne’s Twenty Thousand Leagues Under the Seas featured the Nautilus, a highly advanced submarine. What was its primary power source, considered \"futuristic\" in 1870?"
+  - "In Mary Shelley's Frankenstein, Victor uses a specific scientific \"spark\" to animate his creature. What 18th-century scientific theory inspired this?"
+  - "In Andy Weir’s The Martian, what specific chemical compound does Mark Watney burn to extract hydrogen and create water?"
+  - "In Jurassic Park, the scientists \"de-extinct\" dinosaurs by extracting DNA from mosquitoes. Where was this DNA preserved for millions of years?"
+options:
+  -
+    - The Eloi
+    - The Morlocks
+    - The Selenites
+    - The Fremen
+  -
+    - Water
+    - Glass
+    - Air
+    - Mirrors
+  -
+    - Via phone booths
+    - Via cell phones
+    - Via subways
+    - Via modems 
+  -
+    - Dark Matter expansion
+    - Gravitational Time Dilation
+    - The Hawking Radiation effect
+    - Quantum Entanglement
+  -
+    - Malfunction
+    - Disobedience
+    - Calculation
+    - Inaction
+  -
+    - Time
+    - Speed
+    - Distance
+    - Fuel efficiency
+  -
+    - Steam
+    - Electricity
+    - Coal
+    - Nuclear Fusion
+  -
+    - Alchemy
+    - Galvanism
+    - Phrenology
+    - Atomic Theory
+  -
+    - Hydrazine
+    - Methane
+    - Ammonia
+    - Perchlorate
+  -
+    - In frozen permafrost
+    - Inside fossilized bones
+    - Inside hardened amber
+    - In deep-sea thermal vents
+
+images:
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+
+answers:
+  - 2
+  - 2
+  - 1
+  - 2
+  - 4
+  - 3
+  - 2
+  - 2
+  - 1
+  - 3

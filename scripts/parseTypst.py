@@ -1,11 +1,21 @@
 #!~/python
-import typst, pypandoc, sys, json, yaml, subprocess, os, shutil
+import typst
+import pypandoc
+import sys
+import json
+import yaml
+import tomllib
+import subprocess
+import os
+import shutil
+from datetime import date
 
 typstpath = sys.argv[1]
 issue = sys.argv[2]
 escapeChars = {'|': "&#124;",
                '|': "&#124;",
                '>': "&gt;",
+               '{': "&#123;",
                }
 global footnotes
 global images
@@ -19,14 +29,14 @@ def parseContent(content):
             text = text.replace(char, escapeChar)
         return text
     elif content["func"] == "link":
-        return f"[{content['dest']}]({parseContent(content["body"]).strip()})"
+        return f"[{content['dest']}]({parseContent(content['body']).strip()})"
     elif content["func"] == "strong":
-        return f"**{parseContent(content["body"]).strip()}**"
+        return f"**{parseContent(content['body']).strip()}**"
     elif content["func"] == "emph":
-        return f"_{parseContent(content["body"])}_"
+        return f"_{parseContent(content['body'])}_"
     elif content["func"] == "heading":
         hn = "#" * int(content["depth"])
-        return f"\n\n{hn} {parseContent(content["body"])}\n\n"
+        return f"\n\n{hn} {parseContent(content['body'])}\n\n"
     elif content["func"] == "space":
         return " "
     elif content["func"] == "smartquote":
@@ -36,12 +46,12 @@ def parseContent(content):
     elif content["func"] == "linebreak":
         return "<br>\n"
     elif content["func"] == "place" or content["func"] == "rect" or content["func"] == "box":
-        return parseContent(content["body"])
+        return parseContent(content['body'])
     elif content["func"] == "caption":
-        if content["body"]["func"] == "emph":
-            return parseContent(content["body"]["body"])
+        if content['body']["func"] == "emph":
+            return parseContent(content['body']['body'])
         else:
-            return parseContent(content["body"])
+            return parseContent(content['body'])
     elif content["func"] == "styled":
         return parseContent(content["child"])
     elif content["func"] == "sequence":
@@ -50,7 +60,7 @@ def parseContent(content):
         images.append(parseContent(content['body']))
         if images[-1].endswith(".pdf"):
             print(f"PDF image {images[-1]} in {filename}. I replaced it with `.svg'. Please add svg image.")
-        return f"{{% include figure.html image='{parseContent(content['body']).replace(".pdf", ".svg")}' caption='{parseContent(content['caption'])}' width=800 %}}\n\n"
+        return "{% include figure.html image='" + parseContent(content['body']).replace(".pdf", ".svg") + "' caption='" + parseContent(content['caption']).replace("{", "\\{").replace("}", "\\}") + "' width=800 %}\n\n"
     elif content["func"] == "image":
         return content["source"].split("/")[-1]
     elif content["func"] == "quote":
@@ -76,15 +86,15 @@ def parseContent(content):
     elif content["func"] == "line":
         return "\n\n---\n\n"
     elif content["func"] == "super":
-        return f"$$^{{{parseContent(content["body"])}}}$$"
+        return f"$$^{{{parseContent(content['body'])}}}$$"
     elif content["func"] == "colbreak" or content["func"] == "counter-update":
         return ""
     elif content["func"] == "item":
-        return f"\n+ {parseContent(content["body"])}"
+        return f"\n+ {parseContent(content['body'])}"
     elif content["func"] == "grid":
-        captionBody = content["children"][1]["body"]["body"]["children"][5]
+        captionBody = content["children"][1]['body']['body']["children"][5]
         assert captionBody["func"] == "emph"
-        caption = parseContent(captionBody["body"])
+        caption = parseContent(captionBody['body'])
         images.append(parseContent(content['children'][0]['body']))
         return f"{{% include figure.html image='{parseContent(content['children'][0]['body'])}' caption='{caption}' width=700 %}}\n"
     elif content["func"] == "v":
@@ -106,6 +116,8 @@ def parseContent(content):
             latex = "\n\n$$" + latex[2:-2] + "$$\n\n"
         latex = latex.replace("\\begin{array}{r}", "\\begin{array}{c}")
         return latex
+    elif content["func"] == "context":
+        return ""
     else:
         assert False, f"unhandled function -- {content}"
 
@@ -113,16 +125,17 @@ def parseContent(content):
 
 vars = json.loads(typst.query(typstpath, "<vars>"))
 contents = json.loads(typst.query(typstpath, "<content>", sys_inputs={"html": "true"}))
-postsDir = os.path.join("_posts", f"issue{issue}")
+postsDir = os.path.join("_posts", f"Issue{issue}")
 refsDir = os.path.join("_data", "references")
 os.makedirs(postsDir, exist_ok=True)
 os.makedirs(refsDir, exist_ok=True)
 for (content, var) in zip(contents, vars):
-    if var["value"]["type"] == "article" or var["value"]["type"] == "interview":
+    if var["value"]["type"] == "article" or var["value"]["type"] == "interview" or var["value"]["type"] == "editor" or var["value"]["type"] == "foreword" or var["value"]["type"] == "quiz" or var["value"]["type"] == "linkedlist" or var["value"]["type"] == "crossword" or var["value"]["type"] == "digest":
         footnotes = []
         images = []
-        date = f'{var["value"]["received"]["year"]}-{var["value"]["received"]["month"]}-{var["value"]["received"]["day"]}'
+        Date = date.today().strftime("%Y-%m-%d")
         if var["value"]["type"] == "article":
+            Date = f'{var["value"]["received"]["year"]}-{var["value"]["received"]["month"]}-{var["value"]["received"]["day"]}'
             metaData = {
                     "title": var["value"]["title"],
                     "authors": var["value"]["authors"],
@@ -131,7 +144,7 @@ for (content, var) in zip(contents, vars):
                     "excerpt": parseContent(var["value"]["abstract"]),
                     "hero-image": var["value"]["coverImage"].split("/")[-1],
                     "authorImage": var["value"]["authorImage"].split("/")[-1],
-                    "date": date,
+                    "date": Date,
                     "refs-file": var["value"]["refsFile"],
                     "category": var["value"]["type"],
                     "permalink": var["value"]["permalink"].replace("https://scicomm.iiserkol.ac.in", "") + "/",
@@ -139,7 +152,8 @@ for (content, var) in zip(contents, vars):
             if metaData["refs-file"] != None:
                 metaData["refs-file"] =os.path.splitext(metaData["refs-file"].split("/")[-1])[0]
                 shutil.copy2(os.path.join(os.path.dirname(typstpath), "dataFiles", os.path.basename(var["value"]["refsFile"])), os.path.join(refsDir, os.path.basename(var["value"]["refsFile"])))
-        else:
+        elif var["value"]["type"] == "interview":
+            Date = f'{var["value"]["received"]["year"]}-{var["value"]["received"]["month"]}-{var["value"]["received"]["day"]}'
             metaData = {
                     "title": var["value"]["title"],
                     "authors": var["value"]["authors"],
@@ -148,17 +162,54 @@ for (content, var) in zip(contents, vars):
                     "excerpt": parseContent(var["value"]["abstract"]),
                     "hero-image": var["value"]["coverImage"].split("/")[-1],
                     "authorImage": var["value"]["authorImage"].split("/")[-1],
-                    "date": date,
+                    "date": Date,
                     "category": var["value"]["type"],
                     "permalink": var["value"]["permalink"].replace("https://scicomm.iiserkol.ac.in", "") + "/",
                     }
+        elif var["value"]["type"] == "editor" or var["value"]["type"] == "foreword":
+            metaData = {
+                    "title": var["value"]["title"],
+                    "excerpt": parseContent(var["value"]["abstract"]),
+                    "category": "meta",
+                    "permalink": var["value"]["permalink"].replace("https://scicomm.iiserkol.ac.in", "") + "/",
+                    }
+        elif var["value"]["type"] == "quiz" or var["value"]["type"] == "linkedlist" or var["value"]["type"] == "crossword":
+            metaData = {
+                    "title": var["value"]["title"],
+                    "authors": parseContent(var["value"]["authors"]),
+                    "permalink": var["value"]["permalink"].replace("https://scicomm.iiserkol.ac.in", "") + "/",
+                    }
+            dataDir = os.path.join("_data", {"quiz": "quizzes", "linkedlist": "linkedlists", "crossword": "crosswords"}[var["value"]["type"]])
+            os.makedirs(dataDir, exist_ok=True)
+            if var["value"]["type"] == "crossword":
+                data = tomllib.loads(open(os.path.join(os.path.dirname(typstpath), "dataFiles", os.path.basename(var["value"]["file"])), "r").read())
+                json.dump(data, open(os.path.join(dataDir, f"issue{issue}.json"), "w"), indent=4)
+            else:
+                shutil.copy2(os.path.join(os.path.dirname(typstpath), "dataFiles", os.path.basename(var["value"]["file"])), os.path.join(dataDir, f"issue{issue}.yml"))
+        elif var["value"]["type"] == "digest": 
+            metaData = {
+                    "title": var["value"]["title"],
+                    "permalink": var["value"]["permalink"].replace("https://scicomm.iiserkol.ac.in", "") + "/",
+                    "category": "digest",
+                    "hero-image": var["value"]["coverImage"].split("/")[-1],
+                    }
+            for v in yaml.safe_load(open(os.path.join(os.path.dirname(typstpath), "dataFiles", os.path.basename(var["value"]["file"])), "r")):
+                images.append(v["Image"])
+            print(images)
+            os.makedirs(os.path.join("_data", "digest"), exist_ok=True)
+            shutil.copy2(os.path.join(os.path.dirname(typstpath), "dataFiles", os.path.basename(var["value"]["file"])), os.path.join("_data", "digest", f"issue{issue}.yml"))
+
         imgDir = os.path.join("assets", "images", metaData["permalink"][1:])
         os.makedirs(imgDir, exist_ok=True)
         metaData["issue"] = int(issue)
-        filename = os.path.join(postsDir, f"{date}-{metaData['permalink'].split('/')[2]}.md")
-        print(filename)
+        filename = os.path.join(postsDir, f"{Date}-{metaData['permalink'].split('/')[2]}.md")
         markdown = []
         broken = False
+        contents = json.loads(typst.query(typstpath, "<content>", sys_inputs={"html": "true"}))
+        if "images" in var["value"]:
+            img = var["value"]["images"][0]
+            markdown.append("\n{% include figure.html image='" + os.path.basename(img) + "' caption='" + parseContent(var["value"]["captions"][0]) + "' width=400 %}\n")
+            images.append(img)
         for data in content["value"]["children"]:
             if data == {'func': 'v', 'amount': '1.4em'}:
                 data = {'func': 'parbreak'}
@@ -170,10 +221,17 @@ for (content, var) in zip(contents, vars):
             if parsed.endswith(" ") and len(parsed) > 1:
                 parsed = parsed[:-1]
             markdown.append(parsed)
+        if "images" in var["value"]:
+            img = var["value"]["images"][1]
+            markdown.append("\n{% include figure.html image='" + os.path.basename(img) + "' caption='" + parseContent(var["value"]["captions"][1]) + "' width=400 %}\n")
+            images.append(img)
         for img in images:
             shutil.copy2(os.path.join(os.path.dirname(typstpath), "images", img), imgDir)
-        shutil.copy2(os.path.join(os.path.dirname(typstpath), "covers", metaData["hero-image"]), imgDir)
-        shutil.copy2(os.path.join(os.path.dirname(typstpath), "authFaces", metaData["authorImage"]), imgDir)
+        if "hero-image" in metaData:
+            shutil.copy2(os.path.join(os.path.dirname(typstpath), "covers", metaData["hero-image"]), imgDir)
+        if "authorImage" in metaData:
+            shutil.copy2(os.path.join(os.path.dirname(typstpath), "authFaces", metaData["authorImage"]), imgDir)
+        
 
         for (i, line) in enumerate(markdown[:-1]):
             seps = ["<br>\n", "\n\n"]
@@ -195,3 +253,4 @@ for (content, var) in zip(contents, vars):
                 outfile.write("\n\n---\n\n")
                 for (i, note) in enumerate(footnotes):
                     outfile.write(f"\n[^{i+1}]: {note}\n")
+        print(filename)
