@@ -12,20 +12,23 @@ hero-image: dishari.svg
 issue: 8
 permalink: /issue8/dishari-dasgupta-beyond/
 refs-file: dishari
+reviewed-by:
+- Ishita Bardhan
 title: 'Remembering Jane Goodall: In the Forest and Beyond'
 ---
 
 
 The iconic image of a blonde-haired lady in khaki shorts stretching out her hand towards a baby chimpanzee, and the chimpanzee too stretching out its hand towards the lady in the forest, is still fresh in my mind from when I first saw it back in college. Out of curiosity, I had tried to find out more about her and got to know her name was Jane Goodall, an iconic primatologist who changed the world’s perception about our non-human primate cousins – the chimpanzees of Gombe. That is also when I realized there is more to life science than the usual cancer-virus-DNA sequences. Cut to 2025, almost a decade after coming across this image, Jane Goodall breathed her last on 1st October at the age of 91. The internet was flooded with obituaries. After all, a legend had died.
 
-{% include figure.html image='stretching.png' caption='A photo of Jane Goodall and infant chimp Flint reaching out to each other, captured by her husband Hugo van Lawick in 1964. Long after that, the image continues to influence our perception of chimpanzees. "**When I saw it, though I did not realise it would become iconic, it did make me think of Michelangelo"s painting of God reaching out to Man.**" – Goodall' width=700 %}
+{% include figure.html image='stretching.png' caption='A photo of Jane Goodall and infant chimp Flint reaching out to each other, captured by her husband Hugo van Lawick in 1964. Long after that, the image continues to influence our perception of chimpanzees. "**When I saw it, though I did not realise it would become iconic, it did make me think of Michelangelo\'s painting of God reaching out to Man.**" – Goodall' width=800 %}
+
  
 
 ## Early Life and Inspiration
 
 To know who she was, it helps to begin before the forest, before the chimpanzees, when she was a little girl named Valerie Jane Morris-Goodall. She was born in London in 1934. Her first encounter with chimpanzees came in childhood through a stuffed toy named Jubilee. Her father left early, and she was raised largely by her mother in a household shaped by strong women. Although she did well in school, university was financially out of reach. In 1953, at nineteen, she enrolled at London’s Queens Secretarial College and went on to hold a series of clerical jobs. Amidst all this, she nurtured within her an ambitious dream: a dream to visit Africa. In 1955, a former school friend invited her to stay on her family’s farm in Kenya. Determined to seize the opportunity, Jane worked as a waitress to save the fare. In 1957, she finally travelled to Africa.
 
-She took an office job in Nairobi, where she met Louis Leakey, a paleoanthropologist studying human evolution. Though he was an academic, he believed that formal training could sometimes limit a person"s capacity for observation, binding them to pre-conceived theories. Jane’s lack of a degree, which would later become one of the strongest criticisms against her, was an advantage to him. Leakey trained her in basic research methods and entrusted her with a task to study wild chimpanzees in what would later become Gombe Stream National Park.
+She took an office job in Nairobi, where she met Louis Leakey, a paleoanthropologist studying human evolution. Though he was an academic, he believed that formal training could sometimes limit a person's capacity for observation, binding them to pre-conceived theories. Jane’s lack of a degree, which would later become one of the strongest criticisms against her, was an advantage to him. Leakey trained her in basic research methods and entrusted her with a task to study wild chimpanzees in what would later become Gombe Stream National Park.
 
 {% include figure.html image='dishari2.jpg' caption='Jane Goodall with David Graybeard. In Gombe, the first chimp to lose their fear of Jane was Greybeard. This gave Jane the opportunity to study the complex world of chimpanzee life. [National Geographic / Jane Goodall Institute]' width=800 %}
 

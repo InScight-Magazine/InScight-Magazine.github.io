@@ -40,7 +40,7 @@ def parseContent(content):
     elif content["func"] == "space":
         return " "
     elif content["func"] == "smartquote":
-        return "\""
+        return "\"" if content["double"] else "'"
     elif content["func"] == "parbreak":
         return "\n\n"
     elif content["func"] == "linebreak":
@@ -60,7 +60,7 @@ def parseContent(content):
         images.append(parseContent(content['body']))
         if images[-1].endswith(".pdf"):
             print(f"PDF image {images[-1]} in {filename}. I replaced it with `.svg'. Please add svg image.")
-        return "{% include figure.html image='" + parseContent(content['body']).replace(".pdf", ".svg") + "' caption='" + parseContent(content['caption']).replace("{", "\\{").replace("}", "\\}") + "' width=800 %}\n\n"
+        return "{% include figure.html image='" + parseContent(content['body']).replace(".pdf", ".svg") + "' caption='" + parseContent(content['caption']).replace("{", "\\{").replace("}", "\\}").replace("'", "\\'") + "' width=800 %}\n\n"
     elif content["func"] == "image":
         return content["source"].split("/")[-1]
     elif content["func"] == "quote":
@@ -94,9 +94,10 @@ def parseContent(content):
     elif content["func"] == "grid":
         captionBody = content["children"][1]['body']['body']["children"][5]
         assert captionBody["func"] == "emph"
-        caption = parseContent(captionBody['body'])
         images.append(parseContent(content['children'][0]['body']))
-        return f"{{% include figure.html image='{parseContent(content['children'][0]['body'])}' caption='{caption}' width=700 %}}\n"
+        if images[-1].endswith(".pdf"):
+            print(f"PDF image {images[-1]} in {filename}. I replaced it with `.svg'. Please add svg image.")
+        return "{% include figure.html image='" + parseContent(content['children'][0]['body']).replace(".pdf", ".svg") + "' caption='" + parseContent(captionBody['body']).replace("{", "\\{").replace("}", "\\}").replace("'", "\\'") + "' width=800 %}\n\n"
     elif content["func"] == "v":
         return "<br>"
     elif content["func"] == "raw":
@@ -130,7 +131,7 @@ refsDir = os.path.join("_data", "references")
 os.makedirs(postsDir, exist_ok=True)
 os.makedirs(refsDir, exist_ok=True)
 for (content, var) in zip(contents, vars):
-    if var["value"]["type"] == "article" or var["value"]["type"] == "interview" or var["value"]["type"] == "editor" or var["value"]["type"] == "foreword" or var["value"]["type"] == "quiz" or var["value"]["type"] == "linkedlist" or var["value"]["type"] == "crossword" or var["value"]["type"] == "digest":
+    if var["value"]["type"] == "article" or var["value"]["type"] == "interview" or var["value"]["type"] == "editor" or var["value"]["type"] == "foreword" or var["value"]["type"] == "quiz" or var["value"]["type"] == "linkedlist" or var["value"]["type"] == "crossword" or var["value"]["type"] == "digest" or var["value"]["type"] == "comic":
         footnotes = []
         images = []
         Date = date.today().strftime("%Y-%m-%d")
@@ -148,6 +149,7 @@ for (content, var) in zip(contents, vars):
                     "refs-file": var["value"]["refsFile"],
                     "category": var["value"]["type"],
                     "permalink": var["value"]["permalink"].replace("https://scicomm.iiserkol.ac.in", "") + "/",
+                    "reviewed-by": var["value"]["reviewedBy"],
                     }
             if metaData["refs-file"] != None:
                 metaData["refs-file"] =os.path.splitext(metaData["refs-file"].split("/")[-1])[0]
@@ -195,9 +197,34 @@ for (content, var) in zip(contents, vars):
                     }
             for v in yaml.safe_load(open(os.path.join(os.path.dirname(typstpath), "dataFiles", os.path.basename(var["value"]["file"])), "r")):
                 images.append(v["Image"])
-            print(images)
+            # print(images)
             os.makedirs(os.path.join("_data", "digest"), exist_ok=True)
             shutil.copy2(os.path.join(os.path.dirname(typstpath), "dataFiles", os.path.basename(var["value"]["file"])), os.path.join("_data", "digest", f"issue{issue}.yml"))
+        elif var["value"]["type"] == "comic": 
+            metaData = {
+                    "title": var["value"]["title"],
+                    "authors": var["value"]["authors"],
+                    "author-affiliation": var["value"]["authorAffiliations"],
+                    "author-bio": "<br><br>".join([parseContent(v) for v in var["value"]["authorInfo"]]),
+                    "hero-image": var["value"]["coverImage"].split("/")[-1],
+                    "authorImage": var["value"]["authorImage"].split("/")[-1],
+                    "date": Date,
+                    "category": var["value"]["type"],
+                    "permalink": f"/issue{issue}/{var["value"]["permalink"]}",
+                    "pages": var["value"]["pages"]
+                    }
+            images = images + var["value"]["pages"]
+          # title: "Against All Odds -- The Man Who Brought IVF To India"
+          # authors: ['Kajori Barman', 'Afreen Chowdhury']
+          # author-bio: "*Kajori* (right) is a student with curiosity in the sciences. Along with pursuing her interest in science, she also indulges in sketching and painting as hobbies. During the lockdown, she started getting into digital art and has since been drawing her favourite anime and comic characters. #linebreak() *Afreen* (left)  has always been very keen about nature, particularly biology. She has always loved reading novels and comics, and as someone who nerds on fiction, she wanted to try understanding how these stories are written by creating this comic with Kajori."
+          # issue: 7
+          # author-affiliation: ['IISER Kolkata']
+          # hero-image: "comic.svg"
+          # authorImage: "kajori.jpg"
+          # date: "2025-11-12"
+          # category: "comic"
+          # permalink: "/issue7/comic-kajori/"
+          # pages: ["comic_2.jpg", "comic_3.jpg", "comic_4.jpg", "comic_5.jpg", "comic_6.jpg", "comic_7.jpg", "comic_8.jpg", "comic_9.jpg"]
 
         imgDir = os.path.join("assets", "images", metaData["permalink"][1:])
         os.makedirs(imgDir, exist_ok=True)
@@ -211,9 +238,11 @@ for (content, var) in zip(contents, vars):
             markdown.append("\n{% include figure.html image='" + os.path.basename(img) + "' caption='" + parseContent(var["value"]["captions"][0]) + "' width=400 %}\n")
             images.append(img)
         for data in content["value"]["children"]:
+            # print(data)
             if data == {'func': 'v', 'amount': '1.4em'}:
                 data = {'func': 'parbreak'}
             parsed = parseContent(data)
+            # print(parsed)
             if parsed.startswith(" {% include figure.html"):
                 parsed = parsed[1:]
             if parsed.startswith(" ") and len(parsed) > 1:

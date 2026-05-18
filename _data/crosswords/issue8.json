@@ -213,7 +213,7 @@
         349
     ],
     "size": 19,
-    "across": {
+    "down": {
         "ASTRONOMY": [
             164,
             "\u00a0Study of stars and celestial bodies"
@@ -255,7 +255,7 @@
             "Ancient Indian doctor"
         ]
     },
-    "down": {
+    "across": {
         "ALBERUNI": [
             19,
             "Persian polymath who wrote about India"

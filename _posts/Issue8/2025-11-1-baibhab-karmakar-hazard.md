@@ -7,16 +7,20 @@ authors:
 - Baibhab Karmakar
 category: article
 date: 2025-11-1
-excerpt: The Asian megacities of Kolkata and Dhaka sit atop the sediment-filled expanse of the Bengal Basin, one of world"s most densely populated but far from the Great Himalayas. New research focused on the boundary between the ancient Shillong Plateau and the soft, deep sediments of the Bengal Basin has revealed a mechanism for earthquake wave amplification that is so severe it could multiply shake intensity by two to five times in urban areas.
+excerpt: The Asian megacities of Kolkata and Dhaka sit atop the sediment-filled expanse of the Bengal Basin, one of world's most densely populated but far from the Great Himalayas. New research focused on the boundary between the ancient Shillong Plateau and the soft, deep sediments of the Bengal Basin has revealed a mechanism for earthquake wave amplification that is so severe it could multiply shake intensity by two to five times in urban areas.
 hero-image: baibhav.svg
 issue: 8
 permalink: /issue8/baibhab-karmakar-hazard/
 refs-file: baibhav
+reviewed-by:
+- Suddhajit Bishayee
+- Shibaraj Sahu
+- Sushrat Mishra
 title: 'Earthquake Amplification in the Bengal Basin: Insights into Basin-Induced Seismic Hazard'
 ---
 
 
-The Asian megacities of Kolkata and Dhaka sit atop the sediment-filled expanse of the Bengal Basin, one of the world"s most densely populated region but far from the Great Himalayas. For decades, seismic hazard assessments have focused heavily on major fault lines and rupture zones, but a critical, often underestimated factor is now demanding attention– the ground itself.
+The Asian megacities of Kolkata and Dhaka sit atop the sediment-filled expanse of the Bengal Basin, one of the world's most densely populated region but far from the Great Himalayas. For decades, seismic hazard assessments have focused heavily on major fault lines and rupture zones, but a critical, often underestimated factor is now demanding attention– the ground itself.
 
 New research focused on the boundary between the ancient, rigid Shillong Plateau and the soft, deep sediments of the Bengal Basin has revealed a mechanism for earthquake wave amplification that is so severe it could multiply shake intensity by two to five times in urban areas. This work highlights a global imperative to move beyond simplified velocity models and account for the complex interaction between earthquake waves and the heterogeneous, soft subsurface.
 
@@ -44,7 +48,7 @@ The danger zone lies along a stark geological transition. To the north, the Shil
 
 The key scientific problem, and the source of the amplified shaking, is the impedance contrast at the boundary where these two terrains meet. Seismic waves travel through hard, crystalline rock (like the Shillong Plateau) quickly. When these waves encounter the much softer, lower-density sediments of the Bengal Basin, they behave like a fast car hitting a patch of deep mud: they slow down drastically.
 
-This sharp change in velocity, specifically the lower shear-wave velocities (Vs) in the basin sediments, causes the seismic energy to be concentrated and amplified. In addition, several other mechanisms can further enhance seismic wave amplification in sedimentary basins, including (i) resonance effects when the incoming wave frequency matches the natural frequency of the sediment column, (ii) basin geometry and edge effects, where waves are reflected and focused within the basin, leading to localized “hot spots” of stronger shaking, and (iii) wave trapping and multiple reflections between the sediment-bedrock interface and the free surface, which can prolong shaking duration and increase surface motion. This effect is particularly pronounced for surface waves, which travel along the Earth"s surface and carry a majority of the destructive energy, especially at lower frequencies.
+This sharp change in velocity, specifically the lower shear-wave velocities (Vs) in the basin sediments, causes the seismic energy to be concentrated and amplified. In addition, several other mechanisms can further enhance seismic wave amplification in sedimentary basins, including (i) resonance effects when the incoming wave frequency matches the natural frequency of the sediment column, (ii) basin geometry and edge effects, where waves are reflected and focused within the basin, leading to localized “hot spots” of stronger shaking, and (iii) wave trapping and multiple reflections between the sediment-bedrock interface and the free surface, which can prolong shaking duration and increase surface motion. This effect is particularly pronounced for surface waves, which travel along the Earth's surface and carry a majority of the destructive energy, especially at lower frequencies.
 
 ## Methodology: Shear Velocity Profiles and Modeling Techniques
 
@@ -56,7 +60,7 @@ The first computational method used was SWRT. This technique is semi-analytical,
 
 A crucial capability of SWRT is its ability to explicitly incorporate mode conversion, i.e., the process in which seismic wave energy is redistributed into different wave modes when it encounters a strong contrast in subsurface properties. As a surface wave (such as a fundamental Rayleigh or Love wave) reaches a boundary, it cannot continue in the same form entirely; instead, part of its energy is transferred into other modes, often generating higher-mode surface waves that propagate differently through the layered basin sediments. This mechanism of energy conversion helps trap seismic energy and redistribute it within the basin, contributing to the overall amplification.
 
-The SWRT results were then validated using SPECFEM2D, a more computationally intensive full waveform simulation tool. SPECFEM2D solves the complete elastic wave equation, providing a highly accurate, dynamic picture of how the entire seismic wavefield interacts with the two-dimensional geological structure. By showing where the energy goes, SPECFEM2D essentially acts as a high-fidelity "virtual seismograph" to confirm the predictions of the more simplified SWRT model.
+The SWRT results were then validated using SPECFEM2D, a more computationally intensive full waveform simulation tool. SPECFEM2D solves the complete elastic wave equation, providing a highly accurate, dynamic picture of how the entire seismic wavefield interacts with the two-dimensional geological structure. By showing where the energy goes, SPECFEM2D essentially acts as a high-fidelity 'virtual seismograph' to confirm the predictions of the more simplified SWRT model.
 
 {% include figure.html image='baibhav4.svg' caption='S-wave Velocity Profiles. This figure shows the S-wave (shear-wave) velocity variation with depth for two distinct regions: Medium 1 representing the Shillong area, and Medium 2 representing the Agartala area.' width=800 %}
 
@@ -66,7 +70,7 @@ The SWRT results were then validated using SPECFEM2D, a more computationally int
 
 The predictions from both independent modeling techniques were starkly consistent: Both SWRT and SPECFEM2D predict 2-5 times higher amplitudes in the Bengal Basin sediments than in the adjacent crystalline terrain.
 
-This significant amplification occurs across a crucial frequency band: 0.01-0.15 Hz. This low-frequency range is particularly dangerous because it corresponds to the natural resonant frequencies of tall structures like high-rise buildings and bridges [6]. The amplified shaking at these frequencies can drive buildings into destructive resonance, magnifying structural damage far beyond what would be expected based solely on the earthquake"s magnitude.
+This significant amplification occurs across a crucial frequency band: 0.01-0.15 Hz. This low-frequency range is particularly dangerous because it corresponds to the natural resonant frequencies of tall structures like high-rise buildings and bridges [6]. The amplified shaking at these frequencies can drive buildings into destructive resonance, magnifying structural damage far beyond what would be expected based solely on the earthquake's magnitude.
 
 ## Confirmation from the Earth
 

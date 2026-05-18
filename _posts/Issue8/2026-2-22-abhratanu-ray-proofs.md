@@ -12,6 +12,8 @@ hero-image: abhratanu.svg
 issue: 8
 permalink: /issue8/abhratanu-ray-proofs/
 refs-file: null
+reviewed-by:
+- Debanuj Chatterjee
 title: "Finite Points, \u201CInfinity Lines\u201D and a Couple of Nice Proofs"
 ---
 
@@ -31,7 +33,7 @@ We can see that some line has been generated that passes through only two of the
 
 On first instinct, proof by contradiction seems to be the way to go. And it was, for Kelly, although this proof was pretty pervasive, and went undiscovered for decades, it is a really short and simple one.
 
-**We shall go through two proofs of the problem statement**. One given by **Eberhard Melchior**, in 1941, after Paul Erdős popularised the problem; and the other much later, in 1986, by **Leroy Milton Kelly**. The former proof is a much more general one, made using concepts of graph theory, and projective plane geometry (I will try my best to explain this, to the extent at which I am able to grasp it myself), and the latter is a much simpler and more elegant one, although not being nearly as useful in application to other spheres or problems as Melchior"s.
+**We shall go through two proofs of the problem statement**. One given by **Eberhard Melchior**, in 1941, after Paul Erdős popularised the problem; and the other much later, in 1986, by **Leroy Milton Kelly**. The former proof is a much more general one, made using concepts of graph theory, and projective plane geometry (I will try my best to explain this, to the extent at which I am able to grasp it myself), and the latter is a much simpler and more elegant one, although not being nearly as useful in application to other spheres or problems as Melchior's.
 
 We list 2 standard definitions for our proofs:
 
@@ -43,9 +45,9 @@ We restate **Problem 1** as the following theorem, then proceed to prove it.
 
 **Theorem 1.1:** **(Sylvester-Gallai Theorem)** Every such set P determines at least one ordinary line.
 
-Let us first look at Kelly"s proof, a truly beautiful and simple one, with elementary geometrical construction, proving the theorem by contradiction.
+Let us first look at Kelly's proof, a truly beautiful and simple one, with elementary geometrical construction, proving the theorem by contradiction.
 
-## Kelly"s Proof
+## Kelly's Proof
 
  _Proof._ Let $$l$$ be a line in the plane, such that it passes through $$n$$ points in the plane, and there exists some point $$P$$ in the plane, whose perpendicular distance to $$l$$ is the minimal perpendicular distance between any point-line pair in the plane. Note that since we have an arrangement of a finite number of points (in the set P) in our plane, the set of lines determined by the points in P is also finite. <br>
  {% include figure.html image='abhratanu2.png' caption='' width=800 %}
@@ -65,10 +67,10 @@ But, this contradicts our choice of $$l$$ and $$P$$ as the closest point-line pa
 
 Hence, Case-1 must be true, and $$l$$ is proved to be ordinary. 
 
-On first read, this proof felt extremely satisfying to me, like it was out of Erdős" "**Book**". But in a way, this proof is "a bit too clever". There isn"t much of anything we can extend this to. <br>
- For the purpose of extension, and to find some results we can apply to other areas of Mathematics, we turn now, to **Melchior"s proof**.
+On first read, this proof felt extremely satisfying to me, like it was out of Erdős' "**Book**". But in a way, this proof is "a bit too clever". There isn't much of anything we can extend this to. <br>
+ For the purpose of extension, and to find some results we can apply to other areas of Mathematics, we turn now, to **Melchior's proof**.
 
-## Melchior"s Proof
+## Melchior's Proof
 
  In this proof, the concepts of the **Projective Plane** and **Graph Theory** have been used. We will go through the specific results/concepts we need.
 
@@ -96,7 +98,7 @@ The modification made to our "normal" notions of geometry here, is that **all** 
 + Every pair of points in the set $$\mathbb{P}$$ lies on a unique line in the set $$\mathbb{L}$$
 
 
-+ Given any line $$l \in \mathbb{L}$$ and any point $$P \in \mathbb{P}$$ which doesn"t lie on $$l$$, $$\exists$$ a unique line $$m \in \mathbb{L}$$ such that P lies on $$m$$ and $$l \cap m = \varnothing$$ (no point lies on both $$l$$ and $$m$$).
++ Given any line $$l \in \mathbb{L}$$ and any point $$P \in \mathbb{P}$$ which doesn't lie on $$l$$, $$\exists$$ a unique line $$m \in \mathbb{L}$$ such that P lies on $$m$$ and $$l \cap m = \varnothing$$ (no point lies on both $$l$$ and $$m$$).
 
 
 + $$\exists$$ $$3$$ non-collinear points in the set $$\mathbb{P}$$.
@@ -130,7 +132,7 @@ Then, $$\mathbb{T}'$$ holds for the projective plane.
 The proof for Theorem 3.1 is omitted here, but it is quite easy to see why it works with an example, as given below. <br>
 We consider the Theorem of Pappus as an example.
 
-**Theorem 3.2:** **(Pappus" Theorem)** Let $$l,l'$$ be two lines in the plane. Let
+**Theorem 3.2:** **(Pappus' Theorem)** Let $$l,l'$$ be two lines in the plane. Let
 
 
 + $$A,B,C$$ be points of $$l$$.
@@ -149,7 +151,7 @@ Then, $$L = AB' \cap A'B,M = AC' \cap A'C,N = BC' \cap B'C$$ are collinear. <br>
 + $$a,b,c$$ be lines concurrent at P.
 
 
-+ $$a',b',c'$$ be lines concurrent at P".
++ $$a',b',c'$$ be lines concurrent at P'.
 
 
 + all these lines be distinct from that joining $$P,P'.$$
@@ -172,7 +174,7 @@ Below are the standard, and dual versions of the theorem in a diagrammatic form.
 
 ### Proceeding with the proof
 
- Now we can finally attempt to understand Melchior"s proof, with the knowledge of preceding subsections. <br>
+ Now we can finally attempt to understand Melchior's proof, with the knowledge of preceding subsections. <br>
 _Proof._ Let P be a finite set of points in a projective plane $$\pi = (P,L,I)$$. Let us consider a **dual collection** of $$n$$ lines:
 
 $$P^{\ast} = \left\{ p^{\ast}:p \in P \right\}$$.
@@ -203,5 +205,5 @@ $$$$
 
  Surprisingly enough, this proof not only shows that one ordinary line shall exist, but rather that **three must exist**, for any finite arrangement.
 
-This proof gives us a "better" result, although it is way more convoluted than what Kelly came up with. It is quite stunning how elusive the prior proof was. It took decades after Melchior"s publication, for someone to revisit the problem, after Paul Erdos brought it back up, so this elegant and beautiful proof could be presented to the world. <br>
+This proof gives us a "better" result, although it is way more convoluted than what Kelly came up with. It is quite stunning how elusive the prior proof was. It took decades after Melchior's publication, for someone to revisit the problem, after Paul Erdos brought it back up, so this elegant and beautiful proof could be presented to the world. <br>
 The most satisfying mathematics is not always the most applicable, or "the best". Beauty, in many cases, arises from simplicity. 

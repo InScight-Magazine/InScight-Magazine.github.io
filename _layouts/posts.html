@@ -35,6 +35,11 @@ layout: default
 {{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>"}}
 </div>
 {% endif %}
+
+{% if page.reviewed-by %}
+<br>
+<i>Reviewed by <b>{{ page.reviewed-by | join: ", " }}</b></i>
+{% endif %}
 <hr>
 {{ content }}
 
