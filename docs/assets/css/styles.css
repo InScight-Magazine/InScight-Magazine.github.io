@@ -471,6 +471,15 @@ a.nf {
   justify-content: space-between;
 }
 
+.issue-read {
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1em;
+  row-gap: 0em;
+  flex-wrap: wrap;
+}
+
 .digest-item {
   display: flex;
   flex-direction: column;
@@ -698,7 +707,7 @@ input[type=radio]:checked {
 }
 
 .reveal, .reveal a {
-  margin-top: 1rem;
+  margin: 0.5rem;
   background-color: #2E2E2E;
   color: #FAFAFA;
   border: 0px;
@@ -873,6 +882,7 @@ iframe.crossword-iframe {
     object-fit: contain;
   }
   .highlight-desc {
+    margin-top: 1em;
     max-width: 100%;
   }
 }

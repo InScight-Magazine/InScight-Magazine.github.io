@@ -18,7 +18,7 @@ layout: default
 {% for item in metaArticles %}
 <div class="magazine-item">
 <span class="magazine-summary-title">{{ item.title }}</span>
-<span><span class="archive-author">{{ item.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</span> <a class="reveal" href={{ item.url }}>Read</a></span>
+<span class="issue-read"><span class="archive-author">{{ item.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</span> <a class="reveal" href={{ item.url }}>Read</a></span>
 </div>
 {% endfor %}
 
@@ -28,7 +28,7 @@ layout: default
 {% for item in articles %}
 <div class="magazine-item">
 <span class="magazine-summary-title">{{ item.title }}</span>
-<span><span class="archive-author">{{ item.authors | join: ", " | strip }}</span> <a class="reveal" href={{ item.url }}>Read</a></span>
+<span class="issue-read"><span class="archive-author">{{ item.authors | join: ", " | strip }}</span> <a class="reveal" href={{ item.url }}>Read</a></span>
 </div>
 {% endfor %}
 
@@ -37,7 +37,7 @@ layout: default
 {% for item in interviews %}
 <div class="magazine-item">
 <span class="magazine-summary-title">{{ item.title }}</span>
-<span><span class="archive-author">{{ item.authors | join: ", " }}</span> <a class="reveal" href={{ item.url }}>Read</a></span>
+<span class="issue-read"><span class="archive-author">{{ item.authors | join: ", " }}</span> <a class="reveal" href={{ item.url }}>Read</a></span>
 </div>
 {% endfor %}
 
@@ -49,7 +49,7 @@ layout: default
 {% assign link = "/issue" | append: issue | append: "/digest/#" | append: slug %}
 <div class="magazine-item">
 <span class="magazine-summary-title">{{ item.Title }}</span>
-<span><span class="archive-author">{{ item["Author"] }}</span> <a class="reveal" href={{ link }}>Read</a></span>
+<span class="issue-read"><span class="archive-author">{{ item["Author"] }}</span> <a class="reveal" href={{ link }}>Read</a></span>
 </div>
 {% endfor %}
 <div class="magazine-item">
@@ -64,7 +64,7 @@ layout: default
 {% for item in items %}
 <div class="magazine-item">
 <span class="magazine-summary-title">{{ item.title }}</span>
-<span><span class="archive-author">{{ item.authors | join: ", " }}</span> <a class="reveal" href={{ item.permalink }}>Read</a></span>
+<span class="issue-read"><span class="archive-author">{{ item.authors | join: ", " }}</span> <a class="reveal" href={{ item.permalink }}>Read</a></span>
 </div>
 {% endfor %}
 {% endif %}
@@ -74,6 +74,6 @@ layout: default
 {% assign items = issueItems | where_exp:"item", "categories contains item.category" %}
 {% for item in items %}
 <div class="magazine-item">
-<span><span class="magazine-summary-title">{{ item.title | markdownify | remove: '<p>' | remove: '</p>' }}</span><a class="reveal" href="{{ item.url }}">Try Out</a></span>
+<span class="issue-read"><span class="magazine-summary-title">{{ item.title | markdownify | remove: '<p>' | remove: '</p>' }}</span><a class="reveal" href="{{ item.url }}">Try Out</a></span>
 </div>
 {% endfor %}

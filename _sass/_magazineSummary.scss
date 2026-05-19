@@ -42,3 +42,12 @@
   display: flex;
   justify-content: space-between;
 }
+
+.issue-read {
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1em;
+  row-gap: 0em;
+  flex-wrap: wrap;
+}
