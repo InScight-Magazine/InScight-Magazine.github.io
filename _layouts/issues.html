@@ -2,16 +2,16 @@
 layout: default
 ---
 
-{% assign issue = site.data.magazines.first.issue-number %}
-{% assign month = site.data.magazines.first.month %}
-{% assign year = site.data.magazines.first.year %}
+{% assign issue = page.permalink | remove: "/" | remove: "issue" %}
+{% assign item = site.data.magazines | find:"issue-number", issue %}
+{% assign month = item.month %}
+{% assign year = item.year %}
 <h1> Issue #{{ issue }} | {{ month }}, {{ year}}</h1>
 <div class="magazine-banner">
 <div><a class="button" href="/assets/magazines/issue{{ issue }}.pdf">Download PDF</a></div>
 </div>
 
-{% assign permalink = "issue" | append: issue %}
-{% assign issueItems = site.posts | where_exp: "item" , "item.permalink contains permalink" %}
+{% assign issueItems = site.posts | where_exp: "item" , "item.permalink contains page.permalink" %}
 
 <h2>Perspectives</h2>
 {% assign metaArticles = issueItems | where:"category", "meta" %}
