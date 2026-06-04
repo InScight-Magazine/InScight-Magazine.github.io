@@ -118,7 +118,7 @@
 
 </div>
 
-<div class="article-date">Jun 01, 2026</div>
+<div class="article-date">Jun 04, 2026</div>
 
 </div>
 
@@ -289,6 +289,13 @@ Prime numbers appear to be scattered at random, yet their overall distribution f
 <p>Seen in this light, Cramér’s model reveals both the power and the limitations of probabilistic reasoning in number theory. It captures the correct scale of prime gaps while falling short of fully encoding arithmetic structure. Its successes and failures together show why such models are best viewed as guiding principles rather than final answers. By exploring where the model works, where it breaks down, and how it can be refined, mathematicians continue to uncover subtle patterns beneath the surface, ensuring that the study of prime numbers remains a vibrant and evolving field.</p>
 
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue7-anup-dixit-probability--y"> I enjoyed it! </button>
+<button class="button" id="-issue7-anup-dixit-probability--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -304,6 +311,34 @@ Prime numbers appear to be scattered at random, yet their overall distribution f
 <br>
 
 
+
+
+<script>
+const buttonY = document.getElementById("-issue7-anup-dixit-probability--y");
+const buttonN = document.getElementById("-issue7-anup-dixit-probability--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue7/anup-dixit-probability/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue7/anup-dixit-probability/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

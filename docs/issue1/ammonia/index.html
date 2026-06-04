@@ -245,6 +245,13 @@ The bottleneck in sustainable ammonia production is discovering an effective cat
 
 <p>Efforts to develop green ammonia and cutting-edge catalytic technologies are transforming the ammonia-production process into a more sustainable endeavour. As Dr. Patel notes, “The future of ammonia will help decide the future of our planet. With stakes this high, it’s not just about chemistry—it’s about survival.” The story of ammonia extends beyond chemistry, reflecting past and present constraints while offering hope for sustainability and innovation in one of the world’s most energy-intensive industries.</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue1-ammonia--y"> I enjoyed it! </button>
+<button class="button" id="-issue1-ammonia--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -258,6 +265,7 @@ The bottleneck in sustainable ammonia production is discovering an effective cat
 <br>
 
 
+
 <h2>References</h2>
 <div class="references">
 <ol>
@@ -266,6 +274,33 @@ The bottleneck in sustainable ammonia production is discovering an effective cat
 </ol>
 </div>
 
+
+<script>
+const buttonY = document.getElementById("-issue1-ammonia--y");
+const buttonN = document.getElementById("-issue1-ammonia--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue1/ammonia/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue1/ammonia/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

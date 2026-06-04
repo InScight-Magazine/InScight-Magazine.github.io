@@ -348,6 +348,13 @@ Given that he is not an IIT student, how can he secure the money required to tra
 
 <p class="interview-answer">CSS: Thank you.</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue3-swarnendu-sharma--y"> I enjoyed it! </button>
+<button class="button" id="-issue3-swarnendu-sharma--n"> I didn't really enjoy it. </button>
+</div>
 
 
 <br>
@@ -355,6 +362,34 @@ Given that he is not an IIT student, how can he secure the money required to tra
 <br>
 
 
+
+
+<script>
+const buttonY = document.getElementById("-issue3-swarnendu-sharma--y");
+const buttonN = document.getElementById("-issue3-swarnendu-sharma--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue3/swarnendu-sharma/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue3/swarnendu-sharma/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

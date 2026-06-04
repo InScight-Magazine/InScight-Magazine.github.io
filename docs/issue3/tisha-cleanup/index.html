@@ -307,6 +307,13 @@ In Mucopolysaccharidosis VII, missing a key enzyme wrecks the cell’s ability t
 <p>Ultimately, the concept of enhancing cellular clearance mechanisms, whether through compounds like resveratrol or novel mitophagy-specific agents, holds promise for treating not only MPSVII but also a wide spectrum of neurodegenerative disorders. This study sets the stage for future research that could lead to more effective, targeted therapies for these devastating diseases.</p>
 
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue3-tisha-cleanup--y"> I enjoyed it! </button>
+<button class="button" id="-issue3-tisha-cleanup--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -322,6 +329,7 @@ In Mucopolysaccharidosis VII, missing a key enzyme wrecks the cell’s ability t
 <br>
 
 
+
 <h2>References</h2>
 <div class="references">
 <ol>
@@ -330,6 +338,33 @@ In Mucopolysaccharidosis VII, missing a key enzyme wrecks the cell’s ability t
 </ol>
 </div>
 
+
+<script>
+const buttonY = document.getElementById("-issue3-tisha-cleanup--y");
+const buttonN = document.getElementById("-issue3-tisha-cleanup--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue3/tisha-cleanup/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue3/tisha-cleanup/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

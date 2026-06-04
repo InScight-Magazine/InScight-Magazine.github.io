@@ -197,6 +197,13 @@ The different positions I have taken up in my career have come with their own se
 <h2 id="message-for-current-iiser-students">Message for current IISER students</h2>
 <p>IISER Kolkata is poised to step out of its teens and enter the second decade. An Institute is known not only for the quality of research and teaching, but also for the success of its alumni. Despite its relatively young age, IISER-K has already produced a significant number of alumni who have established themselves in academia and industry. Our alumni have become faculty members and academic group leaders, established companies, and achieved success in corporate jobs. Current IISER students should tap into this network. Whether you are wondering about applying for a PhD/Post-doc/Faculty position or thinking of establishing a start-up, the alumni network can be a powerful resource who can help you. So, don’t be shy about asking your seniors for help even if you don’t know them personally. I wish you all the very best for your journey!</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue3-sayan-journey--y"> I enjoyed it! </button>
+<button class="button" id="-issue3-sayan-journey--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -212,6 +219,34 @@ The different positions I have taken up in my career have come with their own se
 <br>
 
 
+
+
+<script>
+const buttonY = document.getElementById("-issue3-sayan-journey--y");
+const buttonN = document.getElementById("-issue3-sayan-journey--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue3/sayan-journey/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue3/sayan-journey/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

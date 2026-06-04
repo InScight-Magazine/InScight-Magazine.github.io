@@ -257,6 +257,13 @@ Thus, Govindjee has no hesitation in declaring: “Therefore, Jagadish Chandra B
 <h2 id="summary">Summary</h2>
 <p>In the 1920s, Jagadish Chandra Bose turned to photosynthesis, publishing The Physiology of Photosynthesis (1924), a 25-chapter monograph. He devised the Photosynthetic Bubbler, an innovative instrument that enabled precise, quantitative measurement of oxygen release during photosynthesis, overcoming the limitations of simple bubble-counting methods. Using this and other novel devices, Bose investigated the effects of light intensity, wavelength, temperature, seasonal and diurnal changes, as well as chemical stimulants and inhibitors. His most significant finding was that Hydrilla plants produced malic acid to supply internal CO₂ for photosynthesis—an early recognition of the C4 pathway, decades before Hatch and Slack’s 1966 discovery. He also observed the stimulatory effect of nitric acid on photosynthesis. Modern scholars, including Govindjee, regard Bose as not only a pioneer in India but also a global trailblazer in photosynthesis research.</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue6-gautam-biophysicist--y"> I enjoyed it! </button>
+<button class="button" id="-issue6-gautam-biophysicist--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -270,6 +277,7 @@ Thus, Govindjee has no hesitation in declaring: “Therefore, Jagadish Chandra B
 <br>
 
 <br>
+
 
 
 <h2>References</h2>
@@ -298,6 +306,33 @@ Thus, Govindjee has no hesitation in declaring: “Therefore, Jagadish Chandra B
 </ol>
 </div>
 
+
+<script>
+const buttonY = document.getElementById("-issue6-gautam-biophysicist--y");
+const buttonN = document.getElementById("-issue6-gautam-biophysicist--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue6/gautam-biophysicist/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue6/gautam-biophysicist/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

@@ -118,7 +118,7 @@
 
 </div>
 
-<div class="article-date">Jun 01, 2026</div>
+<div class="article-date">Jun 04, 2026</div>
 
 </div>
 
@@ -283,6 +283,13 @@ Regulatory T cells (Tregs) are a unique subset of CD<span class="katex"><span cl
 <p>Their work ultimately bridged mouse and human immunology and illuminated the central role of <em>FOXP3</em> in peripheral immune tolerance. Their discovery has opened the door to innovative therapies ranging from Treg-based interventions in autoimmune diseases, allergy, and transplantation, to strategies that modulate Treg function in cancer immunotherapy. The immune system’s peacekeepers “Tregs” stand as a testament to nature’s intricate design and the enduring power of scientific inquiry.</p>
 
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue7-pallavi-gupta-within--y"> I enjoyed it! </button>
+<button class="button" id="-issue7-pallavi-gupta-within--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -296,6 +303,7 @@ Regulatory T cells (Tregs) are a unique subset of CD<span class="katex"><span cl
 <br>
 
 <br>
+
 
 
 <h2>References</h2>
@@ -381,6 +389,33 @@ Regulatory T cells (Tregs) are a unique subset of CD<span class="katex"><span cl
 </ol>
 </div>
 
+
+<script>
+const buttonY = document.getElementById("-issue7-pallavi-gupta-within--y");
+const buttonN = document.getElementById("-issue7-pallavi-gupta-within--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue7/pallavi-gupta-within/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue7/pallavi-gupta-within/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

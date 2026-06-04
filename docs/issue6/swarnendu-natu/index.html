@@ -447,6 +447,13 @@ From a financially humble childhood, doing odd jobs to fund his education, to be
 <p class="interview-answer">AAN:  MBA with science background plays a major role in all other affairs. How? For example, now the pharma industry, you take. Somehow I take examples all the time from the pharma industry. The pharmaceutical industry today needs youngsters with science backgrounds and MBA degrees. These three things: analytical capabilities, nurturing creativity, and presentation. And these capabilities you can use anywhere that you go in future. In any branch of science or any profession that you take. And I always encourage them if they say they would like to do this.</p>
 <p>SS:  Thank you sir for your time with us. We hope our present students will be inspired by your comments. Thank you.</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue6-swarnendu-natu--y"> I enjoyed it! </button>
+<button class="button" id="-issue6-swarnendu-natu--n"> I didn't really enjoy it. </button>
+</div>
 
 
 <br>
@@ -454,6 +461,34 @@ From a financially humble childhood, doing odd jobs to fund his education, to be
 <br>
 
 
+
+
+<script>
+const buttonY = document.getElementById("-issue6-swarnendu-natu--y");
+const buttonN = document.getElementById("-issue6-swarnendu-natu--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue6/swarnendu-natu/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue6/swarnendu-natu/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

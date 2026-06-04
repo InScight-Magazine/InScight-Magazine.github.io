@@ -210,6 +210,13 @@ Dragonflies are one of the marvels of natural creation. The secrets of their fli
 
 <p>In fact, research on the structural properties of the wings of a dragonfly witnessed a boom in the past decade. The wings’ nanostructures revealed anti-bacterial properties [6,7], opening potential application avenues in biofilm design for medical implants [8] or even in the food processing industry [9]. In a world of emerging technologies, I strongly believe in the potential of the dragonflies to inspire the next generation of biomimetic innovations.</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue3-debanuj-dragonfly--y"> I enjoyed it! </button>
+<button class="button" id="-issue3-debanuj-dragonfly--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -225,6 +232,7 @@ Dragonflies are one of the marvels of natural creation. The secrets of their fli
 <br>
 
 
+
 <h2>References</h2>
 <div class="references">
 <ol>
@@ -233,6 +241,33 @@ Dragonflies are one of the marvels of natural creation. The secrets of their fli
 </ol>
 </div>
 
+
+<script>
+const buttonY = document.getElementById("-issue3-debanuj-dragonfly--y");
+const buttonN = document.getElementById("-issue3-debanuj-dragonfly--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue3/debanuj-dragonfly/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue3/debanuj-dragonfly/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

@@ -232,6 +232,13 @@
 <p>As more and more plant-emitted volatiles are being explored, we find their central role in the complex chemical dance of nature. Plants use these molecules as their they choreograph complex ecological relationships, shaping interactions from insect behavior to microbial alliances. Deciphering this silent but significant communication helps us to design sustainable agricultural solutions to safeguard crops, improve ecosystem services, and lower our environmental impact. The hidden symphony of VOCs stands as a powerful testament to the ingenuity and resilience of plants, showcasing their extraordinary ability to adapt and thrive amid ever-evolving environmental challenges. As we continue to delve deeper into this field, we move closer to a future where agriculture and ecology are not in conflict but in concert, united by the invisible threads of chemical communication.</p>
 
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue4-sayantani-behaviour--y"> I enjoyed it! </button>
+<button class="button" id="-issue4-sayantani-behaviour--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -245,6 +252,7 @@
 <br>
 
 <br>
+
 
 
 <h2>References</h2>
@@ -276,6 +284,33 @@
 </ol>
 </div>
 
+
+<script>
+const buttonY = document.getElementById("-issue4-sayantani-behaviour--y");
+const buttonN = document.getElementById("-issue4-sayantani-behaviour--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue4/sayantani-behaviour/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue4/sayantani-behaviour/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

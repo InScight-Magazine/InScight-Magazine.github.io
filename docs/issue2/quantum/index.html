@@ -324,6 +324,13 @@ After the transmission and measurement steps, Alice and Bob publicly announce th
 <p>As we stand on the brink of the second quantum revolution, the interplay between threat and solution in cryptography is a testament to the dual nature of technological progress- both a challenge and an opportunity.</p>
 
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue2-quantum--y"> I enjoyed it! </button>
+<button class="button" id="-issue2-quantum--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -337,6 +344,7 @@ After the transmission and measurement steps, Alice and Bob publicly announce th
 <br>
 
 
+
 <h2>References</h2>
 <div class="references">
 <ol>
@@ -345,6 +353,33 @@ After the transmission and measurement steps, Alice and Bob publicly announce th
 </ol>
 </div>
 
+
+<script>
+const buttonY = document.getElementById("-issue2-quantum--y");
+const buttonN = document.getElementById("-issue2-quantum--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue2/quantum/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue2/quantum/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

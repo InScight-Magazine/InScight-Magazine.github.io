@@ -267,6 +267,13 @@ I ask this with the hope that your insights will benefit future applicants. Whil
 <p class="interview-answer">RB: I can wish them all the best for sure for their future endeavor, whatever career path you choose for yourself, it doesn’t matter, you can choose PhD, you can choose MBA, you can choose to have your own business, whatever career path you choose, just try to self-teach yourself the thought process of training yourself to have an intelligent way of approaching any problem, as intelligently as possible. By saying as intelligently, it means saving as much time and resources and that basically, I mean your specific problem is your specific thing to solve, but this is the general thing that you will find that it would be very useful for yourself.</p>
 <p>SS: Thank you so much.</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue4-swarnendu-voyage--y"> I enjoyed it! </button>
+<button class="button" id="-issue4-swarnendu-voyage--n"> I didn't really enjoy it. </button>
+</div>
 
 
 <br>
@@ -274,6 +281,34 @@ I ask this with the hope that your insights will benefit future applicants. Whil
 <br>
 
 
+
+
+<script>
+const buttonY = document.getElementById("-issue4-swarnendu-voyage--y");
+const buttonN = document.getElementById("-issue4-swarnendu-voyage--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue4/swarnendu-voyage/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue4/swarnendu-voyage/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

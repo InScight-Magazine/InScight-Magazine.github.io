@@ -224,6 +224,13 @@ In 1961,  physicist Rolf Landauer made a bold claim: erasing one bit of informat
 
 <p>In a sense, we are all demons—tiny processors in a vast cosmic engine. And as we compute, think, and erase, the universe quietly tallies our debts in units of heat. To know is to order. To forget is to warm the world, ever so slightly.</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue6-tanmoy-heat--y"> I enjoyed it! </button>
+<button class="button" id="-issue6-tanmoy-heat--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -240,6 +247,34 @@ This article draws inspiration from: T. Pandit, G. Paul, A. Misra, and P. Chatto
 <br>
 
 
+
+
+<script>
+const buttonY = document.getElementById("-issue6-tanmoy-heat--y");
+const buttonN = document.getElementById("-issue6-tanmoy-heat--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue6/tanmoy-heat/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue6/tanmoy-heat/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

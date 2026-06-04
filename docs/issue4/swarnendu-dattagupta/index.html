@@ -394,6 +394,13 @@ After graduating, they forget the friends they made there. It feels like we talk
 <p class="interview-answer">SDG:Be happy, be on your own and be responsible to your surroundings. Worry about the fact that we have done big damage to ecology in the name of development.  If you look after your health and look after your health means that you have to do physical exercise and look after your diet and also be happy. So, mental peace is the most important thing in life and that is what you should have. And finally, as you said, and I’m unhappy to hear this, you must have a lot of friends and have a lot of <em>Adda</em>.</p>
 <p>SS:Thank you, sir.</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue4-swarnendu-dattagupta--y"> I enjoyed it! </button>
+<button class="button" id="-issue4-swarnendu-dattagupta--n"> I didn't really enjoy it. </button>
+</div>
 
 
 <br>
@@ -401,6 +408,34 @@ After graduating, they forget the friends they made there. It feels like we talk
 <br>
 
 
+
+
+<script>
+const buttonY = document.getElementById("-issue4-swarnendu-dattagupta--y");
+const buttonN = document.getElementById("-issue4-swarnendu-dattagupta--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue4/swarnendu-dattagupta/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue4/swarnendu-dattagupta/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

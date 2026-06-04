@@ -531,6 +531,13 @@ In this conversation with our representative, Prof. Sukumar Das Adhikari connect
 </figure>
 
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue7-s-d-adhikari--y"> I enjoyed it! </button>
+<button class="button" id="-issue7-s-d-adhikari--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -546,6 +553,34 @@ In this conversation with our representative, Prof. Sukumar Das Adhikari connect
 <br>
 
 
+
+
+<script>
+const buttonY = document.getElementById("-issue7-s-d-adhikari--y");
+const buttonN = document.getElementById("-issue7-s-d-adhikari--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue7/s-d-adhikari/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue7/s-d-adhikari/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

@@ -22,3 +22,24 @@ a.nf:focus {
 a.title-link {
   color: constants.$fg-color;
 }
+
+.button {
+  background-color: constants.$fg-color;
+  color: constants.$bg-color;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.feedback {
+  > * {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2em;
+  margin: 1em 0;
+}

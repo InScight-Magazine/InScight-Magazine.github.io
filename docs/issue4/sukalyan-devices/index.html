@@ -441,6 +441,13 @@ c-16-25.333-24-45-24-59z"/></svg></span></span></span></span></span></span></spa
 
 <p>While the full experimental verification of Majorana-based qubits remains an ongoing challenge - previous claims have been met with skepticism and rigorous scrutiny - Microsoft’s results are a tangible step forward in the quest to harness topological phases of matter for real-world quantum computing. If successful, it would validate years of theoretical predictions and could signal a turning point where topology moves from abstract mathematics into the heart of practical, next-generation technologies.</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue4-sukalyan-devices--y"> I enjoyed it! </button>
+<button class="button" id="-issue4-sukalyan-devices--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -454,6 +461,7 @@ c-16-25.333-24-45-24-59z"/></svg></span></span></span></span></span></span></spa
 <br>
 
 <br>
+
 
 
 <h2>References</h2>
@@ -506,6 +514,33 @@ c-16-25.333-24-45-24-59z"/></svg></span></span></span></span></span></span></spa
 </ol>
 </div>
 
+
+<script>
+const buttonY = document.getElementById("-issue4-sukalyan-devices--y");
+const buttonN = document.getElementById("-issue4-sukalyan-devices--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue4/sukalyan-devices/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue4/sukalyan-devices/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

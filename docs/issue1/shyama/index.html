@@ -294,6 +294,13 @@
 
 <p class="interview-answer">SN. I would encourage students to be patient and persistent. Success in science doesn’t come quickly. It requires time, effort, and the willingness to face failures   along the way. But the satisfaction of contributing to knowledge and discovery is worth it. Focus on the long-term impact of your work, not just the number of papers you publish. At the end of the day, it’s about making a meaningful contribution to the field.</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue1-shyama--y"> I enjoyed it! </button>
+<button class="button" id="-issue1-shyama--n"> I didn't really enjoy it. </button>
+</div>
 
 
 <br>
@@ -301,6 +308,34 @@
 <br>
 
 
+
+
+<script>
+const buttonY = document.getElementById("-issue1-shyama--y");
+const buttonN = document.getElementById("-issue1-shyama--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue1/shyama/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue1/shyama/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

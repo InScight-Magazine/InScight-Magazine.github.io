@@ -417,6 +417,13 @@ In this wide-ranging conversation, Prof. Munshi reflects on a life shaped by mat
 <p>RM: Exactly. The real joy of mathematics lies in the attempt itself—in trying to move the wall. That is where the fun is. When the wall finally moves, you feel immense satisfaction—but there is also a strange sadness, because the struggle that defined the journey has ended.</p>
 
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue7-ritabrata-munshi--y"> I enjoyed it! </button>
+<button class="button" id="-issue7-ritabrata-munshi--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -432,6 +439,34 @@ In this wide-ranging conversation, Prof. Munshi reflects on a life shaped by mat
 <br>
 
 
+
+
+<script>
+const buttonY = document.getElementById("-issue7-ritabrata-munshi--y");
+const buttonN = document.getElementById("-issue7-ritabrata-munshi--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue7/ritabrata-munshi/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue7/ritabrata-munshi/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

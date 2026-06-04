@@ -386,6 +386,13 @@ We consider the Theorem of Pappus as an example.</p>
 <p>This proof gives us a “better” result, although it is way more convoluted than what Kelly came up with. It is quite stunning how elusive the prior proof was. It took decades after Melchior’s publication, for someone to revisit the problem, after Paul Erdos brought it back up, so this elegant and beautiful proof could be presented to the world. <br />
 The most satisfying mathematics is not always the most applicable, or “the best”. Beauty, in many cases, arises from simplicity.</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue8-abhratanu-ray-proofs--y"> I enjoyed it! </button>
+<button class="button" id="-issue8-abhratanu-ray-proofs--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -401,6 +408,34 @@ The most satisfying mathematics is not always the most applicable, or “the bes
 <br>
 
 
+
+
+<script>
+const buttonY = document.getElementById("-issue8-abhratanu-ray-proofs--y");
+const buttonN = document.getElementById("-issue8-abhratanu-ray-proofs--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue8/abhratanu-ray-proofs/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue8/abhratanu-ray-proofs/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

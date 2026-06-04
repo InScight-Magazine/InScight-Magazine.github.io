@@ -354,6 +354,13 @@ In “Gluten – Not for All Gluttons,” Shrestha Chowdhury takes readers on an
 
 <p>Gluten, though discovered three hundred years ago, has only recently become a focal point of attention due to the growing awareness of various gluten-related disorders. Fortunately, we no longer live in a time devoid of gluten-free alternatives. Today, the market offers a plethora of such options, although there’s still room for improvement in their taste. Nevertheless, the demand for gluten-free alternatives has opened up new business opportunities. So, cheer up your gluten-sensitive friends! It’s not far-fetched to imagine a future where new wheat cultivars are developed, free from the toxic polypeptides found in gluten. Of course, achieving this milestone requires a deep understanding of protein folding, both experimentally and theoretically.</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue1-gluten--y"> I enjoyed it! </button>
+<button class="button" id="-issue1-gluten--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -367,6 +374,7 @@ In “Gluten – Not for All Gluttons,” Shrestha Chowdhury takes readers on an
 <br>
 
 
+
 <h2>References</h2>
 <div class="references">
 <ol>
@@ -375,6 +383,33 @@ In “Gluten – Not for All Gluttons,” Shrestha Chowdhury takes readers on an
 </ol>
 </div>
 
+
+<script>
+const buttonY = document.getElementById("-issue1-gluten--y");
+const buttonN = document.getElementById("-issue1-gluten--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue1/gluten/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue1/gluten/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

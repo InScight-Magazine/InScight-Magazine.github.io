@@ -242,6 +242,13 @@ In this story, Apurba Das chronicles her PhD journey uncovering how lysosomal de
 
 <p>This PhD journey has been more than an academic pursuit - it has been a lesson in perseverance, curiosity, and gratitude. Behind every experiment were mentors, collaborators, friends, and family who kept the spark alive. Science often begins with wonder, and I aim to carry that same sense of curiosity forward into every new beginning - continuing to ask questions, chase unknowns, and believe in the quiet power of keep learning.</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue6-apurba-disease--y"> I enjoyed it! </button>
+<button class="button" id="-issue6-apurba-disease--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -255,6 +262,7 @@ In this story, Apurba Das chronicles her PhD journey uncovering how lysosomal de
 <br>
 
 <br>
+
 
 
 <h2>References</h2>
@@ -298,6 +306,33 @@ In this story, Apurba Das chronicles her PhD journey uncovering how lysosomal de
 </ol>
 </div>
 
+
+<script>
+const buttonY = document.getElementById("-issue6-apurba-disease--y");
+const buttonN = document.getElementById("-issue6-apurba-disease--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue6/apurba-disease/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue6/apurba-disease/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

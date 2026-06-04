@@ -276,6 +276,13 @@ Why do cells choose to die? From shaping embryos to protecting entire communitie
 <p>The same fundamental elements of the cell death program are activated in various cell types, whether they respond to developmental signals, immune signals, oxidative stress, injuries, or infections. The numerous components of cell death machinery are evolutionarily conserved from worms to humans; however, a lot needs to be researched for similarities and peculiarities of the cell death pathways in single celled life to understand the thread that exists between the uni and multicellular life [9,10]. Initial selection of the functional domains of molecular effectors that control death, aging, and adaptation might have favored their original selection, and this is true for both unicellular and multicellular organisms. Some of the molecules associated with cell death may have been associated with survival pathways that were later adapted for the death signalling. Cell death in unicellular organisms remains an attractive area for further research to understand an important component of the biology of survival.</p>
 
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue5-chandrima-easier--y"> I enjoyed it! </button>
+<button class="button" id="-issue5-chandrima-easier--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -289,6 +296,7 @@ Why do cells choose to die? From shaping embryos to protecting entire communitie
 <br>
 
 <br>
+
 
 
 <h2>References</h2>
@@ -329,6 +337,33 @@ Why do cells choose to die? From shaping embryos to protecting entire communitie
 </ol>
 </div>
 
+
+<script>
+const buttonY = document.getElementById("-issue5-chandrima-easier--y");
+const buttonN = document.getElementById("-issue5-chandrima-easier--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue5/chandrima-easier/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue5/chandrima-easier/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

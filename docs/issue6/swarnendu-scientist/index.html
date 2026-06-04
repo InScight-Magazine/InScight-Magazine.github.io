@@ -409,6 +409,13 @@ Now that student wants to go abroad to present his work. In that case, do they h
 <p class="interview-answer">Don’t work only on your own. What you call. Don’t think only about yourself. It is important that we think about others also. You will realize all these things after 40 years when someone will take your interview. So help each other. And, system you should take care. The system in which you are working. The system which has given you a job. I think it is very important. That we respect that system. We respect each other. We respect other cultures. We respect each other’s language. We respect others’ food habits. This is very important. And, I will also say at the end. While being local. Think globally.</p>
 <p>SS: Thank you sir. That will be all.</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue6-swarnendu-scientist--y"> I enjoyed it! </button>
+<button class="button" id="-issue6-swarnendu-scientist--n"> I didn't really enjoy it. </button>
+</div>
 
 
 <br>
@@ -416,6 +423,34 @@ Now that student wants to go abroad to present his work. In that case, do they h
 <br>
 
 
+
+
+<script>
+const buttonY = document.getElementById("-issue6-swarnendu-scientist--y");
+const buttonN = document.getElementById("-issue6-swarnendu-scientist--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue6/swarnendu-scientist/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue6/swarnendu-scientist/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

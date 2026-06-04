@@ -328,6 +328,13 @@ Over time, the workshop has expanded well beyond its early focus on neurobiology
 <p>The workshop also ensures that participants feel at home. Each year, they are treated to delicious meals, and 2025 was no exception. The variety, flavor, and quality of the food earned praise from both students and distinguished speakers, adding a thoughtful and memorable touch to the scientific program.
 The cultural evening provided the perfect conclusion. It was a time to relax, celebrate, and showcase creativity through art and performance. Altogether, BAW 2025 was far more than just a workshop. It was a transformative experience that shaped skilled researchers, encouraged leadership, and fostered a dynamic and close-knit scientific community.</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue5-bishal-scientists--y"> I enjoyed it! </button>
+<button class="button" id="-issue5-bishal-scientists--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -343,6 +350,34 @@ The cultural evening provided the perfect conclusion. It was a time to relax, ce
 <br>
 
 
+
+
+<script>
+const buttonY = document.getElementById("-issue5-bishal-scientists--y");
+const buttonN = document.getElementById("-issue5-bishal-scientists--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue5/bishal-scientists/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue5/bishal-scientists/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

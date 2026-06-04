@@ -222,6 +222,13 @@ DNAâ€™s electrical properties have been studied since D.D. Eley and Cees Dekkerâ
 <p>They successfully identified unique signatures related to base-pair mismatches that can lead to different genetic diseases, offering significant potential to early detection genetic disorder and medical diagnostics. This work could lead to the development of a fast and cost-effective DNA sequencing device.</p>
 
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue2-dna--y"> I enjoyed it! </button>
+<button class="button" id="-issue2-dna--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -235,6 +242,7 @@ DNAâ€™s electrical properties have been studied since D.D. Eley and Cees Dekkerâ
 <br>
 
 
+
 <h2>References</h2>
 <div class="references">
 <ol>
@@ -243,6 +251,33 @@ DNAâ€™s electrical properties have been studied since D.D. Eley and Cees Dekkerâ
 </ol>
 </div>
 
+
+<script>
+const buttonY = document.getElementById("-issue2-dna--y");
+const buttonN = document.getElementById("-issue2-dna--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue2/dna/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue2/dna/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

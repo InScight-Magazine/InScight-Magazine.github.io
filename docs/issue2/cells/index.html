@@ -247,6 +247,13 @@ m0 0v40h399900v-40z m100 194v40h399900v-40zm0 0v40h399900v-40z"/></svg></span></
 <p>Cell mechanosensing is essential for detecting and responding to mechanical stimuli in the environment, enabling cells to regulate critical functions such as migration, adhesion, differentiation, and proliferation. This process is vital in tissue development, wound healing, and immune responses, where cells must adapt to varying mechanical forces. Mechanosensing allows cells to interpret physical cues from the extracellular matrix and neighboring cells, influencing gene expression and signaling pathways. Dysregulation of mechanosensing can lead to diseases such as cancer and fibrosis. Understanding how cells sense and respond to forces provides insights into tissue engineering, regenerative medicine, and targeted therapeutic strategies.</p>
 
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue2-cells--y"> I enjoyed it! </button>
+<button class="button" id="-issue2-cells--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -260,6 +267,7 @@ m0 0v40h399900v-40z m100 194v40h399900v-40zm0 0v40h399900v-40z"/></svg></span></
 <br>
 
 
+
 <h2>References</h2>
 <div class="references">
 <ol>
@@ -268,6 +276,33 @@ m0 0v40h399900v-40z m100 194v40h399900v-40zm0 0v40h399900v-40z"/></svg></span></
 </ol>
 </div>
 
+
+<script>
+const buttonY = document.getElementById("-issue2-cells--y");
+const buttonN = document.getElementById("-issue2-cells--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue2/cells/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue2/cells/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

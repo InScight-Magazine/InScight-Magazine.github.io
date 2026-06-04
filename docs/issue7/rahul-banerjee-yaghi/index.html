@@ -118,7 +118,7 @@
 
 </div>
 
-<div class="article-date">Jun 01, 2026</div>
+<div class="article-date">Jun 04, 2026</div>
 
 </div>
 
@@ -192,6 +192,13 @@ Prof. Rahul Banerjee of IISER Kolkata weaves the scientific rise of MOFs and COF
 </figure>
 
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue7-rahul-banerjee-yaghi--y"> I enjoyed it! </button>
+<button class="button" id="-issue7-rahul-banerjee-yaghi--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -207,6 +214,34 @@ Prof. Rahul Banerjee of IISER Kolkata weaves the scientific rise of MOFs and COF
 <br>
 
 
+
+
+<script>
+const buttonY = document.getElementById("-issue7-rahul-banerjee-yaghi--y");
+const buttonN = document.getElementById("-issue7-rahul-banerjee-yaghi--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue7/rahul-banerjee-yaghi/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue7/rahul-banerjee-yaghi/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

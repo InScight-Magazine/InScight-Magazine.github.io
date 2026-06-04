@@ -419,6 +419,13 @@ Our model data overall supports our hypothesis of temperature affecting body siz
 
 <p>In nature it is very rare that only one variable controls an entire system. We observe this very frequently in modern ecological studies. Any biotic or abiotic factor in an ecosystem, if perturbed, can disturb the whole system. Applying this same principle to paleontological studies has yielded very promising results. This study is just one of many macroevolutionary trends which are being re-examined with a multivariate lens. Perhaps one day we will invent a time machine and go back to the mesozoic to know exactly why insect body size reached stasis. Until then our best bet is studies like these.</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue6-atri-insects--y"> I enjoyed it! </button>
+<button class="button" id="-issue6-atri-insects--n"> I didn't really enjoy it. </button>
+</div>
 
 
   <div class="author-bio">
@@ -434,6 +441,34 @@ Our model data overall supports our hypothesis of temperature affecting body siz
 <br>
 
 
+
+
+<script>
+const buttonY = document.getElementById("-issue6-atri-insects--y");
+const buttonN = document.getElementById("-issue6-atri-insects--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue6/atri-insects/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue6/atri-insects/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 

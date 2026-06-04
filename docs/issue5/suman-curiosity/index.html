@@ -322,6 +322,13 @@
 <p class="interview-answer">Attend high-quality conferences where the leaders in your field present. Listen carefully, engage with them if possible, and understand the direction in which the field is moving. This is a lifelong process—even as a PI, I still attend key meetings to track emerging areas and identify promising research directions.</p>
 <p>SH: Thank you sir. It was my pleasure to have this chance to interview you.</p>
 
+<hr>
+
+<div class="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue5-suman-curiosity--y"> I enjoyed it! </button>
+<button class="button" id="-issue5-suman-curiosity--n"> I didn't really enjoy it. </button>
+</div>
 
 
 <br>
@@ -329,6 +336,34 @@
 <br>
 
 
+
+
+<script>
+const buttonY = document.getElementById("-issue5-suman-curiosity--y");
+const buttonN = document.getElementById("-issue5-suman-curiosity--n");
+
+buttonY.addEventListener('click', () => {
+	feedback(1, "/issue5/suman-curiosity/");
+});
+buttonN.addEventListener('click', () => {
+    feedback(-1, "/issue5/suman-curiosity/");
+});
+
+async function feedback(vote, permalink) {
+  const response = await fetch(
+    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+		  permalink: permalink,
+		  vote: vote
+      })
+    }
+  );
+	console.log(permalink);
+  console.log(await response.text());
+}
+</script>
 
 </main>
 
