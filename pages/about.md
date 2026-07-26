@@ -19,23 +19,44 @@ If you are feeling generous and wish to sponsor some printed copies of our magaz
 
 ## Members
 
-{% for category in site.data.members %}
-### {{ category[0] }}
 <div class="members">
-{% for member in category[1] %}
 <div class="member-details">
-<img src="/assets/members/{{member["image"]}}"/>
-<strong>{{ member["name"] | upcase }}</strong>
+<img src="/assets/members/"/>
+<strong></strong>
 <div class="socials">
-{% for link in member["links"] %}
-{%- assign name = link[0] -%}
-<a class="{{ link[0] }}" href="{{ link[1] }}"></a>
-{% endfor %}
+<a class="email" href=""></a>
+<a class="instagram" href=""></a>
+<a class="twitter" href=""></a>
+<a class="linkedin" href=""></a>
+<a class="facebook" href=""></a>
+<a class="website" href=""></a>
+<a class="github" href=""></a>
 </div>
-{{ member["desc"] }}
+<span class="member-desc"></span>
+<span><strong>ROLES</strong>: <span class="member-roles"></span></span>
 </div>
-{% endfor %}
 </div>
-{% endfor %}
+<!---->
+<!-- --- -->
+<!---->
+<!-- {% for category in site.data.members %} -->
+<!-- ### {{ category[0] }} -->
+<!-- <div class="members"> -->
+<!-- {% for member in category[1] %} -->
+<!-- <div class="member-details"> -->
+<!-- <img src="/assets/members/{{member["image"]}}"/> -->
+<!-- <strong>{{ member["name"] }}</strong> -->
+<!-- <div class="socials"> -->
+<!-- {% for link in member["links"] %} -->
+<!-- {%- assign name = link[0] -%} -->
+<!-- <a class="{{ link[0] }}" href="{{ link[1] }}"></a> -->
+<!-- {% endfor %} -->
+<!-- </div> -->
+<!-- {{ member["desc"] }} -->
+<!-- </div> -->
+<!-- {% endfor %} -->
+<!-- </div> -->
+<!-- {% endfor %} -->
 
+<script src="/assets/js/fillMembers.js" onload="updateMembers('{{ site.members-sheet }}')"></script>
 <script src="/assets/js/copyEmail.js"></script>

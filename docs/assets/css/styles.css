@@ -378,6 +378,9 @@ a.nf {
 .member-details > img {
   width: 200px;
 }
+.member-details > strong {
+  text-transform: uppercase;
+}
 .member-details {
   text-align: left;
   display: flex;
