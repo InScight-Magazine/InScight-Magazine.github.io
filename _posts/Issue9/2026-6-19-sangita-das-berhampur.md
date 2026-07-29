@@ -38,7 +38,7 @@ To wrap up an incredible year of teaching, my personal and professional lives re
 
 ## Post-Doctoral Research As A New Mother
 
- {% include figure.html image='images/sangita-2.jpg' caption='With B.Math Student, 2025 Batch at ISI Bangalore.' width=800 %}
+ {% include figure.html image='sangita-2.jpg' caption='With B.Math Student, 2025 Batch at ISI Bangalore.' width=800 %}
 
  I started my Post-Doctoral study at ISI Bangalore with my newly born son. As a new mother, I found myself in a challenging situation, balancing my academic career and my responsibilities. But my husband, mentor Prof. Mohan Delampady and the entire ISI Bangalore community stood by me completely. Their support and understanding helped me get through that difficult time smoothly.
 
@@ -50,7 +50,7 @@ During my Ph.D., I absolutely fell in love with reliability theory and survival 
 
 ## My Research On Statistical Predictions
 
- {% include figure.html image='images/sangita-4.jpg' caption='With Prof. Bernard De Baets, Department of Data Analysis and Mathematical Modelling,Ghent University, during visit in 2022.' width=800 %}
+ {% include figure.html image='sangita-4.jpg' caption='With Prof. Bernard De Baets, Department of Data Analysis and Mathematical Modelling,Ghent University, during visit in 2022.' width=800 %}
 
  Today, my research focuses on reliability theory, survival analysis, stochastic ordering, and Bayesian analysis. At its core, my work seeks to answer questions related to uncertainty. How can we compare systems whose future behaviour is uncertain? How can we predict reliability when complete information is unavailable? How can statistical methods help us make better decisions under risk?
 
@@ -66,6 +66,6 @@ The importance of stochastic ordering has grown significantly in recent years (s
 
  Moving forward, my main goal is to build new mathematical frameworks that help us make sense of uncertainty, no matter how complex the systems become. My long-term vision is to bring stochastic ordering, dependence modelling, and modern statistics together into one powerful approach. This will help us solve tough, real-world challenges across diverse fields like finance, public health, climate science, and new data technologies. Today, our world is completely interconnected, and dealing with uncertainty is part of everyday life. I deeply believe that developing solid, reliable math tools to compare and measure risks will play a massive role in future scientific breakthroughs and in helping society make smarter decisions
 
-Today, standing as a faculty member at IISER Berhampur, I look back at that rural girl who never imagined to be here. I am reminded that a career break is not a full stop, and societal expectations are not boundaries. Mathematics gave me a voice, and my goal now is to help my students find theirs. {% include figure.html image='images/sangita-3.jpg' caption='With Prof. Hans De Meyer, Department of Mathematics, Computer Science and Statistics, Ghent University, during visit in 2022' width=800 %}
+Today, standing as a faculty member at IISER Berhampur, I look back at that rural girl who never imagined to be here. I am reminded that a career break is not a full stop, and societal expectations are not boundaries. Mathematics gave me a voice, and my goal now is to help my students find theirs. {% include figure.html image='sangita-3.jpg' caption='With Prof. Hans De Meyer, Department of Mathematics, Computer Science and Statistics, Ghent University, during visit in 2022' width=800 %}
 
  

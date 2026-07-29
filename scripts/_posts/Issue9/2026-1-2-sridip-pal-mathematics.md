@@ -42,7 +42,7 @@ Historically, the conformal bootstrap is not a new idea. Its roots go back to th
 
 A helpful way to think about the conformal bootstrap is through the analogy of _Sudoku_ (see figure. 1). In a Sudoku puzzle, only a few numbers are filled in at the start, while the rest of the grid is left blank. The rules are simple: each row, column, and subgrid must contain every digit exactly once. Yet these rules are enforced _everywhere_ at once.
 
-{% include figure.html image='images/sridip1.svg' caption='Analogy between _Sudoku_ and _Conformal Bootstrap_: solving theory using consistency conditions.' width=800 %}
+{% include figure.html image='sridip1.svg' caption='Analogy between _Sudoku_ and _Conformal Bootstrap_: solving theory using consistency conditions.' width=800 %}
 
 A choice made in one corner of the grid can quietly constrain entries far away, and in a well-posed puzzle, the solution may be essentially unique.
 
@@ -74,7 +74,7 @@ Stripped to its essentials, the story raised two closely related questions. Firs
 
 The final ingredient came after I moved to IAS, from analytic number theory.
 
-{% include figure.html image='images/sridip2.png' caption='Beurling-Selberg extremal functions for integer sized bins' width=800 %}
+{% include figure.html image='sridip2.png' caption='Beurling-Selberg extremal functions for integer sized bins' width=800 %}
 
 Through conversations with Sergey Tikhonov, a mathematician, I was pointed toward the _Beurling–Selberg extremization problem_, a famous and classical construction originally developed to obtain optimal bounds in analytic number theory. It is not a tool one normally expects to encounter in quantum field theory—but once the connection became clear, it was unmistakable. Beurling–Selberg extremal functions provided precisely what was needed to translate abstract bootstrap consistency conditions into sharp, quantitative bounds on operator spacing and operator counting. What made this framework especially powerful was that it allowed me to construct extremal functions in a systematic and controlled way. With this machinery in hand, two results emerged naturally. First, it yielded another proof of the conjectured optimal gap between states at high energies—this time in a form that I found aesthetically cleaner and conceptually more satisfying than my earlier approach of mine. Second, it made it possible to answer a closely related question: given a fixed energy window of half-integer size, how many states can be optimally packed into it at high energies?
 
@@ -86,7 +86,7 @@ What emerged was a clear lesson: the high-energy structure of a 2D CFT is not a 
 
  The next direction of my IAS work began not from calculations, but from a conversation.
 
-{% include figure.html image='images/sridip3.svg' caption='Picture taken from Wikipedia: eigenfunctions corresponding to the first three positive eigenvalues of Laplace operator on Bolza surface, the most symmetric genus 2 hyperbolic manifold.' width=800 %}
+{% include figure.html image='sridip3.svg' caption='Picture taken from Wikipedia: eigenfunctions corresponding to the first three positive eigenvalues of Laplace operator on Bolza surface, the most symmetric genus 2 hyperbolic manifold.' width=800 %}
 
 I had not been thinking about geometry at all when Dalimil Mazáč (another postdoctoral fellow at IAS) in winter of 2021 told me about an idea he had been considering: whether techniques inspired by the conformal bootstrap could be used to constrain the _Laplace spectrum of hyperbolic manifolds_—curved spaces with constant negative curvature. Until that moment, this direction simply was not on my radar.
 
@@ -94,7 +94,7 @@ But as Dalimil explained the idea, something clicked immediately. The analogy wa
 
 I jumped into the project with Dalimil. We soon found that this was not a superficial analogy. We could find concrete bounds for 3 dimensional manifolds. Later Petr Kravchuk, another postdoctoral fellow at IAS, joined the project and we turned our attention to 2 dimensional surfaces.
 
-{% include figure.html image='images/sridip4.png' caption='As we scan over various hyperbolic surfaces, the first non trivial eigenvalue of Laplacian takes the value, denoted with blue, on the real line. The numbers on top inside the square bracket are extit&#123;names\} of the surface, signifying the topological type. Figure taken from [https://arxiv.org/abs/2111.12716](arXiv:2111.12716[hep-th]). ' width=800 %}
+{% include figure.html image='sridip4.png' caption='As we scan over various hyperbolic surfaces, the first non trivial eigenvalue of Laplacian takes the value, denoted with blue, on the real line. The numbers on top inside the square bracket are extit&#123;names\} of the surface, signifying the topological type. Figure taken from [https://arxiv.org/abs/2111.12716](arXiv:2111.12716[hep-th]). ' width=800 %}
 
 By translating bootstrap ideas into the language of hyperbolic symmetry and harmonic analysis, we derived new, rigorous bounds on Laplacian eigenvalues for broad classes of hyperbolic surfaces and orbifolds, resulting in a joint publication [https://arxiv.org/abs/2111.12716](arXiv:2111.12716[hep-th]).
 
@@ -126,7 +126,7 @@ These inequalities allowed us to rigorously control the large-central-charge lim
 
  Looking back, my postdoctoral years were shaped as much by people and places as by problems. At IAS, life and physics blended together in ways that were sometimes intense, sometimes joyful, and often unexpected. There were long afternoons of card games and late-night conversations, periods of quiet focus punctuated by dinners with friends, and stretches of uncertainty during the COVID years that made even small moments feel precious. I spent many hours walking through the woods around Princeton, where ideas had a way of loosening themselves during long, solitary walks. Later, in California, the rhythm changed—the sun, the Pacific, puzzle solving games squeezed between calculations, evenings that stretched late into the night. Conferences and travel filled the calendar, including memorable trips abroad, from intense workshops to moments of awe standing near Iguazú Falls in Brazil. Through it all, physics never felt separate from life; it was woven into it.
 
-{% include figure.html image='images/sridip5.png' caption='Friends and collaborators: with Subham and Jiaxin at Iguazu, with Brato and Shouvik in Bengaluru, with Dalimil near Eiffel Tower, with Shreya and Brato in Bengaluru.' width=800 %}
+{% include figure.html image='sridip5.png' caption='Friends and collaborators: with Subham and Jiaxin at Iguazu, with Brato and Shouvik in Bengaluru, with Dalimil near Eiffel Tower, with Shreya and Brato in Bengaluru.' width=800 %}
 
 What I value most from this period, however, is the community that formed around me. I was fortunate to build close friendships and collaborations with an extraordinary group of people: Brato Chakrabarti, Shreya Biswas, Shouvik Ganguly, Dalimil Mazáč, Sanja Nedić, Anshul Adve, Baur Mukhametzhanov, Petr Kravchuk, Ahanjit Bhattacharya, Peter Stoffer, Serena Gradel, Andrew Kobach, Nathan Benjamin, Yuya Kusuki, Jiaxin Qiao, Leonardo Badurina, Kim Berghaus, Temple He, Allic Sivaramakrishnan, Julio Martinez, Clara Murgui, Ryan Plestid, Lorenz Eberhardt, Argha Mondal, Yixin Xu, Elliott Gesteau, Ritama Paul, Bratati Patra, Souvik Dutta, Pinaki Banerjee, Diptarka Das, Sara Murciano and Aron Hillman and many more. Some of these connections grew into long-term collaborations; others became lasting friendships. Together, we shared not just ideas and equations, but meals, travels, frustrations, and celebrations. In many ways, this network of people—spread across institutions and continents—became as important to my scientific growth as any single result or paper.
 

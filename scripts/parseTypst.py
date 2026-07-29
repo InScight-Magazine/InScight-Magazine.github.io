@@ -57,9 +57,11 @@ def parseContent(content):
         return "".join([parseContent(ele) for ele in content["children"]])
     elif content["func"] == "figure":
         images.append(parseContent(content['body']))
+        print(images[-1])
+        print(images[-1].split("/")[-1])
         if images[-1].endswith(".pdf"):
             print(f"PDF image {images[-1]} in {filename}. I replaced it with `.svg'. Please add svg image.")
-        return "{% include figure.html image='" + parseContent(content['body']).replace(".pdf", ".svg") + "' caption='" + parseContent(content['caption']).replace("{", "\\{").replace("}", "\\}").replace("'", "\\'") + "' width=800 %}\n\n"
+        return "{% include figure.html image='" + images[-1].split("/")[-1].replace(".pdf", ".svg") + "' caption='" + parseContent(content['caption']).replace("{", "\\{").replace("}", "\\}").replace("'", "\\'") + "' width=800 %}\n\n"
     elif content["func"] == "image":
         return content["source"].strip("//")
     elif content["func"] == "quote":

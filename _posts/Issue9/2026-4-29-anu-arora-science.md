@@ -50,7 +50,7 @@ In this new approach, physical quantities were represented through a transition 
 
 Although quantum mechanics initially emerged to explain atomic phenomena, it soon developed into a broader framework for understanding systems across multiple length scales, ranging from electrons to molecules to material and biological systems.
 
-{% include figure.html image='images/sourav-1.svg' caption='Timeline of key milestones in quantum mechanics and computational chemistry, from Max Planck’s radiation quanta to modern approaches including Density Functional Theory and advanced post-Hartree–Fock approaches for atomic and molecular systems.' width=800 %}
+{% include figure.html image='sourav-1.svg' caption='Timeline of key milestones in quantum mechanics and computational chemistry, from Max Planck’s radiation quanta to modern approaches including Density Functional Theory and advanced post-Hartree–Fock approaches for atomic and molecular systems.' width=800 %}
 
  
 
@@ -130,7 +130,7 @@ These equations are solved iteratively until convergence, yielding a stable grou
 
 ### Jacob’s Ladder: Systematic Improvement of DFT
 
- {% include figure.html image='images/sourav-2.png' caption='Schematic representation of Jacob’s ladder in DFT, approximations from LDA → GGA → meta-GGA → hybrid → double hybrid, showing increasing accuracy.' width=800 %}
+ {% include figure.html image='sourav-2.png' caption='Schematic representation of Jacob’s ladder in DFT, approximations from LDA → GGA → meta-GGA → hybrid → double hybrid, showing increasing accuracy.' width=800 %}
 
 To systematically enhance the accuracy of density functional calculations, John P. Perdew introduced the concept of Jacob’s ladder[19], which organises density functional approximations into a hierarchy of increasing sophistication:
 
@@ -157,9 +157,9 @@ As we move up Jacob’s ladder, more physical information is included, improving
 
 Within the CC scheme, the correlated wavefunction is expressed using an exponential ansatz in the form of 
 
-$$~|~\Psi_{\text{cc }}\rangle = e^{T}~|~\Phi_{0}\rangle,$$
+$$ ~|~\Psi_{\text{cc }}\rangle = e^{T}~|~\Phi_{0}\rangle, $$
 
- where $$T$$ is the cluster excitation operator that accounts for electron correlation effects through a hierarchy of excitations built upon the reference Slater determinant $$|\Phi_{0}\rangle$$ [20]. In practical applications, the expansion is commonly truncated to obtain computationally feasible methods such as coupled cluster single and double excitations (CCSD) and coupled cluster single and double excitations including perturbative triple excitations (CCSD(T)). These methods frequently yield molecular energies and related properties with near experimental accuracy, especially for small and medium-sized molecular systems.
+where $$T$$ is the cluster excitation operator that accounts for electron correlation effects through a hierarchy of excitations built upon the reference Slater determinant $$\vert\Phi_{0}\rangle$$ [20]. In practical applications, the expansion is commonly truncated to obtain computationally feasible methods such as coupled cluster single and double excitations (CCSD) and coupled cluster single and double excitations including perturbative triple excitations (CCSD(T)). These methods frequently yield molecular energies and related properties with near experimental accuracy, especially for small and medium-sized molecular systems.
 
 Figure 3 presents the computational scaling of widely used electron structure methods. The steep growth in computational expense with increasing system size N underscores the difficulty of extending highly accurate correlation-based approaches to large molecular systems.
 
@@ -167,7 +167,7 @@ The standard CC starts from a single HF reference, which assumes one electronic 
 
 Beyond energies, CC theory is extended to compute molecular properties analytically, dipole moments, polarizabilities, NMR shielding, spectroscopic constant and more. The Z-vector method makes this an efficient method[23]. It solves a linear response equation and computes all first-order properties rather than differentiating the CC wavefunction.
 
-{% include figure.html image='images/sourav-3.png' caption='Comparison of computational scaling with increasing system size for electronic-structure methods. The log of CPU time is plotted against the number of atoms $$N$$, showing characteristic polynomial scalings: semi-empirical methods ($$- N^\{2\}$$), DFT ($$- N^\{4\}$$), MP2 ($$- N^\{5\}$$), CCSD ($$- N^\{6\}$$), and CCSD(T) ($$- N^\{7\}$$). The figure highlights the rapidly increasing computational expense of higher-accuracy correlated methods with system size.' width=800 %}
+{% include figure.html image='sourav-3.png' caption='Comparison of computational scaling with increasing system size for electronic-structure methods. The log of CPU time is plotted against the number of atoms $$N$$, showing characteristic polynomial scalings: semi-empirical methods ($$- N^\{2\}$$), DFT ($$- N^\{4\}$$), MP2 ($$- N^\{5\}$$), CCSD ($$- N^\{6\}$$), and CCSD(T) ($$- N^\{7\}$$). The figure highlights the rapidly increasing computational expense of higher-accuracy correlated methods with system size.' width=800 %}
 
  For systems having heavy elements, relativistic effects become necessary for achieving accurate theoretical predictions. The most famous example is that gold and silver are predicted to exhibit similar chemical and optical properties. But the relativistic correction of the 6s orbital of gold results in the change in s-d orbital energy gaps, which directly explains gold’s anomalous optical appearance and chemical behaviour. Relativistic effects are also crucial in phenomena such as parity non-conservation [24] and electron electric dipole moment studies in heavy molecules like HgF [25].
 
