@@ -8,7 +8,7 @@ author: "*Abhirup Mukherjee* [DPS, IISER Kolkata]"
     - "The Great Wall of China is visible from the Moon with the naked eye."
     - "Sharks existed before trees."
     - "A day on Venus is longer than its year."
-  a: 3
+  a: 2
 2:
   q: "Which of the following is a myth?"
   o:
@@ -16,7 +16,7 @@ author: "*Abhirup Mukherjee* [DPS, IISER Kolkata]"
     - "Some fungi can turn ants into 'zombies'."
     - "There are lakes beneath Antarctica's ice."
     - "Water can boil at room temperature."
-  a: 2
+  a: 1
 3:
   q: "Which of the following is a myth?"
   o:
@@ -24,7 +24,7 @@ author: "*Abhirup Mukherjee* [DPS, IISER Kolkata]"
     - "Honey can remain edible for thousands of years."
     - "Goldfish have a memory of only three seconds."
     - "Octopuses have three hearts."
-  a: 1
+  a: 3
   i: "/images/quiz-honey-ttb.jpg"
 4:
   q: "Which of the following is a myth?"

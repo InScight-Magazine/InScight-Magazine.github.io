@@ -4,26 +4,31 @@ layout: posts
 
 {% assign file = "issue" | append: page.issue %}
 {% assign path = site.data.quizzes[file] %}
-{% assign questions = path["questions"] %}
-{% assign images = path["images"] %}
-{% assign options = path["options"] %}
-{% assign answers = path["answers"] %}
+<!-- {% assign questions = path["questions"] %} -->
+<!-- {% assign images = path["images"] %} -->
+<!-- {% assign options = path["options"] %} -->
+<!-- {% assign answers = path["answers"] %} -->
 <ol>
-{% for question in questions %}
-{% assign outerIndex = forloop.index0 %}
-<form class="quiz" id="form-{{ outerIndex }}">
-<li>{{ question | markdownify }}</li>
-{% if images[outerIndex] %}
-<img class="quiz-image" src="{{ page.permalink | append: images[outerIndex] | prepend: '/assets/images' | relative_url }}">
+{% for row in path %}
+{% if row[1].q == nil %}
+{% continue %}
 {% endif %}
-{% for option in options[outerIndex] %}
+{% assign outerIndex = row[0] %}
+<form class="quiz" id="form-{{ outerIndex }}">
+<li>{{ row[1].q | markdownify }}</li>
+{% if row[1].i %}
+{% assign img = row[1].i | split: "/" | last %}
+<img class="quiz-image" src="{{ page.permalink | append: img | prepend: '/assets/images' | relative_url }}">
+{% endif %}
+{% for option in row[1].o %}
 {% assign buttonId = outerIndex | append: "-" | append: forloop.index %}
 <div>
 <input type="radio" name="{{ outerIndex }}" id="{{ buttonId }}" value="{{ buttonId }}" />
 <label for="{{ buttonId }}" id="l-{{ buttonId }}">{{ option }}</label>
 </div>
 {% endfor %}
-{% assign correctAnswerId = outerIndex | append: "-" | append: answers[outerIndex] %}
+{% assign answer = row[1].a %}
+{% assign correctAnswerId = outerIndex | append: "-" | append: answer %}
 <button type="button" value="{{ correctAnswerId }}" class="reveal">Reveal</button>
 </form>
 <br>
