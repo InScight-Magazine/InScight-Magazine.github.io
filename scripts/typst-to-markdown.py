@@ -139,7 +139,6 @@ if "group1" in frontMatter:
     category = "interview"
 else:
     category = "article"
-print(category)
 frontMatter["category"] = category
 frontMatter["permalink"] = "/issue" + issue + "/" + frontMatter["authors"][0].split()[0].lower() + "-" + frontMatter["title"].split()[-1].lower() + "/"
 savePath = frontMatter["date"] + "-" + typstpath.split("/")[-1].replace(".typ", ".md")
@@ -153,7 +152,6 @@ os.makedirs(imgDir, exist_ok=True)
 for img in images:
     shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "images"), img), imgDir)
 if "authorImage" in frontMatter:
-    print(frontMatter["authorImage"])
     shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "authFaces"), frontMatter["authorImage"]), imgDir)
 if "refs-file" in frontMatter:
     shutil.copy2(os.path.join(os.path.dirname(typstpath).replace("subfiles", "dataFiles"), frontMatter["refs-file"]), ".")

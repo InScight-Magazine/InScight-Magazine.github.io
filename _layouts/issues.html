@@ -32,14 +32,16 @@ layout: default
 </div>
 {% endfor %}
 
-<h2> Interviews </h2>
 {% assign interviews = issueItems | where:"category", "interview" %}
-{% for item in interviews %}
-<div class="magazine-item">
-<span class="magazine-summary-title">{{ item.title }}</span>
-<span class="issue-read"><span class="archive-author">{{ item.authors | join: ", " }}</span> <a class="reveal" href={{ item.url }}>Read</a></span>
-</div>
-{% endfor %}
+{% if interviews.size > 0 %}
+	<h2> Interviews </h2>
+	{% for item in interviews %}
+	<div class="magazine-item">
+	<span class="magazine-summary-title">{{ item.title }}</span>
+	<span class="issue-read"><span class="archive-author">{{ item.authors | join: ", " }}</span> <a class="reveal" href={{ item.url }}>Read</a></span>
+	</div>
+	{% endfor %}
+{% endif %}
 
 {% assign filename = "issue" | append: issue %}
 {% if site.data.digest[filename] %}

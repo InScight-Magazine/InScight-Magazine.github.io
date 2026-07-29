@@ -1,4 +1,3 @@
-#!~/python
 import typst
 import pypandoc
 import sys
@@ -62,7 +61,7 @@ def parseContent(content):
             print(f"PDF image {images[-1]} in {filename}. I replaced it with `.svg'. Please add svg image.")
         return "{% include figure.html image='" + parseContent(content['body']).replace(".pdf", ".svg") + "' caption='" + parseContent(content['caption']).replace("{", "\\{").replace("}", "\\}").replace("'", "\\'") + "' width=800 %}\n\n"
     elif content["func"] == "image":
-        return content["source"].split("/")[-1]
+        return content["source"].strip("//")
     elif content["func"] == "quote":
         if content['body']['func'] == "sequence":
             quote = "\n\n"
@@ -117,6 +116,8 @@ def parseContent(content):
             latex = "\n\n$$" + latex[2:-2] + "$$\n\n"
         latex = latex.replace("\\begin{array}{r}", "\\begin{array}{c}")
         return latex
+    elif content["func"] == "align":
+        return parseContent(content["body"])
     elif content["func"] == "context":
         return ""
     else:
@@ -131,6 +132,7 @@ refsDir = os.path.join("_data", "references")
 os.makedirs(postsDir, exist_ok=True)
 os.makedirs(refsDir, exist_ok=True)
 for (content, var) in zip(contents, vars):
+    print(var["value"]["title"])
     if var["value"]["type"] == "article" or var["value"]["type"] == "interview" or var["value"]["type"] == "editor" or var["value"]["type"] == "foreword" or var["value"]["type"] == "quiz" or var["value"]["type"] == "linkedlist" or var["value"]["type"] == "crossword" or var["value"]["type"] == "digest" or var["value"]["type"] == "comic":
         footnotes = []
         images = []
@@ -236,7 +238,7 @@ for (content, var) in zip(contents, vars):
         if "images" in var["value"]:
             img = var["value"]["images"][0]
             markdown.append("\n{% include figure.html image='" + os.path.basename(img) + "' caption='" + parseContent(var["value"]["captions"][0]) + "' width=400 %}\n")
-            images.append(img)
+            images.append(img.strip("//"))
         for data in content["value"]["children"]:
             # print(data)
             if data == {'func': 'v', 'amount': '1.4em'}:
@@ -253,9 +255,13 @@ for (content, var) in zip(contents, vars):
         if "images" in var["value"]:
             img = var["value"]["images"][1]
             markdown.append("\n{% include figure.html image='" + os.path.basename(img) + "' caption='" + parseContent(var["value"]["captions"][1]) + "' width=400 %}\n")
-            images.append(img)
+            images.append(img.strip("//"))
         for img in images:
-            shutil.copy2(os.path.join(os.path.dirname(typstpath), "images", img), imgDir)
+            print(img)
+            if os.path.basename(img) == img:
+                shutil.copy2(os.path.join(os.path.dirname(typstpath), "images", img), imgDir)
+            else:
+                shutil.copy2(os.path.join(os.path.dirname(typstpath), img), imgDir)
         if "hero-image" in metaData:
             shutil.copy2(os.path.join(os.path.dirname(typstpath), "covers", metaData["hero-image"]), imgDir)
         if "authorImage" in metaData:
@@ -282,4 +288,3 @@ for (content, var) in zip(contents, vars):
                 outfile.write("\n\n---\n\n")
                 for (i, note) in enumerate(footnotes):
                     outfile.write(f"\n[^{i+1}]: {note}\n")
-        print(filename)

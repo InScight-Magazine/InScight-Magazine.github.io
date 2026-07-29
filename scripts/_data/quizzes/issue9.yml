@@ -1,0 +1,86 @@
+title: "3 Truths, 1 Lie: Science Quiz"
+intro: "Guess Which Scientific-Sounding Statement Is A Myth"
+author: "*Abhirup Mukherjee* [DPS, IISER Kolkata]"
+1:
+  q: "Which of the following is a myth?"
+  o:
+    - "Lightning can strike the same place more than once."
+    - "The Great Wall of China is visible from the Moon with the naked eye."
+    - "Sharks existed before trees."
+    - "A day on Venus is longer than its year."
+  a: 3
+2:
+  q: "Which of the following is a myth?"
+  o:
+    - "Your fingernails continue growing after death."
+    - "Some fungi can turn ants into 'zombies'."
+    - "There are lakes beneath Antarctica's ice."
+    - "Water can boil at room temperature."
+  a: 2
+3:
+  q: "Which of the following is a myth?"
+  o:
+    - "Bananas are naturally slightly radioactive."
+    - "Honey can remain edible for thousands of years."
+    - "Goldfish have a memory of only three seconds."
+    - "Octopuses have three hearts."
+  a: 1
+  i: "/images/quiz-honey-ttb.jpg"
+4:
+  q: "Which of the following is a myth?"
+  o:
+    - "The human body contains enough carbon to make thousands of pencil leads."
+    - "Glass is actually a liquid that flows over time."
+    - "The Eiffel Tower becomes taller in summer."
+    - "A teaspoon of neutron star matter would weigh billions of tonnes."
+  a: 2
+5:
+  q: "Which of the following is a myth?"
+  o:
+    - "There are more possible chess games than atoms in the observable universe."
+    - "Some turtles can breathe through their rear ends."
+    - "Camels store water in their humps."
+    - "Saturn would float in a sufficiently large ocean."
+  a: 3
+7:
+  q: "Which of the following is a myth?"
+  o:
+    - "Hot water can sometimes freeze faster than cold water."
+    - "Humans share about half of their DNA with bananas."
+    - "A bolt of lightning is hotter than the surface of the Sun."
+    - "Humans only use 10% of their brains."
+  a: 4
+  i: "/images/quiz-dna-ttb.jpg"
+6:
+  q: "Which of the following is a myth?"
+  o:
+    - "Wombat droppings are cube-shaped."
+    - "The Moon is slowly moving away from Earth."
+    - "Bulls become angry when they see the colour red."
+    - "Some metals can 'remember' their original shape."
+  a: 3
+8:
+  q: "Which of the following is a myth?"
+  o:
+    - "A cloud can weigh hundreds of tonnes."
+    - "The Coriolis effect determines the direction water drains in household sinks."
+    - "The International Space Station experiences about 16 sunrises each day."
+    - "A blue whale's heart can weigh as much as a small car."
+  a: 2
+10:
+  q: "Which of the following is a myth?"
+  o:
+    - "There are more trees on Earth than stars in the Milky Way."
+    - "An ostrich buries its head in the sand when frightened."
+    - "Jellyfish have existed longer than dinosaurs."
+    - "Some bacteria can survive in nuclear reactors."
+  a: 2
+  i: "/images/quiz-ostrich-ttb.jpg"
+9:
+  q: "Which of the following is a myth?"
+  o:
+    - "The Sahara Desert was once much greener than it is today."
+    - "Diamonds are formed from compressed coal."
+    - "A day on Mercury lasts longer than its year."
+    - "The fingerprints of koalas resemble those of humans."
+  a: 2
