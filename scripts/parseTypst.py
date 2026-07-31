@@ -8,6 +8,7 @@ import subprocess
 import os
 import shutil
 from datetime import date
+from pathlib import Path
 
 typstpath = sys.argv[1]
 issue = sys.argv[2]
@@ -199,11 +200,26 @@ for (content, var) in zip(contents, vars):
                     "category": "digest",
                     "hero-image": var["value"]["coverImage"].split("/")[-1],
                     }
-            for v in yaml.safe_load(open(os.path.join(os.path.dirname(typstpath), "dataFiles", os.path.basename(var["value"]["file"])), "r")):
-                images.append(v["Image"])
-            # print(images)
+            digest = json.loads(typst.query(os.path.join(Path(typstpath).parent, "dataFiles", "digest.typ"), "<digest>"))
+            digestYaml = []
+            for item in digest[0]["value"]:
+                digestYaml.append({
+                    "Title": item["Title"],
+                    "Author": item["Author"],
+                    "Affiliation": item["Affiliation"],
+                    "Url": item["Url"],
+                    "Reference": item["Reference"],
+                    "Image": item["Image"],
+                    "Keywords": item["Keywords"],
+                    "Caption": parseContent(item["Caption"]),
+                    "Summary": parseContent(item["Writing"]),
+                    })
+                images.append(os.path.join("images", item["Image"]))
             os.makedirs(os.path.join("_data", "digest"), exist_ok=True)
-            shutil.copy2(os.path.join(os.path.dirname(typstpath), "dataFiles", os.path.basename(var["value"]["file"])), os.path.join("_data", "digest", f"issue{issue}.yml"))
+            yaml.dump(digestYaml, open(os.path.join("_data", "digest", f"issue{issue}.yml"), "w"), default_flow_style=False, width=9999)
+
+            # print(images)
+            # shutil.copy2(os.path.join(os.path.dirname(typstpath), "dataFiles", os.path.basename(var["value"]["file"])), os.path.join("_data", "digest", f"issue{issue}.yml"))
         elif var["value"]["type"] == "comic": 
             metaData = {
                     "title": var["value"]["title"],

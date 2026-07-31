@@ -20,7 +20,7 @@ layout: default
 <a class="reference" href={{ item["Url"] }}>{{ item["Reference"] }}</a>
 <span class="author">Contributed by: {{ item["Author"] }}</span> 
 <span class="affiliation">({{ item["Affiliation"] }})</span>
-<span class="keywords">Keywords: {{ item["Keywords"] | join: ", " }}</span>
+<span class="keywords"><strong>Subjects</strong>: {{ item["Keywords"] | join: ", " }}</span>
 <p class="summary">{{ item["Summary"] | newline_to_br }}</p>
 {% if item["Image"] %}
 {% assign imagePath = item["Image"] %}
