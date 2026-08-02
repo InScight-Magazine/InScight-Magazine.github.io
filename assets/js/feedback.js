@@ -1,22 +1,26 @@
-function addEvents(idYes, idNo, permalink) {
+function addEvents(idYes, idNo, permalink, feedbackdb) {
+	console.log(feedbackdb);
 	const buttonY = document.getElementById(idYes);
 	const buttonN = document.getElementById(idNo);
 
 	buttonY.addEventListener('click', () => {
-		feedback(1, permalink);
+		feedback(1, permalink, feedbackdb);
 	});
 	buttonN.addEventListener('click', () => {
-		feedback(-1, permalink);
+		feedback(-1, permalink, feedbackdb);
 	});
 
-	if (localStorage.getItem(`voted-$permalink`) === "true") {
-		document.getElementById("feedback").style.display = "none";
+	if (localStorage.getItem(`voted-${permalink}`)) {
+		document.querySelectorAll("#feedback button").forEach((element, index) => {
+			element.style.display = "none";
+		});
+		document.querySelector('#feedback span').innerHTML = "Your response has been recorded!";
 	}
 }
 
-async function feedback(vote, permalink) {
-    const workerURL = "https://website-feedback.scicomm-0e1.workers.dev/";
-    const response = await fetch(workerURL, {
+async function feedback(vote, permalink, feedbackdb) {
+	document.querySelector('#feedback span').innerHTML = "Recording your response...";
+    const response = await fetch(feedbackdb, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -26,14 +30,22 @@ async function feedback(vote, permalink) {
             reaction: vote
         })
     });
-
+	if (response.ok) {
+		console.log("Okay");
+        localStorage.setItem(`voted-${permalink}`, vote);
+		document.querySelectorAll("#feedback button").forEach((element, index) => {
+			element.style.display = "none";
+		});
+		document.querySelector('#feedback span').innerHTML = "Your response has been recorded!";
+    }
+	console.log(localStorage.getItem(`voted-${permalink}`));
     console.log(await response.text());
 }
 
 async function loadFeedback() {
   try {
     const response = await fetch(
-      "https://website-feedback.scicomm-0e1.workers.dev/api/feedback"
+      `$feedbackdb/api/feedback`
     );
 
     if (!response.ok) {
@@ -63,7 +75,7 @@ async function loadFeedback() {
 async function loadSummary() {
   try {
     const response = await fetch(
-      "https://website-feedback.scicomm-0e1.workers.dev/api/summary"
+      `$feedbackdb/api/summary`
     );
 
     if (!response.ok) {

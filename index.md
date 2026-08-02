@@ -78,24 +78,3 @@ You can contribute under these categories:
 {{ site.color-emoji["clip"] }} You can find loads of details on the [Content Submission page](/submit/) (along with linked examples), so be sure to check it out if you are curious.
 
 {{ site.color-emoji["hourglass"] }} Submissions are accepted on a rolling basis, so feel free to send yours in anytime.
-
-<script>
-async function test() {
-    const workerURL = "https://website-feedback.scicomm-0e1.workers.dev/";
-    const response = await fetch(workerURL, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            permalink: "/issue0/art2/",
-            reaction: 0
-        })
-    });
-
-    console.log(await response.text());
-}
-
-test();
-</script>
-

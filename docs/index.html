@@ -166,27 +166,6 @@
 <p>📎 You can find loads of details on the <a href="/submit/">Content Submission page</a> (along with linked examples), so be sure to check it out if you are curious.</p>
 
 <p>⏳ Submissions are accepted on a rolling basis, so feel free to send yours in anytime.</p>
-
-<script>
-async function test() {
-    const workerURL = "https://website-feedback.scicomm-0e1.workers.dev/";
-    const response = await fetch(workerURL, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            permalink: "/issue0/art2/",
-            reaction: 0
-        })
-    });
-
-    console.log(await response.text());
-}
-
-test();
-</script>
-
 </main>
 
 <script src="/assets/js/randomHighlight.js"></script>
