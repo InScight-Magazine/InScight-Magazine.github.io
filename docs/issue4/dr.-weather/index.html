@@ -203,7 +203,7 @@ Others have suggested that volcanic eruptions introduce widespread dust in the a
 
 <hr>
 
-<div class="feedback">
+<div id="feedback">
 <span> Did you find this interesting?</span>
 <button class="button" id="-issue4-dr.-weather--y"> I enjoyed it! </button>
 <button class="button" id="-issue4-dr.-weather--n"> I didn't really enjoy it. </button>
@@ -225,31 +225,9 @@ Others have suggested that volcanic eruptions introduce widespread dust in the a
 
 
 
+<script src="/assets/js/feedback.js"></script>
 <script>
-const buttonY = document.getElementById("-issue4-dr.-weather--y");
-const buttonN = document.getElementById("-issue4-dr.-weather--n");
-
-buttonY.addEventListener('click', () => {
-	feedback(1, "/issue4/dr.-weather/");
-});
-buttonN.addEventListener('click', () => {
-    feedback(-1, "/issue4/dr.-weather/");
-});
-
-async function feedback(vote, permalink) {
-  const response = await fetch(
-    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
-    {
-      method: "POST",
-      body: JSON.stringify({
-		  permalink: permalink,
-		  vote: vote
-      })
-    }
-  );
-	console.log(permalink);
-  console.log(await response.text());
-}
+addEvents("-issue4-dr.-weather--y", "-issue4-dr.-weather--n", "/issue4/dr.-weather/");
 </script>
 
 </main>

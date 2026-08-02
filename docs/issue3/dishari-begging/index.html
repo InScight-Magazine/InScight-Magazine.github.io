@@ -386,7 +386,7 @@ In Dakshineswar, a popular tourist and religious site in Kolkata, primates like 
 
 <hr>
 
-<div class="feedback">
+<div id="feedback">
 <span> Did you find this interesting?</span>
 <button class="button" id="-issue3-dishari-begging--y"> I enjoyed it! </button>
 <button class="button" id="-issue3-dishari-begging--n"> I didn't really enjoy it. </button>
@@ -437,31 +437,9 @@ In Dakshineswar, a popular tourist and religious site in Kolkata, primates like 
 </div>
 
 
+<script src="/assets/js/feedback.js"></script>
 <script>
-const buttonY = document.getElementById("-issue3-dishari-begging--y");
-const buttonN = document.getElementById("-issue3-dishari-begging--n");
-
-buttonY.addEventListener('click', () => {
-	feedback(1, "/issue3/dishari-begging/");
-});
-buttonN.addEventListener('click', () => {
-    feedback(-1, "/issue3/dishari-begging/");
-});
-
-async function feedback(vote, permalink) {
-  const response = await fetch(
-    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
-    {
-      method: "POST",
-      body: JSON.stringify({
-		  permalink: permalink,
-		  vote: vote
-      })
-    }
-  );
-	console.log(permalink);
-  console.log(await response.text());
-}
+addEvents("-issue3-dishari-begging--y", "-issue3-dishari-begging--n", "/issue3/dishari-begging/");
 </script>
 
 </main>

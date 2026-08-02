@@ -356,7 +356,7 @@ In “Gluten – Not for All Gluttons,” Shrestha Chowdhury takes readers on an
 
 <hr>
 
-<div class="feedback">
+<div id="feedback">
 <span> Did you find this interesting?</span>
 <button class="button" id="-issue1-gluten--y"> I enjoyed it! </button>
 <button class="button" id="-issue1-gluten--n"> I didn't really enjoy it. </button>
@@ -384,31 +384,9 @@ In “Gluten – Not for All Gluttons,” Shrestha Chowdhury takes readers on an
 </div>
 
 
+<script src="/assets/js/feedback.js"></script>
 <script>
-const buttonY = document.getElementById("-issue1-gluten--y");
-const buttonN = document.getElementById("-issue1-gluten--n");
-
-buttonY.addEventListener('click', () => {
-	feedback(1, "/issue1/gluten/");
-});
-buttonN.addEventListener('click', () => {
-    feedback(-1, "/issue1/gluten/");
-});
-
-async function feedback(vote, permalink) {
-  const response = await fetch(
-    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
-    {
-      method: "POST",
-      body: JSON.stringify({
-		  permalink: permalink,
-		  vote: vote
-      })
-    }
-  );
-	console.log(permalink);
-  console.log(await response.text());
-}
+addEvents("-issue1-gluten--y", "-issue1-gluten--n", "/issue1/gluten/");
 </script>
 
 </main>

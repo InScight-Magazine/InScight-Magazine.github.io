@@ -110,13 +110,13 @@
  
  
  <div class="highlight-desc">
- <a href="/issue7/subham-sarkar-biswas/" id="highlight-article-url">
- <img id="highlight-article-image" src="/assets/images/issue7/subham-sarkar-biswas/interview.svg" />
+ <a href="/issue7/raka-dasgupta-nobel/" id="highlight-article-url">
+ <img id="highlight-article-image" src="/assets/images/issue7/raka-dasgupta-nobel/raka.svg" />
  </a>
- <strong id="highlight-article-title">Guiding Tomorrow’s Minds: Conversation with Nayan Bhunia and Dibyendu Biswas
+ <strong id="highlight-article-title">Macroscopic Quantum Phenomena : The Story of 2025 Physics Nobel
 </strong>
- <span class="archive-author" id="highlight-article-author"> Subham Sarkar </span>
- <p class="home-button"><span>🥽 <a href="/issue7/subham-sarkar-biswas/" id="highlight-article-link"> Browse </a></span><span class="shuffle" id="article-shuffle"></span></p>
+ <span class="archive-author" id="highlight-article-author"> Raka Dasgupta </span>
+ <p class="home-button"><span>🥽 <a href="/issue7/raka-dasgupta-nobel/" id="highlight-article-link"> Browse </a></span><span class="shuffle" id="article-shuffle"></span></p>
  </div>
  
  
@@ -166,6 +166,27 @@
 <p>📎 You can find loads of details on the <a href="/submit/">Content Submission page</a> (along with linked examples), so be sure to check it out if you are curious.</p>
 
 <p>⏳ Submissions are accepted on a rolling basis, so feel free to send yours in anytime.</p>
+
+<script>
+async function test() {
+    const workerURL = "https://website-feedback.scicomm-0e1.workers.dev/";
+    const response = await fetch(workerURL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            permalink: "/issue0/art2/",
+            reaction: 0
+        })
+    });
+
+    console.log(await response.text());
+}
+
+test();
+</script>
+
 </main>
 
 <script src="/assets/js/randomHighlight.js"></script>

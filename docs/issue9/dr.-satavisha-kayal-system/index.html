@@ -297,7 +297,7 @@ From the mirror-image molecules that distinguish medicines from poisons to the c
 
 <hr>
 
-<div class="feedback">
+<div id="feedback">
 <span> Did you find this interesting?</span>
 <button class="button" id="-issue9-dr.-satavisha-kayal-system--y"> I enjoyed it! </button>
 <button class="button" id="-issue9-dr.-satavisha-kayal-system--n"> I didn't really enjoy it. </button>
@@ -325,59 +325,37 @@ From the mirror-image molecules that distinguish medicines from poisons to the c
 <ol>
 
 
-<li id="ref-1">Lin, G.-Q.; Li, Y.-M.; Chan, A. S. C. Principles and Applications of Asymmetric Synthesis; Wiley-Interscience: New York, *2001*.</li>
+<li id="ref-1">Lin, G.-Q.; Li, Y.-M.; Chan, A. S. C. Principles and Applications of Asymmetric Synthesis; Wiley-Interscience: New York, 2001.</li>
 
 
-<li id="ref-2">Pasteur, L. Acad. Sci. *1848*, 26, 535.</li>
+<li id="ref-2">Pasteur, L. Acad. Sci. 1848, 26, 535.</li>
 
 
-<li id="ref-3">Vickery, H. B.; Pucher, G. W.; Deuber, C. G. J. Biol. Chem. *1942*, 145, 45.</li>
+<li id="ref-3">Vickery, H. B.; Pucher, G. W.; Deuber, C. G. J. Biol. Chem. 1942, 145, 45.</li>
 
 
-<li id="ref-4">Bodor, N.; Sloan, K. B.; Higuchi, T.; Sasahara, K. J. Med. Chem. *1977*, 20, 1435.</li>
+<li id="ref-4">Bodor, N.; Sloan, K. B.; Higuchi, T.; Sasahara, K. J. Med. Chem. 1977, 20, 1435.</li>
 
 
-<li id="ref-5">For reviews on chiral phosphoric acid catalysis: (a) Akiyama, T. Chem. Rev. *2007*, 107, 5744. (b) Terada, M. Synthesis *2010*, 1929. (c) Kampen, D.; Reisinger, C. M.; List, B. Top. Curr. Chem. *2010*, 291, 395. (d) Parmar, D.; Sugiono, E.; Raja, S.; Rueping, M. Chem. Rev. *2014*, 114, 9047.</li>
+<li id="ref-5">For reviews on chiral phosphoric acid catalysis: (a) Akiyama, T. Chem. Rev. 2007, 107, 5744. (b) Terada, M. Synthesis 2010, 1929. (c) Kampen, D.; Reisinger, C. M.; List, B. Top. Curr. Chem. 2010, 291, 395. (d) Parmar, D.; Sugiono, E.; Raja, S.; Rueping, M. Chem. Rev. 2014, 114, 9047.</li>
 
 
-<li id="ref-6">For reviews on metal complex/organic molecule binary catalytic system: (a) Shao, Z.; Zhang, H. Chem. Soc. Rev. *2009*, 38, 2745. (b) Zhou, J. Chem. Asian J. *2010*, 5, 422. (c) Hashmi, A. S. K.; Hubbert, C. Angew. Chem. Int. Ed. *2010*, 49, 1010. (d) Armas, P. De; Tejedor, D.; García-Tellado, F. Angew. Chem. Int. Ed. *2010*, 49, 1013. (e) Du, Z.; Shao, Z. Chem. Soc. Rev. *2013*, 42, 1337.</li>
+<li id="ref-6">For reviews on metal complex/organic molecule binary catalytic system: (a) Shao, Z.; Zhang, H. Chem. Soc. Rev. 2009, 38, 2745. (b) Zhou, J. Chem. Asian J. 2010, 5, 422. (c) Hashmi, A. S. K.; Hubbert, C. Angew. Chem. Int. Ed. 2010, 49, 1010. (d) Armas, P. De; Tejedor, D.; García-Tellado, F. Angew. Chem. Int. Ed. 2010, 49, 1013. (e) Du, Z.; Shao, Z. Chem. Soc. Rev. 2013, 42, 1337.</li>
 
 
-<li id="ref-7">Sorimachi, K.; Terada, M. J. Am. Chem. Soc. *2008*, 130, 14452.</li>
+<li id="ref-7">Sorimachi, K.; Terada, M. J. Am. Chem. Soc. 2008, 130, 14452.</li>
 
 
-<li id="ref-8">Peng, B.; Ma, J.; Guo, J.; Gong, Y.; Wang, R.; Zhang, Y.; Zeng, J.; Chen, W.; Ding, K.; Zhao, B. J. Am. Chem. Soc. *2022*, 144, 2853.</li>
+<li id="ref-8">Peng, B.; Ma, J.; Guo, J.; Gong, Y.; Wang, R.; Zhang, Y.; Zeng, J.; Chen, W.; Ding, K.; Zhao, B. J. Am. Chem. Soc. 2022, 144, 2853.</li>
 
 
 </ol>
 </div>
 
 
+<script src="/assets/js/feedback.js"></script>
 <script>
-const buttonY = document.getElementById("-issue9-dr.-satavisha-kayal-system--y");
-const buttonN = document.getElementById("-issue9-dr.-satavisha-kayal-system--n");
-
-buttonY.addEventListener('click', () => {
-	feedback(1, "/issue9/dr.-satavisha-kayal-system/");
-});
-buttonN.addEventListener('click', () => {
-    feedback(-1, "/issue9/dr.-satavisha-kayal-system/");
-});
-
-async function feedback(vote, permalink) {
-  const response = await fetch(
-    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
-    {
-      method: "POST",
-      body: JSON.stringify({
-		  permalink: permalink,
-		  vote: vote
-      })
-    }
-  );
-	console.log(permalink);
-  console.log(await response.text());
-}
+addEvents("-issue9-dr.-satavisha-kayal-system--y", "-issue9-dr.-satavisha-kayal-system--n", "/issue9/dr.-satavisha-kayal-system/");
 </script>
 
 </main>

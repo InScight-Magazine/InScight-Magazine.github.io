@@ -193,11 +193,11 @@ a.title-link {
   cursor: pointer;
 }
 
-.feedback > * {
+#feedback > * {
   font-weight: bold;
   font-size: 1.1em;
 }
-.feedback {
+#feedback {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -205,6 +205,20 @@ a.title-link {
   margin: 1em 0;
 }
 
+@media (max-width: 1000px) {
+  #feedback > * {
+    font-weight: bold;
+    font-size: 1em;
+  }
+  #feedback {
+    gap: 1em;
+  }
+}
+@media (max-width: 600px) {
+  #feedback {
+    flex-direction: column;
+  }
+}
 header {
   width: 100%;
   background-color: #2E2E2E;

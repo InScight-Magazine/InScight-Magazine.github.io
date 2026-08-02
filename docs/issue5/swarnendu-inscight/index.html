@@ -329,7 +329,7 @@ Given your own experiences, how would you describe your approach? And why did yo
 
 <hr>
 
-<div class="feedback">
+<div id="feedback">
 <span> Did you find this interesting?</span>
 <button class="button" id="-issue5-swarnendu-inscight--y"> I enjoyed it! </button>
 <button class="button" id="-issue5-swarnendu-inscight--n"> I didn't really enjoy it. </button>
@@ -343,31 +343,9 @@ Given your own experiences, how would you describe your approach? And why did yo
 
 
 
+<script src="/assets/js/feedback.js"></script>
 <script>
-const buttonY = document.getElementById("-issue5-swarnendu-inscight--y");
-const buttonN = document.getElementById("-issue5-swarnendu-inscight--n");
-
-buttonY.addEventListener('click', () => {
-	feedback(1, "/issue5/swarnendu-inscight/");
-});
-buttonN.addEventListener('click', () => {
-    feedback(-1, "/issue5/swarnendu-inscight/");
-});
-
-async function feedback(vote, permalink) {
-  const response = await fetch(
-    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
-    {
-      method: "POST",
-      body: JSON.stringify({
-		  permalink: permalink,
-		  vote: vote
-      })
-    }
-  );
-	console.log(permalink);
-  console.log(await response.text());
-}
+addEvents("-issue5-swarnendu-inscight--y", "-issue5-swarnendu-inscight--n", "/issue5/swarnendu-inscight/");
 </script>
 
 </main>

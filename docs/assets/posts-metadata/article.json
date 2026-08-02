@@ -1,8 +1,53 @@
 [
   
     {
+      "title": "Macroscopic Quantum Phenomena : The Story of 2025 Physics Nobel",
+      "date": "2026-08-01T22:05:22+05:30",
+      "permalink": "/issue7/raka-dasgupta-nobel/",
+      "authors": "Raka Dasgupta",
+      "category": "article",
+      "hero-image": "/assets/images/issue7/raka-dasgupta-nobel/raka.svg"
+    },
+  
+    {
+      "title": "Metal–Organic Frameworks (MOFs), Covalent Organic Frameworks (COFs), and My Scientific Journey with Professor Omar Yaghi",
+      "date": "2026-08-01T22:05:22+05:30",
+      "permalink": "/issue7/rahul-banerjee-yaghi/",
+      "authors": "Rahul Banerjee",
+      "category": "article",
+      "hero-image": "/assets/images/issue7/rahul-banerjee-yaghi/chemNobel.svg"
+    },
+  
+    {
+      "title": "The Genius of Koshliakov and His Indomitable Spirit",
+      "date": "2026-08-01T22:05:22+05:30",
+      "permalink": "/issue7/atul-dixit-spirit/",
+      "authors": "Atul Dixit",
+      "category": "article",
+      "hero-image": "/assets/images/issue7/atul-dixit-spirit/dixit.svg"
+    },
+  
+    {
+      "title": "Patterns In Primes Via Probability",
+      "date": "2026-08-01T22:05:22+05:30",
+      "permalink": "/issue7/anup-dixit-probability/",
+      "authors": "Anup Dixit, Siddhi Pathak",
+      "category": "article",
+      "hero-image": "/assets/images/issue7/anup-dixit-probability/primes.svg"
+    },
+  
+    {
+      "title": "Integer Partitions in Three Acts: Combinatorics, Number Theory, and Analysis",
+      "date": "2026-08-01T22:05:18+05:30",
+      "permalink": "/issue7/koustav-banerjee-analysis/",
+      "authors": "Koustav Banerjee",
+      "category": "article",
+      "hero-image": "/assets/images/issue7/koustav-banerjee-analysis/koustav.svg"
+    },
+  
+    {
       "title": "Guiding Tomorrow’s Minds: Conversation with Nayan Bhunia and Dibyendu Biswas",
-      "date": "2026-08-01T02:57:13+05:30",
+      "date": "2026-08-01T22:05:13+05:30",
       "permalink": "/issue7/subham-sarkar-biswas/",
       "authors": "Subham Sarkar",
       "category": "article",
@@ -11,7 +56,7 @@
   
     {
       "title": "The World of Diophantus",
-      "date": "2026-08-01T02:57:12+05:30",
+      "date": "2026-08-01T22:05:12+05:30",
       "permalink": "/issue7/b-sury-diophantus/",
       "authors": "B Sury",
       "category": "article",
@@ -20,7 +65,7 @@
   
     {
       "title": "The Peacekeepers Within",
-      "date": "2026-08-01T02:57:12+05:30",
+      "date": "2026-08-01T22:05:12+05:30",
       "permalink": "/issue7/pallavi-gupta-within/",
       "authors": "Pallavi Gupta, Kushagra Bansal",
       "category": "article",
@@ -29,7 +74,7 @@
   
     {
       "title": "How Magnetism Defies: Classical Mechanics",
-      "date": "2026-08-01T02:57:10+05:30",
+      "date": "2026-08-01T22:05:10+05:30",
       "permalink": "/issue7/raj-gaurav-tripathi-mechanics/",
       "authors": "Raj Gaurav Tripathi",
       "category": "article",

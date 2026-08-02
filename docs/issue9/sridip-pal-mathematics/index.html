@@ -326,7 +326,7 @@ What if we do not have to look for solutions to equations of motion abiding phys
 
 <hr>
 
-<div class="feedback">
+<div id="feedback">
 <span> Did you find this interesting?</span>
 <button class="button" id="-issue9-sridip-pal-mathematics--y"> I enjoyed it! </button>
 <button class="button" id="-issue9-sridip-pal-mathematics--n"> I didn't really enjoy it. </button>
@@ -348,31 +348,9 @@ What if we do not have to look for solutions to equations of motion abiding phys
 
 
 
+<script src="/assets/js/feedback.js"></script>
 <script>
-const buttonY = document.getElementById("-issue9-sridip-pal-mathematics--y");
-const buttonN = document.getElementById("-issue9-sridip-pal-mathematics--n");
-
-buttonY.addEventListener('click', () => {
-	feedback(1, "/issue9/sridip-pal-mathematics/");
-});
-buttonN.addEventListener('click', () => {
-    feedback(-1, "/issue9/sridip-pal-mathematics/");
-});
-
-async function feedback(vote, permalink) {
-  const response = await fetch(
-    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
-    {
-      method: "POST",
-      body: JSON.stringify({
-		  permalink: permalink,
-		  vote: vote
-      })
-    }
-  );
-	console.log(permalink);
-  console.log(await response.text());
-}
+addEvents("-issue9-sridip-pal-mathematics--y", "-issue9-sridip-pal-mathematics--n", "/issue9/sridip-pal-mathematics/");
 </script>
 
 </main>

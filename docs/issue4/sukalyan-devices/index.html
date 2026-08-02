@@ -443,7 +443,7 @@ c-16-25.333-24-45-24-59z"/></svg></span></span></span></span></span></span></spa
 
 <hr>
 
-<div class="feedback">
+<div id="feedback">
 <span> Did you find this interesting?</span>
 <button class="button" id="-issue4-sukalyan-devices--y"> I enjoyed it! </button>
 <button class="button" id="-issue4-sukalyan-devices--n"> I didn't really enjoy it. </button>
@@ -515,31 +515,9 @@ c-16-25.333-24-45-24-59z"/></svg></span></span></span></span></span></span></spa
 </div>
 
 
+<script src="/assets/js/feedback.js"></script>
 <script>
-const buttonY = document.getElementById("-issue4-sukalyan-devices--y");
-const buttonN = document.getElementById("-issue4-sukalyan-devices--n");
-
-buttonY.addEventListener('click', () => {
-	feedback(1, "/issue4/sukalyan-devices/");
-});
-buttonN.addEventListener('click', () => {
-    feedback(-1, "/issue4/sukalyan-devices/");
-});
-
-async function feedback(vote, permalink) {
-  const response = await fetch(
-    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
-    {
-      method: "POST",
-      body: JSON.stringify({
-		  permalink: permalink,
-		  vote: vote
-      })
-    }
-  );
-	console.log(permalink);
-  console.log(await response.text());
-}
+addEvents("-issue4-sukalyan-devices--y", "-issue4-sukalyan-devices--n", "/issue4/sukalyan-devices/");
 </script>
 
 </main>

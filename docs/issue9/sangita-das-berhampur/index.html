@@ -229,7 +229,7 @@ Growing up as a girl in a rural village, I never imagined I would end up where I
 
 <hr>
 
-<div class="feedback">
+<div id="feedback">
 <span> Did you find this interesting?</span>
 <button class="button" id="-issue9-sangita-das-berhampur--y"> I enjoyed it! </button>
 <button class="button" id="-issue9-sangita-das-berhampur--n"> I didn't really enjoy it. </button>
@@ -292,31 +292,9 @@ Growing up as a girl in a rural village, I never imagined I would end up where I
 </div>
 
 
+<script src="/assets/js/feedback.js"></script>
 <script>
-const buttonY = document.getElementById("-issue9-sangita-das-berhampur--y");
-const buttonN = document.getElementById("-issue9-sangita-das-berhampur--n");
-
-buttonY.addEventListener('click', () => {
-	feedback(1, "/issue9/sangita-das-berhampur/");
-});
-buttonN.addEventListener('click', () => {
-    feedback(-1, "/issue9/sangita-das-berhampur/");
-});
-
-async function feedback(vote, permalink) {
-  const response = await fetch(
-    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
-    {
-      method: "POST",
-      body: JSON.stringify({
-		  permalink: permalink,
-		  vote: vote
-      })
-    }
-  );
-	console.log(permalink);
-  console.log(await response.text());
-}
+addEvents("-issue9-sangita-das-berhampur--y", "-issue9-sangita-das-berhampur--n", "/issue9/sangita-das-berhampur/");
 </script>
 
 </main>

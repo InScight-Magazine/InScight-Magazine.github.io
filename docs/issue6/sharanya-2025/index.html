@@ -319,7 +319,7 @@ To further ensure safety, the team implemented a <em>dual-layered lysis-based ki
 
 <hr>
 
-<div class="feedback">
+<div id="feedback">
 <span> Did you find this interesting?</span>
 <button class="button" id="-issue6-sharanya-2025--y"> I enjoyed it! </button>
 <button class="button" id="-issue6-sharanya-2025--n"> I didn't really enjoy it. </button>
@@ -342,31 +342,9 @@ To further ensure safety, the team implemented a <em>dual-layered lysis-based ki
 
 
 
+<script src="/assets/js/feedback.js"></script>
 <script>
-const buttonY = document.getElementById("-issue6-sharanya-2025--y");
-const buttonN = document.getElementById("-issue6-sharanya-2025--n");
-
-buttonY.addEventListener('click', () => {
-	feedback(1, "/issue6/sharanya-2025/");
-});
-buttonN.addEventListener('click', () => {
-    feedback(-1, "/issue6/sharanya-2025/");
-});
-
-async function feedback(vote, permalink) {
-  const response = await fetch(
-    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
-    {
-      method: "POST",
-      body: JSON.stringify({
-		  permalink: permalink,
-		  vote: vote
-      })
-    }
-  );
-	console.log(permalink);
-  console.log(await response.text());
-}
+addEvents("-issue6-sharanya-2025--y", "-issue6-sharanya-2025--n", "/issue6/sharanya-2025/");
 </script>
 
 </main>

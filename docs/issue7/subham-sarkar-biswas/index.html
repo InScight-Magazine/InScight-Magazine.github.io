@@ -270,7 +270,7 @@ In their June 20, 2025 interview, Mr. Nayan Bhunia and Mr. Dibyendu Biswas highl
 
 <hr>
 
-<div class="feedback">
+<div id="feedback">
 <span> Did you find this interesting?</span>
 <button class="button" id="-issue7-subham-sarkar-biswas--y"> I enjoyed it! </button>
 <button class="button" id="-issue7-subham-sarkar-biswas--n"> I didn't really enjoy it. </button>
@@ -292,31 +292,9 @@ In their June 20, 2025 interview, Mr. Nayan Bhunia and Mr. Dibyendu Biswas highl
 
 
 
+<script src="/assets/js/feedback.js"></script>
 <script>
-const buttonY = document.getElementById("-issue7-subham-sarkar-biswas--y");
-const buttonN = document.getElementById("-issue7-subham-sarkar-biswas--n");
-
-buttonY.addEventListener('click', () => {
-	feedback(1, "/issue7/subham-sarkar-biswas/");
-});
-buttonN.addEventListener('click', () => {
-    feedback(-1, "/issue7/subham-sarkar-biswas/");
-});
-
-async function feedback(vote, permalink) {
-  const response = await fetch(
-    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
-    {
-      method: "POST",
-      body: JSON.stringify({
-		  permalink: permalink,
-		  vote: vote
-      })
-    }
-  );
-	console.log(permalink);
-  console.log(await response.text());
-}
+addEvents("-issue7-subham-sarkar-biswas--y", "-issue7-subham-sarkar-biswas--n", "/issue7/subham-sarkar-biswas/");
 </script>
 
 </main>

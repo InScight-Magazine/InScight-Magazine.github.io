@@ -232,7 +232,7 @@ In a world where trends shape our decisions, we often find ourselves following t
 
 <hr>
 
-<div class="feedback">
+<div id="feedback">
 <span> Did you find this interesting?</span>
 <button class="button" id="-issue1-trends--y"> I enjoyed it! </button>
 <button class="button" id="-issue1-trends--n"> I didn't really enjoy it. </button>
@@ -260,31 +260,9 @@ In a world where trends shape our decisions, we often find ourselves following t
 </div>
 
 
+<script src="/assets/js/feedback.js"></script>
 <script>
-const buttonY = document.getElementById("-issue1-trends--y");
-const buttonN = document.getElementById("-issue1-trends--n");
-
-buttonY.addEventListener('click', () => {
-	feedback(1, "/issue1/trends/");
-});
-buttonN.addEventListener('click', () => {
-    feedback(-1, "/issue1/trends/");
-});
-
-async function feedback(vote, permalink) {
-  const response = await fetch(
-    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
-    {
-      method: "POST",
-      body: JSON.stringify({
-		  permalink: permalink,
-		  vote: vote
-      })
-    }
-  );
-	console.log(permalink);
-  console.log(await response.text());
-}
+addEvents("-issue1-trends--y", "-issue1-trends--n", "/issue1/trends/");
 </script>
 
 </main>

@@ -269,7 +269,7 @@ I ask this with the hope that your insights will benefit future applicants. Whil
 
 <hr>
 
-<div class="feedback">
+<div id="feedback">
 <span> Did you find this interesting?</span>
 <button class="button" id="-issue4-swarnendu-voyage--y"> I enjoyed it! </button>
 <button class="button" id="-issue4-swarnendu-voyage--n"> I didn't really enjoy it. </button>
@@ -283,31 +283,9 @@ I ask this with the hope that your insights will benefit future applicants. Whil
 
 
 
+<script src="/assets/js/feedback.js"></script>
 <script>
-const buttonY = document.getElementById("-issue4-swarnendu-voyage--y");
-const buttonN = document.getElementById("-issue4-swarnendu-voyage--n");
-
-buttonY.addEventListener('click', () => {
-	feedback(1, "/issue4/swarnendu-voyage/");
-});
-buttonN.addEventListener('click', () => {
-    feedback(-1, "/issue4/swarnendu-voyage/");
-});
-
-async function feedback(vote, permalink) {
-  const response = await fetch(
-    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
-    {
-      method: "POST",
-      body: JSON.stringify({
-		  permalink: permalink,
-		  vote: vote
-      })
-    }
-  );
-	console.log(permalink);
-  console.log(await response.text());
-}
+addEvents("-issue4-swarnendu-voyage--y", "-issue4-swarnendu-voyage--n", "/issue4/swarnendu-voyage/");
 </script>
 
 </main>

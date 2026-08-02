@@ -330,7 +330,7 @@ The cultural evening provided the perfect conclusion. It was a time to relax, ce
 
 <hr>
 
-<div class="feedback">
+<div id="feedback">
 <span> Did you find this interesting?</span>
 <button class="button" id="-issue5-bishal-scientists--y"> I enjoyed it! </button>
 <button class="button" id="-issue5-bishal-scientists--n"> I didn't really enjoy it. </button>
@@ -352,31 +352,9 @@ The cultural evening provided the perfect conclusion. It was a time to relax, ce
 
 
 
+<script src="/assets/js/feedback.js"></script>
 <script>
-const buttonY = document.getElementById("-issue5-bishal-scientists--y");
-const buttonN = document.getElementById("-issue5-bishal-scientists--n");
-
-buttonY.addEventListener('click', () => {
-	feedback(1, "/issue5/bishal-scientists/");
-});
-buttonN.addEventListener('click', () => {
-    feedback(-1, "/issue5/bishal-scientists/");
-});
-
-async function feedback(vote, permalink) {
-  const response = await fetch(
-    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
-    {
-      method: "POST",
-      body: JSON.stringify({
-		  permalink: permalink,
-		  vote: vote
-      })
-    }
-  );
-	console.log(permalink);
-  console.log(await response.text());
-}
+addEvents("-issue5-bishal-scientists--y", "-issue5-bishal-scientists--n", "/issue5/bishal-scientists/");
 </script>
 
 </main>

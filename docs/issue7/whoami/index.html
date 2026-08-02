@@ -187,7 +187,7 @@ Identify the natural laws and biochemical processes from the hints.
 
 <hr>
 
-<div class="feedback">
+<div id="feedback">
 <span> Did you find this interesting?</span>
 <button class="button" id="-issue7-whoami--y"> I enjoyed it! </button>
 <button class="button" id="-issue7-whoami--n"> I didn't really enjoy it. </button>
@@ -201,31 +201,9 @@ Identify the natural laws and biochemical processes from the hints.
 
 
 
+<script src="/assets/js/feedback.js"></script>
 <script>
-const buttonY = document.getElementById("-issue7-whoami--y");
-const buttonN = document.getElementById("-issue7-whoami--n");
-
-buttonY.addEventListener('click', () => {
-	feedback(1, "/issue7/whoami/");
-});
-buttonN.addEventListener('click', () => {
-    feedback(-1, "/issue7/whoami/");
-});
-
-async function feedback(vote, permalink) {
-  const response = await fetch(
-    "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
-    {
-      method: "POST",
-      body: JSON.stringify({
-		  permalink: permalink,
-		  vote: vote
-      })
-    }
-  );
-	console.log(permalink);
-  console.log(await response.text());
-}
+addEvents("-issue7-whoami--y", "-issue7-whoami--n", "/issue7/whoami/");
 </script>
 
 </main>
