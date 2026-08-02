@@ -156,6 +156,13 @@
 <img class="comic-page" tabindex="0" src="/assets/images//issue7/comic-kajori/comic_9.jpg"/>
 
 
+<div id="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue7-comic-kajori--y"> I enjoyed it! </button>
+<button class="button" id="-issue7-comic-kajori--n"> I didn't really enjoy it. </button>
+</div>
+
+
 <script>
 const pages = document.querySelectorAll('.comic-page')
 for (let i = 0; i < pages.length - 1; i++) {
@@ -164,6 +171,11 @@ for (let i = 0; i < pages.length - 1; i++) {
 		pages[i+1].scrollIntoView({ block: "nearest" });
     });
 }
+</script>
+
+<script src="/assets/js/feedback.js"></script>
+<script>
+addEvents("-issue7-comic-kajori--y", "-issue7-comic-kajori--n", "/issue7/comic-kajori/");
 </script>
 
 </main>

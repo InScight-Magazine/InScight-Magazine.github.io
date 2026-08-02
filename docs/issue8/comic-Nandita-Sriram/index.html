@@ -141,6 +141,13 @@
 <img class="comic-page" tabindex="0" src="/assets/images//issue8/comic-Nandita-Sriram/comic3.png"/>
 
 
+<div id="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="-issue8-comic-Nandita-Sriram--y"> I enjoyed it! </button>
+<button class="button" id="-issue8-comic-Nandita-Sriram--n"> I didn't really enjoy it. </button>
+</div>
+
+
 <script>
 const pages = document.querySelectorAll('.comic-page')
 for (let i = 0; i < pages.length - 1; i++) {
@@ -149,6 +156,11 @@ for (let i = 0; i < pages.length - 1; i++) {
 		pages[i+1].scrollIntoView({ block: "nearest" });
     });
 }
+</script>
+
+<script src="/assets/js/feedback.js"></script>
+<script>
+addEvents("-issue8-comic-Nandita-Sriram--y", "-issue8-comic-Nandita-Sriram--n", "/issue8/comic-Nandita-Sriram/");
 </script>
 
 </main>

@@ -14,27 +14,6 @@ function addEvents(idYes, idNo, permalink) {
 	}
 }
 
-// async function feedback(vote, permalink) {
-// 	console.log(permalink);
-//   const response = await fetch(
-//     "https://script.google.com/macros/s/AKfycbx_CsR3shAcpSGZPgK52G6NQPuu65EKRHIlxo2G5FVcW7AxqdRAa95D8-JhOIHRZta0/exec",
-//     {
-//       method: "POST",
-//       body: JSON.stringify({
-// 		  permalink: permalink,
-// 		  vote: vote
-//       })
-//     }
-//   );
-// 	if (response.ok) {
-//         localStorage.setItem(`voted-$permalink`, "true");
-// 		document.getElementById("feedback").style.display = "none";
-//     }
-// 	console.log(permalink);
-//     console.log(await response.text());
-// }
-//
-
 async function feedback(vote, permalink) {
     const workerURL = "https://website-feedback.scicomm-0e1.workers.dev/";
     const response = await fetch(workerURL, {
@@ -49,4 +28,63 @@ async function feedback(vote, permalink) {
     });
 
     console.log(await response.text());
+}
+
+async function loadFeedback() {
+  try {
+    const response = await fetch(
+      "https://website-feedback.scicomm-0e1.workers.dev/api/feedback"
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const rows = await response.json();
+    const table = document.getElementById("votes");
+
+    table.innerHTML =
+      "<tr><th>Permalink</th><th>Reaction</th><th>Timestamp</th></tr>";
+
+    for (const row of rows) {
+      table.innerHTML += `
+        <tr>
+          <td>${row.permalink}</td>
+          <td>${row.reaction}</td>
+          <td>${row.timestamp}</td>
+        </tr>`;
+    }
+  } catch (err) {
+    console.error("Failed to load feedback:", err);
+  }
+}
+
+
+async function loadSummary() {
+  try {
+    const response = await fetch(
+      "https://website-feedback.scicomm-0e1.workers.dev/api/summary"
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const rows = await response.json();
+	const table = document.getElementById("votes");
+
+    table.innerHTML =
+      "<tr><th>Permalink</th><th>👍</th><th>👎</th></tr>";
+
+    for (const row of rows) {
+      table.innerHTML += `
+        <tr>
+          <td>${row.permalink}</td>
+          <td>${row.likes}</td>
+          <td>${row.dislikes}</td>
+        </tr>`;
+    }
+  } catch (err) {
+    console.error("Failed to load feedback:", err);
+  }
 }

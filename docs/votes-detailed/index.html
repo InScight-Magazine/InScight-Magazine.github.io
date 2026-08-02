@@ -25,12 +25,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>India's Silent Architect of Modern Physics</title>
+	<title>Votes: Detailed</title>
 	<meta name="description" content="">
 
-	<meta property="og:title" content="India's Silent Architect of Modern Physics">
+	<meta property="og:title" content="Votes: Detailed">
 	<meta property="og:type" content="website">
-	<meta property="og:url" content=http://localhost:4000/issue7/comic-mishra/>
+	<meta property="og:url" content=http://localhost:4000/votes-detailed/>
 	<meta property="og:description" content="">
 	<meta property="og:image" content="">
 
@@ -97,71 +97,15 @@
 
 
 <main>
-  
-  <div class="hero-image-caption">
-	
-	  <img class="hero-image" src="/assets/images/issue7/comic-mishra/mishra.svg"/>
-	
-  
-  </div>
+  <h1> Votes: Detailed </h1>
 
-<h1> India's Silent Architect of Modern Physics </h1>
-<div id="article-data">
-
-<div>
-<div class="author">Lipsamayee Mishra</div>
-
-
-<i>IISER Kolkata</i>
-
-</div>
-
-<div class="article-date">Nov 12, 2025</div>
-
-</div>
-
-<hr>
-  <div class="author-bio">
-	
-	<img src=/assets/images/issue7/comic-mishra/mishra.jpg />
-	
-    <p><em>Lipsamayee Mishra</em> is a student in IISER Kolkata pursuing physics and maths. She is an art enthusiast who is passionate about illustrations and exploring new visual artforms.</p>
-
-  </div>
-
-<hr>
-
-
-<img class="comic-page" tabindex="0" src="/assets/images//issue7/comic-mishra/mishra1.png"/>
-
-
-<img class="comic-page" tabindex="0" src="/assets/images//issue7/comic-mishra/mishra2.png"/>
-
-
-<img class="comic-page" tabindex="0" src="/assets/images//issue7/comic-mishra/mishra3.png"/>
-
-
-<div id="feedback">
-<span> Did you find this interesting?</span>
-<button class="button" id="-issue7-comic-mishra--y"> I enjoyed it! </button>
-<button class="button" id="-issue7-comic-mishra--n"> I didn't really enjoy it. </button>
-</div>
-
-
-<script>
-const pages = document.querySelectorAll('.comic-page')
-for (let i = 0; i < pages.length - 1; i++) {
-	const element = pages[i];
-	element.addEventListener('click', function() {
-		pages[i+1].scrollIntoView({ block: "nearest" });
-    });
-}
-</script>
+<table id="votes" style="width: max-content;"></table>
 
 <script src="/assets/js/feedback.js"></script>
-<script>
-addEvents("-issue7-comic-mishra--y", "-issue7-comic-mishra--n", "/issue7/comic-mishra/");
-</script>
+
+<script>loadFeedback()</script>
+
+
 
 </main>
 
