@@ -29,3 +29,15 @@ layout: default
 {% endif %}
 </div>
 {% endfor %}
+
+<div id="feedback">
+<span> Did you find this interesting?</span>
+<button class="button" id="{{ page.permalink | replace: "/","-" }}-y"> I enjoyed it! </button>
+<button class="button" id="{{ page.permalink | replace: "/","-" }}-n"> I didn't really enjoy it. </button>
+</div>
+
+<script src="/assets/js/feedback.js"></script>
+<script>
+addEvents("{{ page.permalink | replace: "/","-" }}-y", "{{ page.permalink | replace: "/","-" }}-n", "{{ page.permalink }}");
+</script>
+
