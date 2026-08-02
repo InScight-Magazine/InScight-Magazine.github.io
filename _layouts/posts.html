@@ -80,5 +80,5 @@ layout: default
 
 <script src="/assets/js/feedback.js"></script>
 <script>
-	addEvents("{{ page.permalink | replace: "/","-" }}-y", "{{ page.permalink | replace: "/","-" }}-n", "{{ page.permalink }}", "{{ site.feedback-db }}");
+	addVoteButtonEvents("{{ page.permalink | replace: "/","-" }}-y", "{{ page.permalink | replace: "/","-" }}-n", "{{ page.permalink }}", "{{ site.feedback-db }}");
 </script>

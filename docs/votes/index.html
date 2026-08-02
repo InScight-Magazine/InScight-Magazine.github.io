@@ -25,12 +25,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Votes: Detailed</title>
+	<title>Votes</title>
 	<meta name="description" content="">
 
-	<meta property="og:title" content="Votes: Detailed">
+	<meta property="og:title" content="Votes">
 	<meta property="og:type" content="website">
-	<meta property="og:url" content=http://localhost:4000/votes-detailed/>
+	<meta property="og:url" content=http://localhost:4000/votes/>
 	<meta property="og:description" content="">
 	<meta property="og:image" content="">
 
@@ -97,13 +97,25 @@
 
 
 <main>
-  <h1> Votes: Detailed </h1>
+  <h1> Votes </h1>
 
-<table id="votes" style="width: max-content;"></table>
+<p><button id="votes-summary-button" class="button">Summary</button>
+<button id="votes-detailed-button" class="button">Detailed</button></p>
+
+<table id="votes-summary" style="width: max-content;"></table>
+<table id="votes-detailed" style="width: max-content;"></table>
 
 <script src="/assets/js/feedback.js"></script>
 
-<script>loadFeedback()</script>
+<script>
+document.getElementById("votes-summary-button").addEventListener('click', () => {
+    loadVotes("summary", "https://website-feedback.scicomm-0e1.workers.dev", "votes-summary", "votes-detailed");
+});
+document.getElementById("votes-detailed-button").addEventListener('click', () => {
+    loadVotes("detailed", "https://website-feedback.scicomm-0e1.workers.dev", "votes-detailed", "votes-summary");
+});
+loadVotes("summary", "https://website-feedback.scicomm-0e1.workers.dev", "votes-summary", "votes-detailed")
+</script>
 
 
 

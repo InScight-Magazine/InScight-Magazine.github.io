@@ -62,5 +62,5 @@ for (let i = 0; i < pages.length - 1; i++) {
 
 <script src="/assets/js/feedback.js"></script>
 <script>
-addEvents("{{ page.permalink | replace: "/","-" }}-y", "{{ page.permalink | replace: "/","-" }}-n", "{{ page.permalink }}");
+	addVoteButtonEvents("{{ page.permalink | replace: "/","-" }}-y", "{{ page.permalink | replace: "/","-" }}-n", "{{ page.permalink }}", "{{ site.feedback-db }}");
 </script>

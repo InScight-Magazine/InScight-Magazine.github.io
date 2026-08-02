@@ -191,12 +191,10 @@ a.title-link {
   border-radius: 10px;
   border: none;
   cursor: pointer;
+  font-weight: medium;
+  font-size: 1em;
 }
 
-#feedback > * {
-  font-weight: bold;
-  font-size: 1.1em;
-}
 #feedback {
   display: flex;
   justify-content: start;
