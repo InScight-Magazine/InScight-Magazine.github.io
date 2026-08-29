@@ -2,7 +2,7 @@
   
     {
       "title": "Macroscopic Quantum Phenomena : The Story of 2025 Physics Nobel",
-      "date": "2026-08-02T18:56:22+05:30",
+      "date": "2026-08-30T01:25:22+05:30",
       "permalink": "/issue7/raka-dasgupta-nobel/",
       "authors": "Raka Dasgupta",
       "category": "article",
@@ -11,7 +11,7 @@
   
     {
       "title": "Metal–Organic Frameworks (MOFs), Covalent Organic Frameworks (COFs), and My Scientific Journey with Professor Omar Yaghi",
-      "date": "2026-08-02T18:56:22+05:30",
+      "date": "2026-08-30T01:25:22+05:30",
       "permalink": "/issue7/rahul-banerjee-yaghi/",
       "authors": "Rahul Banerjee",
       "category": "article",
@@ -20,7 +20,7 @@
   
     {
       "title": "The Genius of Koshliakov and His Indomitable Spirit",
-      "date": "2026-08-02T18:56:22+05:30",
+      "date": "2026-08-30T01:25:22+05:30",
       "permalink": "/issue7/atul-dixit-spirit/",
       "authors": "Atul Dixit",
       "category": "article",
@@ -29,7 +29,7 @@
   
     {
       "title": "Patterns In Primes Via Probability",
-      "date": "2026-08-02T18:56:22+05:30",
+      "date": "2026-08-30T01:25:22+05:30",
       "permalink": "/issue7/anup-dixit-probability/",
       "authors": "Anup Dixit, Siddhi Pathak",
       "category": "article",
@@ -38,7 +38,7 @@
   
     {
       "title": "Integer Partitions in Three Acts: Combinatorics, Number Theory, and Analysis",
-      "date": "2026-08-02T18:56:18+05:30",
+      "date": "2026-08-30T01:25:18+05:30",
       "permalink": "/issue7/koustav-banerjee-analysis/",
       "authors": "Koustav Banerjee",
       "category": "article",
@@ -47,7 +47,7 @@
   
     {
       "title": "Guiding Tomorrow’s Minds: Conversation with Nayan Bhunia and Dibyendu Biswas",
-      "date": "2026-08-02T18:56:13+05:30",
+      "date": "2026-08-30T01:25:13+05:30",
       "permalink": "/issue7/subham-sarkar-biswas/",
       "authors": "Subham Sarkar",
       "category": "article",
@@ -56,7 +56,7 @@
   
     {
       "title": "The World of Diophantus",
-      "date": "2026-08-02T18:56:12+05:30",
+      "date": "2026-08-30T01:25:12+05:30",
       "permalink": "/issue7/b-sury-diophantus/",
       "authors": "B Sury",
       "category": "article",
@@ -65,7 +65,7 @@
   
     {
       "title": "The Peacekeepers Within",
-      "date": "2026-08-02T18:56:12+05:30",
+      "date": "2026-08-30T01:25:12+05:30",
       "permalink": "/issue7/pallavi-gupta-within/",
       "authors": "Pallavi Gupta, Kushagra Bansal",
       "category": "article",
@@ -74,7 +74,7 @@
   
     {
       "title": "How Magnetism Defies: Classical Mechanics",
-      "date": "2026-08-02T18:56:10+05:30",
+      "date": "2026-08-30T01:25:10+05:30",
       "permalink": "/issue7/raj-gaurav-tripathi-mechanics/",
       "authors": "Raj Gaurav Tripathi",
       "category": "article",
@@ -129,6 +129,15 @@
     {
       "title": "Remembering Jane Goodall: In the Forest and Beyond",
       "date": "2026-01-27T00:00:00+05:30",
+      "permalink": "/issue9.5/dishari-dasgupta-beyond/",
+      "authors": "Dishari Dasgupta",
+      "category": "article",
+      "hero-image": "/assets/images/issue9.5/dishari-dasgupta-beyond/dishari.svg"
+    },
+  
+    {
+      "title": "Remembering Jane Goodall: In the Forest and Beyond",
+      "date": "2026-01-27T00:00:00+05:30",
       "permalink": "/issue8/dishari-dasgupta-beyond/",
       "authors": "Dishari Dasgupta",
       "category": "article",
@@ -145,12 +154,30 @@
     },
   
     {
+      "title": "The Genius of Koshliakov and His Indomitable Spirit",
+      "date": "2025-12-22T00:00:00+05:30",
+      "permalink": "/issue9.5/atul-dixit-spirit/",
+      "authors": "Atul Dixit",
+      "category": "article",
+      "hero-image": "/assets/images/issue9.5/atul-dixit-spirit/dixit.svg"
+    },
+  
+    {
       "title": "How a Sleep Hormone Became a Drug Candidate for Wilson Disease",
       "date": "2025-12-22T00:00:00+05:30",
       "permalink": "/issue8/raviranjan-pandey-disease/",
       "authors": "Raviranjan Pandey",
       "category": "article",
       "hero-image": "/assets/images/issue8/raviranjan-pandey-disease/pandey.svg"
+    },
+  
+    {
+      "title": "The Physics of Forgetting: When Information Becomes Heat",
+      "date": "2025-11-01T00:00:00+05:30",
+      "permalink": "/issue9.5/tanmoy-pandit-heat/",
+      "authors": "Tanmoy Pandit",
+      "category": "article",
+      "hero-image": "/assets/images/issue9.5/tanmoy-pandit-heat/tanmoy.svg"
     },
   
     {
@@ -307,6 +334,24 @@
     },
   
     {
+      "title": "From a BS-MS Student to An Independent Scientist: My Academic Journey",
+      "date": "2025-03-28T00:00:00+05:30",
+      "permalink": "/issue9.5/sayan-choudhury-journey/",
+      "authors": "Sayan Choudhury",
+      "category": "article",
+      "hero-image": "/assets/images/issue9.5/sayan-choudhury-journey/sayan.svg"
+    },
+  
+    {
+      "title": "A Century of Quantum Mechanics: From Paradoxes to Possibilities",
+      "date": "2025-03-10T00:00:00+05:30",
+      "permalink": "/issue9.5/sobitri-sen-possibilities/",
+      "authors": "Sobitri Sen",
+      "category": "article",
+      "hero-image": "/assets/images/issue9.5/sobitri-sen-possibilities/sobitri.svg"
+    },
+  
+    {
       "title": "A Century of Quantum Mechanics: From Paradoxes to Possibilities",
       "date": "2025-03-10T00:00:00+05:30",
       "permalink": "/issue4/sobitri-possibilities/",
@@ -370,6 +415,15 @@
     },
   
     {
+      "title": "Melding Data with Science: A Perspective on the 2024 Nobel Prizes",
+      "date": "2025-01-31T00:00:00+05:30",
+      "permalink": "/issue9.5/prof.-neelanjana-sengupta-prizes/",
+      "authors": "Prof. Neelanjana Sengupta",
+      "category": "article",
+      "hero-image": "/assets/images/issue9.5/prof.-neelanjana-sengupta-prizes/neelanjana.svg"
+    },
+  
+    {
       "title": "Engineering Solutions for Foot Care: IISER-K’s E. coli-Powered Foot Insole Bags Gold at iGEM",
       "date": "2024-11-14T00:00:00+05:30",
       "permalink": "/issue1/igem/",
@@ -421,6 +475,15 @@
       "authors": "Shrestha Chowdhury",
       "category": "article",
       "hero-image": "/assets/images/issue1/gluten/bread.webp"
+    },
+  
+    {
+      "title": "Why We Follow Trends, Even When They’re Bad for Us",
+      "date": "2024-01-09T00:00:00+05:30",
+      "permalink": "/issue9.5/swarnendu-saha-us/",
+      "authors": "Swarnendu Saha",
+      "category": "article",
+      "hero-image": "/assets/images/issue9.5/swarnendu-saha-us/trends.svg"
     }
   
 ]

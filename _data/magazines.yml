@@ -1,5 +1,14 @@
 #### IMPORTANT: The latest issues should go to the top. ####
 
+- permalink: /issue9.5/
+  thumbnail: issue9.5.svg
+  issue-number: 9.5
+  month: August
+  year: 2026
+  highlights:
+    - /swarnendu-saha-us/
+    - /dishari-dasgupta-beyond/
+    - /crossword/
 - permalink: /issue9/
   thumbnail: issue9.svg
   issue-number: 9

@@ -58,10 +58,9 @@ def parseContent(content):
         return "".join([parseContent(ele) for ele in content["children"]])
     elif content["func"] == "figure":
         images.append(parseContent(content['body']))
-        print(images[-1])
-        print(images[-1].split("/")[-1])
         if images[-1].endswith(".pdf"):
             print(f"PDF image {images[-1]} in {filename}. I replaced it with `.svg'. Please add svg image.")
+        print(images[-1].split("/")[-1].replace(".pdf", ".svg"))
         return "{% include figure.html image='" + images[-1].split("/")[-1].replace(".pdf", ".svg") + "' caption='" + parseContent(content['caption']).replace("{", "\\{").replace("}", "\\}").replace("'", "\\'") + "' width=800 %}\n\n"
     elif content["func"] == "image":
         return content["source"].strip("//")
@@ -99,7 +98,7 @@ def parseContent(content):
         images.append(parseContent(content['children'][0]['body']))
         if images[-1].endswith(".pdf"):
             print(f"PDF image {images[-1]} in {filename}. I replaced it with `.svg'. Please add svg image.")
-        return "{% include figure.html image='" + parseContent(content['children'][0]['body']).replace(".pdf", ".svg") + "' caption='" + parseContent(captionBody['body']).replace("{", "\\{").replace("}", "\\}").replace("'", "\\'") + "' width=800 %}\n\n"
+        return "{% include figure.html image='" + parseContent(content['children'][0]['body']).split("/")[-1].replace(".pdf", ".svg") + "' caption='" + parseContent(captionBody['body']).replace("{", "\\{").replace("}", "\\}").replace("'", "\\'") + "' width=800 %}\n\n"
     elif content["func"] == "v":
         return "<br>"
     elif content["func"] == "raw":
@@ -218,8 +217,6 @@ for (content, var) in zip(contents, vars):
             os.makedirs(os.path.join("_data", "digest"), exist_ok=True)
             yaml.dump(digestYaml, open(os.path.join("_data", "digest", f"issue{issue}.yml"), "w"), default_flow_style=False, width=9999)
 
-            # print(images)
-            # shutil.copy2(os.path.join(os.path.dirname(typstpath), "dataFiles", os.path.basename(var["value"]["file"])), os.path.join("_data", "digest", f"issue{issue}.yml"))
         elif var["value"]["type"] == "comic": 
             metaData = {
                     "title": var["value"]["title"],
@@ -234,35 +231,23 @@ for (content, var) in zip(contents, vars):
                     "pages": var["value"]["pages"]
                     }
             images = images + var["value"]["pages"]
-          # title: "Against All Odds -- The Man Who Brought IVF To India"
-          # authors: ['Kajori Barman', 'Afreen Chowdhury']
-          # author-bio: "*Kajori* (right) is a student with curiosity in the sciences. Along with pursuing her interest in science, she also indulges in sketching and painting as hobbies. During the lockdown, she started getting into digital art and has since been drawing her favourite anime and comic characters. #linebreak() *Afreen* (left)  has always been very keen about nature, particularly biology. She has always loved reading novels and comics, and as someone who nerds on fiction, she wanted to try understanding how these stories are written by creating this comic with Kajori."
-          # issue: 7
-          # author-affiliation: ['IISER Kolkata']
-          # hero-image: "comic.svg"
-          # authorImage: "kajori.jpg"
-          # date: "2025-11-12"
-          # category: "comic"
-          # permalink: "/issue7/comic-kajori/"
-          # pages: ["comic_2.jpg", "comic_3.jpg", "comic_4.jpg", "comic_5.jpg", "comic_6.jpg", "comic_7.jpg", "comic_8.jpg", "comic_9.jpg"]
 
         imgDir = os.path.join("assets", "images", metaData["permalink"][1:])
         os.makedirs(imgDir, exist_ok=True)
-        metaData["issue"] = int(issue)
+        metaData["issue"] = str(issue)
         filename = os.path.join(postsDir, f"{Date}-{metaData['permalink'].split('/')[2]}.md")
         markdown = []
         broken = False
         contents = json.loads(typst.query(typstpath, "<content>", sys_inputs={"html": "true"}))
         if "images" in var["value"]:
             img = var["value"]["images"][0]
+            print(img)
             markdown.append("\n{% include figure.html image='" + os.path.basename(img) + "' caption='" + parseContent(var["value"]["captions"][0]) + "' width=400 %}\n")
             images.append(img.strip("//"))
         for data in content["value"]["children"]:
-            # print(data)
             if data == {'func': 'v', 'amount': '1.4em'}:
                 data = {'func': 'parbreak'}
             parsed = parseContent(data)
-            # print(parsed)
             if parsed.startswith(" {% include figure.html"):
                 parsed = parsed[1:]
             if parsed.startswith(" ") and len(parsed) > 1:
@@ -275,7 +260,6 @@ for (content, var) in zip(contents, vars):
             markdown.append("\n{% include figure.html image='" + os.path.basename(img) + "' caption='" + parseContent(var["value"]["captions"][1]) + "' width=400 %}\n")
             images.append(img.strip("//"))
         for img in images:
-            print(img)
             if os.path.basename(img) == img:
                 shutil.copy2(os.path.join(os.path.dirname(typstpath), "images", img), imgDir)
             else:

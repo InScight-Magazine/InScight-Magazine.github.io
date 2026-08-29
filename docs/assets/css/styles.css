@@ -193,6 +193,7 @@ a.title-link {
   cursor: pointer;
   font-weight: medium;
   font-size: 1em;
+  align-self: flex-start;
 }
 
 #feedback {
@@ -472,18 +473,22 @@ a.nf {
   margin-top: 1.2rem;
 }
 
-.magazine-banner > div {
-  font-size: 1.3em;
-  font-weight: bold;
+.magazine-banner {
+  display: flex;
+  align-items: top;
 }
-.magazine-banner > img {
-  margin-bottom: 0.5rem;
+.magazine-banner > * {
+  margin: 0;
 }
 .magazine-banner {
-  margin-top: -1rem;
-  margin-bottom: 2rem;
+  gap: 1em;
 }
 
+@media (max-width: 600px) {
+  .magazine-banner {
+    flex-wrap: wrap;
+  }
+}
 .release-buttons {
   display: flex;
   justify-content: space-around;

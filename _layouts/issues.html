@@ -6,9 +6,9 @@ layout: default
 {% assign item = site.data.magazines | find:"issue-number", issue %}
 {% assign month = item.month %}
 {% assign year = item.year %}
-<h1> Issue #{{ issue }} | {{ month }}, {{ year}}</h1>
 <div class="magazine-banner">
-<div><a class="button" href="/assets/magazines/issue{{ issue }}.pdf">Download PDF</a></div>
+  <h1> Issue #{{ issue }} | {{ month }}, {{ year}}</h1>
+  <a class="button" href="/assets/magazines/issue{{ issue }}.pdf">Download PDF</a>
 </div>
 
 {% assign issueItems = site.posts | where_exp: "item" , "item.permalink contains page.permalink" %}

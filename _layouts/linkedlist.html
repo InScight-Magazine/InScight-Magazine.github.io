@@ -4,7 +4,7 @@ excerpt: ""
 ---
 
 <script src="/assets/js/linkedlist.js"></script>
-{% assign file = "issue" | append: page.issue %}
+{% assign file = "issue" | append: page.issue | replace: ".", "" %}
 {% assign data = site.data.linkedlists[file] %}
 <p>
 Linked List is a general science-based word game. The rules are straightforward.

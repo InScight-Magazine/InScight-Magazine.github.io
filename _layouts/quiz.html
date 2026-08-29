@@ -2,12 +2,8 @@
 layout: posts
 ---
 
-{% assign file = "issue" | append: page.issue %}
+{% assign file = "issue" | append: page.issue | replace: ".", "" %}
 {% assign path = site.data.quizzes[file] %}
-<!-- {% assign questions = path["questions"] %} -->
-<!-- {% assign images = path["images"] %} -->
-<!-- {% assign options = path["options"] %} -->
-<!-- {% assign answers = path["answers"] %} -->
 <ol>
 {% for row in path %}
 {% if row[1].q == nil %}

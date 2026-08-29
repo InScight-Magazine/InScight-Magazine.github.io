@@ -23,7 +23,7 @@ layout: posts
 </div>
 
 <script src="/assets/js/crossword.js"></script>
-{% assign file = "issue" | append: page.issue %}
+{% assign file = "issue" | append: page.issue | replace: ".", "" %}
 <script>
 handleFile({{ site.data.crosswords[file] | jsonify }});
 </script>
