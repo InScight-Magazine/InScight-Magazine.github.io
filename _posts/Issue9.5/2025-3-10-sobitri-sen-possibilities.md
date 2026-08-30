@@ -1,7 +1,7 @@
 ---
 author-affiliation:
 - Ashoka University and IISER Kolkata
-author-bio: '**Dr. Sobitri Sen** is a teaching fellow at Ashoka University (Sonepat, India) and a visiting scientist at the QuantAct Laboratory at IISER Kolkata. She is a curious mind who feels and writes about scientific topics using literature to make it a treat to read!'
+author-bio: '**Dr. Sobitri Sen**, former PhD student at Department of Chemical Sciences, IISER Kolkata under Prof. Sourav Pal, and former teaching fellow at Ashoka University (Sonepat, India) and currently Data Analyst & Proposal Writer at Nuva Foundation. She is a curious mind who feels and writes about scientific topics using literature to make it a treat to read!'
 authorImage: sobitri.jpg
 authors:
 - Sobitri Sen
