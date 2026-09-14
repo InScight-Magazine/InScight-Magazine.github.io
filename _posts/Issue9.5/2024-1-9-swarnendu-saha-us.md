@@ -1,7 +1,7 @@
 ---
 author-affiliation:
-- IISER Kolkata
-author-bio: 'A fifth year BS-MS student of IISER Kolkata, **Swarnendu Saha** is a student working with Prof. Rajesh Kumble Nayak, and is a travel enthusiast, who loves to travel anywhere below the sky. Instead of mentioning his preferred fields in science, he would rather say that chemistry is the one he doesn''t like at all! '
+- IIT Bombay
+author-bio: 'Swarnendu is currently a Project student at IIT Bombay. A former BSMS student from 2020 batch of IISER Kolkata, he is also a travel enthusiast who loves to travel anywhere below the sky.'
 authorImage: swarnendu.jpg
 authors:
 - Swarnendu Saha
