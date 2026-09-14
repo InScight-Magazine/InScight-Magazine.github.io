@@ -60,7 +60,6 @@ def parseContent(content):
         images.append(parseContent(content['body']))
         if images[-1].endswith(".pdf"):
             print(f"PDF image {images[-1]} in {filename}. I replaced it with `.svg'. Please add svg image.")
-        print(images[-1].split("/")[-1].replace(".pdf", ".svg"))
         return "{% include figure.html image='" + images[-1].split("/")[-1].replace(".pdf", ".svg") + "' caption='" + parseContent(content['caption']).replace("{", "\\{").replace("}", "\\}").replace("'", "\\'") + "' width=800 %}\n\n"
     elif content["func"] == "image":
         return content["source"].strip("//")
@@ -134,7 +133,7 @@ refsDir = os.path.join("_data", "references")
 os.makedirs(postsDir, exist_ok=True)
 os.makedirs(refsDir, exist_ok=True)
 for (content, var) in zip(contents, vars):
-    print(var["value"]["title"])
+    print("Parsing ", var["value"]["title"])
     if var["value"]["type"] == "article" or var["value"]["type"] == "interview" or var["value"]["type"] == "editor" or var["value"]["type"] == "foreword" or var["value"]["type"] == "quiz" or var["value"]["type"] == "linkedlist" or var["value"]["type"] == "crossword" or var["value"]["type"] == "digest" or var["value"]["type"] == "comic":
         footnotes = []
         images = []
@@ -241,7 +240,6 @@ for (content, var) in zip(contents, vars):
         contents = json.loads(typst.query(typstpath, "<content>", sys_inputs={"html": "true"}))
         if "images" in var["value"]:
             img = var["value"]["images"][0]
-            print(img)
             markdown.append("\n{% include figure.html image='" + os.path.basename(img) + "' caption='" + parseContent(var["value"]["captions"][0]) + "' width=400 %}\n")
             images.append(img.strip("//"))
         for data in content["value"]["children"]:
