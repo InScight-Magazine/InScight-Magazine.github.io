@@ -1,0 +1,97 @@
+title: "Quiz: India's Greatest Scientists"
+intro: "Can You Identify Their Achievements In This Quiz?"
+author: "*Ravi Sharma* [IISER Kolkata]"
+1:
+  q: "Scientist 1: C. V. Raman. Which statement most accurately describes his landmark scientific contribution?"
+  o:
+    - He established that light passing through matter could undergo a measurable change in wavelength due to interactions within the material.
+    - He demonstrated that the intensity of scattered light could be used to determine the thermal state of individual molecules.
+    - He established that the colour of scattered light changes systematically with the density of the material through which it travels.
+    - He showed that the polarization of scattered light could provide a complete description of the internal energy structure of molecules.
+  a: 1
+  i: "/images/raman.jpg"
+  f: "0.5fr"
+2:
+  q: "Scientist 2: Homi J. Bhabha. Which statement most accurately captures his historic scientific contribution to India?"
+  o:
+    - He developed India's first practical nuclear reactor design and personally demonstrated sustained nuclear power generation.
+    - He developed the theoretical foundation for nuclear reactions and then helped create institutions through which India could pursue atomic research.
+    - He transformed India's nuclear research by concentrating primarily on nuclear weapons technology rather than fundamental particle physics.
+    - He established experimental methods for controlling nuclear reactions and used them to demonstrate India's ability to generate atomic energy independently.
+  a: 2
+  # i: "/images/quiz2.jpg"
+3:
+  q: "Scientist 3: Vikram Sarabhai. Which statement most accurately describes his contribution?"
+  o:
+    - He demonstrated that space technology could be developed as a national tool for communication, education and development, and built institutions around that vision.
+    - He concentrated India's early space programme on human spaceflight and developed the institutional framework that later produced India's first astronauts.
+    - He established India's satellite programme mainly to develop independent military reconnaissance capabilities during the early Cold War.
+    - He pioneered India's rocket technology by personally developing the propulsion systems that became the direct basis of modern Indian launch vehicles.
+  a: 1
+  # i: "/images/quiz3.jpg"
+4:
+  q: "Scientist 4: Satyendra Nath Bose. Which statement is historically accurate?"
+  o:
+    - He established the relationship between molecular vibrations and shifted spectral lines produced when light interacts with matter.
+    - He developed a statistical model in which all quantum particles were treated as distinguishable, providing the basis for classical statistical mechanics.
+    - He derived a statistical explanation for the ionisation of atoms in stellar atmospheres and applied it to astronomical spectra.
+    - He developed a new statistical treatment of quantum particles whose indistinguishable nature later became fundamental to Bose–Einstein statistics.
+  a: 4
+  i: "/images/bose.jpg"
+  f: "0.5fr"
+5:
+  q: "Scientist 5: Srinivasa Ramanujan. Which statement best reflects his mathematical legacy?"
+  o:
+    - He formulated a general theory explaining how the distribution of prime numbers determines the convergence of physical and astronomical series.
+    - He developed a unified mathematical framework connecting number theory with the statistical behaviour of quantum particles.
+    - He discovered deep relationships involving numbers, infinite series and continued fractions, often producing results before formal proofs were available.
+    - He established the mathematical foundations of modern probability theory by deriving general laws for randomly distributed integers.
+  a: 3
+  # i: "/images/quiz5.jpg"
+6:
+  q: "Scientist 6: Meghnad Saha. Which statement correctly describes his major contribution?"
+  o:
+    - He developed a model in which the observed spectral lines of stars could be used to determine their chemical composition independently of temperature.
+    - He established a quantitative relationship between temperature, pressure and ionisation that allowed stellar spectra to be interpreted in terms of physical conditions.
+    - He established a quantitative relationship between stellar brightness, temperature and chemical composition that directly determined the masses of stars.
+    - He explained stellar spectra primarily by treating stars as blackbody emitters whose spectral lines arise from variations in surface temperature.
+  a: 2
+  # i: "/images/quiz6.jpg"
+7:
+  q: "Scientist 7: Jagadish Chandra Bose. Which statement most accurately captures his scientific legacy?"
+  o:
+    - He conducted pioneering experiments on electromagnetic waves and later developed sensitive instruments to investigate electrical responses in plants.
+    - He developed the first systematic theory connecting plant growth directly with radio-wave transmission and used it to explain plant communication.
+    - He primarily studied radio transmission for long-distance communication and later applied those techniques to develop biological imaging of plant tissues.
+    - He demonstrated that plants possess a nervous system comparable to animals and used electromagnetic radiation to map its structure.
+  a: 1
+  i: "/images/jcbose.jpg"
+  f: "0.5fr"
+8:
+  q: "Scientist 8: Subrahmanyan Chandrasekhar. Which statement correctly describes his landmark astrophysical contribution?"
+  o:
+    - He demonstrated that the maximum mass of a star is determined primarily by the rate at which it loses heat through radiation.
+    - He established that every white dwarf eventually collapses once its temperature falls below a fixed critical value, regardless of its mass.
+    - He showed that neutron pressure determines the maximum mass of ordinary white dwarfs and used this to predict their transition into neutron stars.
+    - He established a limiting mass for a stable white dwarf and showed how quantum mechanics and relativity constrain the fate of massive stars.
+  a: 4
+  # i: "/images/quiz8.jpg"
+9:
+  q: "Scientist 9: A. P. J. Abdul Kalam. Which statement most accurately describes his scientific contribution?"
+  o:
+    - He personally designed India's first operational satellite and directed the entire scientific programme responsible for placing it in orbit.
+    - He played a leading role in developing indigenous launch-vehicle and missile technologies and helped turn complex aerospace projects into national programmes.
+    - He pioneered India's nuclear-reactor technology and subsequently transferred his expertise to the country's missile programme.
+    - He established India's theoretical foundations for rocket propulsion and developed the mathematical equations later used in the country's launch vehicles.
+  a: 2
+  # i: "/images/quiz9.jpg"
+10:
+  q: "Scientist 10: Har Gobind Khorana. Which statement accurately describes the work for which he received the 1968 Nobel Prize?"
+  o:
+    - He helped establish how specific nucleotide sequences correspond to amino acids, clarifying how genetic information is translated into proteins.
+    - He discovered that mutations arise when radiation changes the chemical structure of individual DNA bases and used this to explain inherited disease.
+    - He established the three-dimensional structure of DNA and showed how its geometry determines the sequence of proteins produced by cells.
+    - He demonstrated how DNA duplicates itself and established the molecular mechanism by which genetic information is copied before cell division.
+  a: 1
+  i: "/images/khorana.jpg"
+  f: "0.5fr"

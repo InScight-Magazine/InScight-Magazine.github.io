@@ -1,0 +1,24 @@
+title: "Maths x Physics --- Guess the words to complete the Linked List"
+author: "*Abhirup Mukherjee* [Department of Physics & Astronomy, Seoul National University]"
+intro: "This issue's linked list involves words drawn from concepts where maths and physics overlap."
+seed: "LAPLACE"
+hints:
+  - "A direction that remains unchanged under a transformation, revealing the natural modes of a physical system."
+  - "A mathematical procedure for handling infinities and understanding how physical laws change with scale."
+  - "A set of nonlinear differential equations describing fluid motion, and a famous unsolved mathematical problem."
+  - "A mathematical relationship between quantities at different length scales, central to critical phenomena and physical universality."
+  - "A mathematical freedom in how fields are described, underlying some of the fundamental interactions in nature."
+  - "A property connecting the long-time evolution of a dynamical system to averages over its entire phase space."
+  - "A mathematical form of interaction potential associated with a theory of nuclear forces and the particle named after its originator."
+  - "The study of limiting behaviour in mathematics, essential for approximating physical systems in extreme regimes."
+  - "A transformation that preserves angles mathematically and plays a central role in two-dimensional critical systems and quantum field theory."
+answers:
+  - EIGENVECTOR
+  - RENORMALISATION
+  - NAVIERSTOKES
+  - SCALING
+  - GAUGE
+  - ERGODICITY
+  - YUKAWA
+  - ASYMPTOTIC
+  - CONFORMAL

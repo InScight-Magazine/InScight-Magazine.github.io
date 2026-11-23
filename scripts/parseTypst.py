@@ -23,11 +23,6 @@ global images
 def parseContent(content):
     if content is None:
         return ""
-    if "text" in content.keys() and content["func"] != "raw":
-        text = content["text"]
-        for (char, escapeChar) in escapeChars.items():
-            text = text.replace(char, escapeChar)
-        return text
     elif content["func"] == "link":
         return f"[{content['dest']}]({parseContent(content['body']).strip()})"
     elif content["func"] == "strong":
@@ -57,6 +52,9 @@ def parseContent(content):
     elif content["func"] == "sequence":
         return "".join([parseContent(ele) for ele in content["children"]])
     elif content["func"] == "figure":
+        if content["body"]["func"] == "table":
+            content["body"]["table-file"] = content["alt"].split("/")[-1]
+            return parseContent(content["body"])
         images.append(parseContent(content['body']))
         if images[-1].endswith(".pdf"):
             print(f"PDF image {images[-1]} in {filename}. I replaced it with `.svg'. Please add svg image.")
@@ -119,12 +117,28 @@ def parseContent(content):
         return latex
     elif content["func"] == "align":
         return parseContent(content["body"])
+    elif content["func"] == "table":
+        return "{% include table.html path=" + content["table-file"] + " caption='' %}"
     elif content["func"] == "context":
         return ""
+    elif content["func"] == "ref":
+        return ""
+    elif content["func"] == "sub":
+        return f"<sub>{parseContent(content['body'])}</sub>"
+    elif "text" in content.keys() and content["func"] != "raw":
+        text = content["text"]
+        for (char, escapeChar) in escapeChars.items():
+            text = text.replace(char, escapeChar)
+        return text
     else:
         assert False, f"unhandled function -- {content}"
 
-
+os.makedirs(os.path.join("pages", "issues"), exist_ok=True)
+with open(f"pages/issues/issue-{issue}.md", 'w') as outfile:
+    outfile.write("---\n")
+    outfile.write("layout: issues\n")
+    outfile.write(f"permalink: /issue{issue}/\n")
+    outfile.write("---")
 
 vars = json.loads(typst.query(typstpath, "<vars>"))
 contents = json.loads(typst.query(typstpath, "<content>", sys_inputs={"html": "true"}))
@@ -198,9 +212,9 @@ for (content, var) in zip(contents, vars):
                     "category": "digest",
                     "hero-image": var["value"]["coverImage"].split("/")[-1],
                     }
-            digest = json.loads(typst.query(os.path.join(Path(typstpath).parent, "dataFiles", "digest.typ"), "<digest>"))
+            digest = var["value"]["digest"]
             digestYaml = []
-            for item in digest[0]["value"]:
+            for item in digest:
                 digestYaml.append({
                     "Title": item["Title"],
                     "Author": item["Author"],
@@ -288,3 +302,10 @@ for (content, var) in zip(contents, vars):
                 outfile.write("\n\n---\n\n")
                 for (i, note) in enumerate(footnotes):
                     outfile.write(f"\n[^{i+1}]: {note}\n")
+
+with open(os.path.join("..", "_data", "magazines.yml"), "r") as f:
+    data = yaml.safe_load(f)
+data = [{'permalink': f'/issue{issue}/', 'thumbnail': '', 'issue-number': issue, 'month': '', 'year': '', 'highlights': ['', '', '']}] + data
+
+with open(os.path.join("_data", "magazines.yml"), "w") as f:
+    yaml.safe_dump(data, f, default_flow_style=False, sort_keys=False)

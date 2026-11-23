@@ -1,0 +1,220 @@
+{
+    "title": "It\u2019s a Small World --- Crossword on The Science of Networks",
+    "intro": "This issue's crossword explores how the idea of networks appears in various domains such as brain wiring, food webs, epidemics, social connections, power grids, and the internet.",
+    "author": "*Abhirup Mukherjee* [Department of Physics & Astronomy, Seoul National University]",
+    "blanks": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        19,
+        20,
+        21,
+        22,
+        23,
+        25,
+        26,
+        28,
+        29,
+        31,
+        32,
+        34,
+        41,
+        43,
+        46,
+        47,
+        49,
+        51,
+        52,
+        53,
+        55,
+        56,
+        58,
+        61,
+        62,
+        67,
+        68,
+        76,
+        77,
+        79,
+        81,
+        82,
+        83,
+        85,
+        86,
+        88,
+        94,
+        96,
+        98,
+        100,
+        101,
+        103,
+        105,
+        106,
+        108,
+        109,
+        111,
+        113,
+        114,
+        115,
+        120,
+        121,
+        123,
+        124,
+        126,
+        128,
+        129,
+        131,
+        133,
+        135,
+        136,
+        138,
+        139,
+        140,
+        141,
+        143,
+        144,
+        146,
+        148,
+        149,
+        150,
+        151,
+        155,
+        156,
+        158,
+        159,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        185,
+        186,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        220,
+        221,
+        222,
+        223,
+        224
+    ],
+    "size": 15,
+    "across": {
+        "CLUSTER": [
+            0,
+            "A group of nodes that are more densely connected to one another than to the rest of the network"
+        ],
+        "EDGE": [
+            90,
+            "A connection between two points in a network graph"
+        ],
+        "HUB": [
+            152,
+            "A highly connected point that can link distant parts of a network"
+        ],
+        "INTERNET": [
+            169,
+            "The system formed by connected computers and networks around the world"
+        ],
+        "NETWORK": [
+            213,
+            "A system of connected points through which information, energy, or influence can travel"
+        ],
+        "PACKET": [
+            35,
+            "A small unit of data sent across a computer network"
+        ],
+        "PATH": [
+            63,
+            "The route that connects two points in a network"
+        ],
+        "ROUTER": [
+            69,
+            "A device that directs data between computer networks"
+        ],
+        "WIFI": [
+            116,
+            "Wireless technology that connects devices to a local network"
+        ]
+    },
+    "down": {
+        "BIOME": [
+            154,
+            "A large ecological region characterized by its climate and typical communities of organisms"
+        ],
+        "CASCADE": [
+            0,
+            "A chain reaction that spreads from one part of a system to another"
+        ],
+        "CIRCUIT": [
+            44,
+            "A set of connected components through which electric current can flow"
+        ],
+        "CONTAGION": [
+            27,
+            "The spread of an infectious disease through a population"
+        ],
+        "FOODWEB": [
+            97,
+            "Map of who eats whom in an ecological community"
+        ],
+        "GRAPH": [
+            92,
+            "A mathematical network made of points and the connections between them"
+        ],
+        "NEURON": [
+            24,
+            "A nerve cell; one of the basic units in the brain\u2019s communication network"
+        ],
+        "NODE": [
+            130,
+            "A point in a network, such as a person in a social network"
+        ],
+        "PATHWAY": [
+            35,
+            "A route through which a signal or process travels in a system"
+        ],
+        "SYNAPSE": [
+            3,
+            "The junction where one neuron communicates with another"
+        ]
+    }
+}

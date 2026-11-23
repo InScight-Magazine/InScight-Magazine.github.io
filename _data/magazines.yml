@@ -1,97 +1,104 @@
-#### IMPORTANT: The latest issues should go to the top. ####
-
+- permalink: /issue10/
+  thumbnail: issue10.jpg
+  issue-number: 10
+  month: November
+  year: 2026
+  highlights:
+  - /bharath-krishna-s-zeta/
+  - /govind-agarwal/
+  - /quiz/
 - permalink: /issue9.5/
   thumbnail: issue9.5.jpg
   issue-number: 9.5
   month: August
   year: 2026
   highlights:
-    - /swarnendu-saha-us/
-    - /dishari-dasgupta-beyond/
-    - /crossword/
+  - /swarnendu-saha-us/
+  - /dishari-dasgupta-beyond/
+  - /crossword/
 - permalink: /issue9/
   thumbnail: issue9.svg
   issue-number: 9
   month: July
   year: 2026
   highlights:
-    - /sangita-das-berhampur/
-    - /comic-Arkadeep-Bandyopadhyay/
-    - /crossword/
+  - /sangita-das-berhampur/
+  - /comic-Arkadeep-Bandyopadhyay/
+  - /crossword/
 - permalink: /issue8/
   thumbnail: issue8
   issue-number: 8
   month: May
   year: 2026
   highlights:
-    - /dishari-dasgupta-beyond/
-    - /comic-Nandita-Sriram/
-    - /quiz/
+  - /dishari-dasgupta-beyond/
+  - /comic-Nandita-Sriram/
+  - /quiz/
 - permalink: /issue7/
   thumbnail: issue7.svg
   issue-number: 7
   month: February
   year: 2026
   highlights:
-    - /raka-dasgupta-nobel/
-    - /ritabrata-munshi/
-    - /comic-kajori/
+  - /raka-dasgupta-nobel/
+  - /ritabrata-munshi/
+  - /comic-kajori/
 - permalink: /issue6/
   thumbnail: issue6
   issue-number: 6
   month: November
   year: 2025
   highlights:
-    - /sharanya-2025/
-    - /comic-antarctica/
-    - /crossword/
+  - /sharanya-2025/
+  - /comic-antarctica/
+  - /crossword/
 - permalink: /issue5/
   thumbnail: issue5
   issue-number: 5
   month: September
   year: 2025
   highlights:
-    - /bishal-scientists/
-    - /chandrima-easier/
-    - /swarnendu-curiosity/
-    - /crossword/
+  - /bishal-scientists/
+  - /chandrima-easier/
+  - /swarnendu-curiosity/
+  - /crossword/
 - permalink: /issue4/
   thumbnail: issue4
   issue-number: 4
   month: July
   year: 2025
   highlights:
-    - /sukalyan-devices/
-    - /suprabha-modes/
-    - /swarnendu-india/
-    - /shreya-effect/
+  - /sukalyan-devices/
+  - /suprabha-modes/
+  - /swarnendu-india/
+  - /shreya-effect/
 - permalink: /issue3/
   thumbnail: issue3
   issue-number: 3
   month: May
   year: 2025
   highlights:
-    - /sayan-journey/
-    - /debanuj-dragonfly/
-    - /swarnendu-barma/
-    - /crossword/
+  - /sayan-journey/
+  - /debanuj-dragonfly/
+  - /swarnendu-barma/
+  - /crossword/
 - permalink: /issue2/
   thumbnail: issue2
   issue-number: 2
   month: March
   year: 2025
   highlights:
-    - /nobel/
-    - /quantum/
-    - /probal/
-    - /quiz/
+  - /nobel/
+  - /quantum/
+  - /probal/
+  - /quiz/
 - permalink: /issue1/
   thumbnail: issue1
   issue-number: 1
   month: January
   year: 2025
   highlights:
-    - /bioAi/
-    - /trends/
-    - /sunilkhare/
-    - /quiz/
+  - /bioAi/
+  - /trends/
+  - /sunilkhare/
+  - /quiz/
