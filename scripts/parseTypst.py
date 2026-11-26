@@ -11,7 +11,10 @@ from datetime import date
 from pathlib import Path
 
 typstpath = sys.argv[1]
-issue = sys.argv[2]
+issueData = json.loads(typst.query(typstpath, "<issue-data>"))[0]['value']
+issue = issueData['number']
+highlights = issueData['highlights']
+
 escapeChars = {'|': "&#124;",
                '|': "&#124;",
                '>': "&gt;",
@@ -104,7 +107,7 @@ def parseContent(content):
             math = f"$ {content['text']} $"
         math = math.replace("&", "").replace("\\ ", "").replace("\\\n", "")
         latex = subprocess.run(
-             ["pandoc", "-f", "typst", "-t", "latex"],
+             ["pandoc", "-f", "typst", "-t", "latex", "--lua-filter=replace-pipe.lua"],
              input=math,
              text=True,
              capture_output=True
@@ -146,8 +149,10 @@ postsDir = os.path.join("_posts", f"Issue{issue}")
 refsDir = os.path.join("_data", "references")
 os.makedirs(postsDir, exist_ok=True)
 os.makedirs(refsDir, exist_ok=True)
-for (content, var) in zip(contents, vars):
+highlight_items = []
+for (i, (content, var)) in enumerate(zip(contents, vars)):
     print("Parsing ", var["value"]["title"])
+
     if var["value"]["type"] == "article" or var["value"]["type"] == "interview" or var["value"]["type"] == "editor" or var["value"]["type"] == "foreword" or var["value"]["type"] == "quiz" or var["value"]["type"] == "linkedlist" or var["value"]["type"] == "crossword" or var["value"]["type"] == "digest" or var["value"]["type"] == "comic":
         footnotes = []
         images = []
@@ -168,6 +173,7 @@ for (content, var) in zip(contents, vars):
                     "permalink": var["value"]["permalink"].replace("https://scicomm.iiserkol.ac.in", "") + "/",
                     "reviewed-by": var["value"]["reviewedBy"],
                     }
+
             if metaData["refs-file"] != None:
                 metaData["refs-file"] =os.path.splitext(metaData["refs-file"].split("/")[-1])[0]
                 shutil.copy2(os.path.join(os.path.dirname(typstpath), "dataFiles", os.path.basename(var["value"]["refsFile"])), os.path.join(refsDir, os.path.basename(var["value"]["refsFile"])))
@@ -200,11 +206,19 @@ for (content, var) in zip(contents, vars):
                     }
             dataDir = os.path.join("_data", {"quiz": "quizzes", "linkedlist": "linkedlists", "crossword": "crosswords"}[var["value"]["type"]])
             os.makedirs(dataDir, exist_ok=True)
+            sourceData = os.path.join(os.path.dirname(typstpath), "dataFiles", os.path.basename(var["value"]["file"]))
             if var["value"]["type"] == "crossword":
-                data = tomllib.loads(open(os.path.join(os.path.dirname(typstpath), "dataFiles", os.path.basename(var["value"]["file"])), "r").read())
+                data = tomllib.loads(open(sourceData, "r").read())
                 json.dump(data, open(os.path.join(dataDir, f"issue{issue}.json"), "w"), indent=4)
             else:
-                shutil.copy2(os.path.join(os.path.dirname(typstpath), "dataFiles", os.path.basename(var["value"]["file"])), os.path.join(dataDir, f"issue{issue}.yml"))
+                shutil.copy2(sourceData, os.path.join(dataDir, f"issue{issue}.yml"))
+            if var["value"]["type"] == "quiz":
+                quizdata = yaml.safe_load(open(sourceData, "r"))
+                cnt = 1
+                while cnt in quizdata:
+                    if "i" in quizdata[cnt]:
+                        images.append(quizdata[cnt]["i"].strip("/"))
+                    cnt += 1
         elif var["value"]["type"] == "digest": 
             metaData = {
                     "title": var["value"]["title"],
@@ -215,17 +229,9 @@ for (content, var) in zip(contents, vars):
             digest = var["value"]["digest"]
             digestYaml = []
             for item in digest:
-                digestYaml.append({
-                    "Title": item["Title"],
-                    "Author": item["Author"],
-                    "Affiliation": item["Affiliation"],
-                    "Url": item["Url"],
-                    "Reference": item["Reference"],
-                    "Image": item["Image"],
-                    "Keywords": item["Keywords"],
-                    "Caption": parseContent(item["Caption"]),
-                    "Summary": parseContent(item["Writing"]),
-                    })
+                digestYaml.append(item)
+                digestYaml[-1]["Caption"] = parseContent(item["Caption"])
+                digestYaml[-1]["Summary"] = parseContent(item["Writing"])
                 images.append(os.path.join("images", item["Image"]))
             os.makedirs(os.path.join("_data", "digest"), exist_ok=True)
             yaml.dump(digestYaml, open(os.path.join("_data", "digest", f"issue{issue}.yml"), "w"), default_flow_style=False, width=9999)
@@ -245,6 +251,8 @@ for (content, var) in zip(contents, vars):
                     }
             images = images + var["value"]["pages"]
 
+        if i+1 in highlights:
+            highlight_items.append(metaData["permalink"])
         imgDir = os.path.join("assets", "images", metaData["permalink"][1:])
         os.makedirs(imgDir, exist_ok=True)
         metaData["issue"] = str(issue)
@@ -305,7 +313,15 @@ for (content, var) in zip(contents, vars):
 
 with open(os.path.join("..", "_data", "magazines.yml"), "r") as f:
     data = yaml.safe_load(f)
-data = [{'permalink': f'/issue{issue}/', 'thumbnail': '', 'issue-number': issue, 'month': '', 'year': '', 'highlights': ['', '', '']}] + data
+data = [{'permalink': f'/issue{issue}/', 'issue-number': issue, 'month': issueData['month'], 'year': issueData['year'], 'highlights': highlight_items}] + data
+if "front-cover" in issueData:
+    os.makedirs("assets/magazine-thumbnails", exist_ok=True)
+    ext = issueData["front-cover"].split(".")[-1]
+    data[0]['thumbnail'] = f"issue{issue}.{ext}"
+    shutil.copy2(os.path.join(os.path.dirname(typstpath), issueData["front-cover"].strip("/")), f"assets/magazine-thumbnails/{data[0]['thumbnail']}")
 
 with open(os.path.join("_data", "magazines.yml"), "w") as f:
     yaml.safe_dump(data, f, default_flow_style=False, sort_keys=False)
+
+os.makedirs("assets/magazines", exist_ok=True)
+typst.compile(typstpath, output=f"assets/magazines/issue{issue}.pdf")
