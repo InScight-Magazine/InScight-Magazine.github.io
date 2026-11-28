@@ -8,11 +8,7 @@ permalink: /games/
 <div class="highlight-small">
 {% for cat in categories %}
  {% assign post = site.categories[cat][0] %}
- {% assign image = "/assets/images" | append: post.permalink | append: post.hero-image | relative_link %}
  <div class="highlight-desc">
- <a href="{{ post.permalink }}" id="highlight-{{ cat }}-url">
- <img id="highlight-{{ cat }}-image" src="{{ image }}"/>
- </a>
  <strong id="highlight-{{ cat }}-title">{{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}</strong>
  <span class="archive-author" id="highlight-{{ cat }}-author"> {{ post.authors | join: ", " }} </span>
  <p class="home-button"><span>{{ site.color-emoji["browse"] }} <a href="{{post["permalink"]}}" id="highlight-{{ cat }}-link"> Browse </a></span><span class="shuffle" id="{{ cat }}-shuffle"></span></p>

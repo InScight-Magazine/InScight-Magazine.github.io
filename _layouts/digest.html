@@ -19,9 +19,11 @@ layout: default
 <h3 id="{{ item["Title"] | slugify }}">{{ item["Title"] }}</h3>
 <a class="reference" href={{ item["Url"] }}>{{ item["Reference"] }}</a>
 <span class="author">Contributed by: {{ item["Author"] }}</span> 
+{% if item contains "Affiliation" %}
 <span class="affiliation">({{ item["Affiliation"] }})</span>
+{% endif %}
 <span class="keywords"><strong>Subjects</strong>: {{ item["Keywords"] | join: ", " }}</span>
-<p class="summary">{{ item["Summary"] | newline_to_br }}</p>
+<p class="summary">{{ item["Summary"] | newline_to_br | markdownify }}</p>
 {% if item["Image"] %}
 {% assign imagePath = item["Image"] %}
 {% assign caption = item["Caption"] %}
