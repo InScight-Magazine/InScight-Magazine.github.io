@@ -8,7 +8,7 @@ authors:
 category: article
 date: 2026-6-22
 excerpt: "A knot may look simple, but proving whether it can be untangled\u2014or telling one knot from another\u2014can take sophisticated mathematics. This article introduces knot theory\u2019s tools for answering those questions, then follows their surprising reach from the twisting of DNA and protein structure to the braided particles proposed for quantum computing."
-hero-image: mishra.svg
+hero-image: mishra.png
 issue: '10'
 permalink: /issue10/ram-mishra-applications/
 refs-file: mishra

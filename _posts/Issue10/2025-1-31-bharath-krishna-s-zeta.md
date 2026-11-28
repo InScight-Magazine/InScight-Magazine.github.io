@@ -8,7 +8,7 @@ authors:
 category: article
 date: 2025-1-31
 excerpt: "The claim that $$1 + 2 + 3 + \\ldots = - \\frac{1}{12}$$ is intriguing\u2014but what does it really mean to \u201Csum\u201D infinitely many numbers? This article introduces the ordinary definition of an infinite sum, explores how other summation methods can assign values to some divergent series, and explains why $$1 + 2 + 3 + c\\ldots$$ still does not equal $$- \\frac{1}{12}$$ in the usual sense. The number $$- \\frac{1}{12}$$ instead comes from extending the Riemann zeta function beyond the region where its defining series converges."
-hero-image: zeta.svg
+hero-image: zeta.png
 issue: '10'
 permalink: /issue10/bharath-krishna-s-zeta/
 refs-file: zeta
