@@ -2,7 +2,7 @@
 author-affiliation:
 - IISER Thiruvananthapuram
 author-bio: '**Bharath Krishna S** is an Integrated PhD student from IISER Thiruvananthapuram working in Complex dynamics and Ergodic theory. Apart from his research, he is interested in studying the history of mathematics and writes expository math content where he simplifies concepts from higher math for a general audience.'
-authorImage: zeta.png
+authorImage: bharath.png
 authors:
 - Bharath Krishna S
 category: article

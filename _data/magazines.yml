@@ -21,6 +21,24 @@
   month: November
   year: 2026
   highlights:
+  - /issue10/dr.-arunima-banerjee-waves/
+  - /issue10/ram-mishra-applications/
+  - /issue10/crossword/
+  thumbnail: issue10.svg
+- permalink: /issue10/
+  issue-number: 10
+  month: November
+  year: 2026
+  highlights:
+  - /issue10/dr.-arunima-banerjee-waves/
+  - /issue10/ram-mishra-applications/
+  - /issue10/crossword/
+  thumbnail: issue10.svg
+- permalink: /issue10/
+  issue-number: 10
+  month: November
+  year: 2026
+  highlights:
   - /issue10/ram-mishra-applications/
   - /issue10/govind-agarwal/
   - /issue10/quiz/

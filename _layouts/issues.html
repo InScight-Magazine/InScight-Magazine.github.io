@@ -77,6 +77,6 @@ layout: default
 {% for item in items %}
 <div class="magazine-item">
 <span class="magazine-summary-title"><span class="magazine-summary-title">{{ item.title | markdownify | remove: '<p>' | remove: '</p>' }}</span><a class="reveal" href="{{ item.url }}">Try Out</a></span>
-<span class="issue-read"><span class="archive-author">{{ item.authors | markdownify | remove: '<p>' | remove: '</p>' | join: ", " }}</span> <a class="reveal" href={{ item.permalink }}>Read</a></span>
+<span class="issue-read"><span class="archive-author">{{ item.authors | markdownify | remove: '<p>' | remove: '</p>' | join: ", " }}</span> </span>
 </div>
 {% endfor %}
